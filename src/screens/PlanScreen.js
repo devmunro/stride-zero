@@ -26,6 +26,13 @@ export function PlanScreen({ trainingPlan, completedSet, nextSessionId, onSelect
         const done = week.sessions.filter((session) => completedSet.has(session.id)).length;
         const isFuture = week.week > currentWeek && done === 0;
         const isCurrent = week.week === currentWeek;
+        const sessionsRequired = Math.max(0, (week.week - 1) * week.sessions.length);
+        const completedBeforeWeek = trainingPlan
+          .filter((candidateWeek) => candidateWeek.week < week.week)
+          .flatMap((candidateWeek) => candidateWeek.sessions)
+          .filter((session) => completedSet.has(session.id)).length;
+        const unlockRatio = sessionsRequired === 0 ? 1 : completedBeforeWeek / sessionsRequired;
+
         return (
           <Card
             key={week.week}
@@ -47,6 +54,24 @@ export function PlanScreen({ trainingPlan, completedSet, nextSessionId, onSelect
               <View style={styles.flex}>
                 <Label>{`Week ${week.week}`}</Label>
                 <Title style={[styles.cardTitle, { color: theme.text }]}>{week.goal}</Title>
+                {isFuture ? (
+                  <View style={styles.unlockWrap}>
+                    <Text style={[styles.unlockCopy, { color: theme.textSoft }]}>
+                      {`Unlock progress ${completedBeforeWeek}/${sessionsRequired}`}
+                    </Text>
+                    <View style={[styles.unlockTrack, { backgroundColor: theme.chip }]}>
+                      <View
+                        style={[
+                          styles.unlockFill,
+                          {
+                            backgroundColor: theme.text,
+                            width: `${Math.max(0, Math.min(100, unlockRatio * 100))}%`,
+                          },
+                        ]}
+                      />
+                    </View>
+                  </View>
+                ) : null}
               </View>
               <Pill label={`${done}/3`} muted />
             </View>
