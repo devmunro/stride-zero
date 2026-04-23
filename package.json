@@ -1,17 +1,20 @@
 {
-  "name": "smashit",
+  "name": "stride-zero",
   "version": "1.0.0",
+  "description": "Minimal Expo running app for first-5K training with guided sessions and local progress tracking.",
   "private": true,
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "check": "expo export --platform android"
+    "check": "expo export --platform android",
+    "lint": "expo lint",
+    "smoke": "node scripts/smoke-check.cjs"
   },
   "dependencies": {
-    "expo": "~54.0.0",
     "@react-native-async-storage/async-storage": "2.2.0",
+    "expo": "~54.0.0",
     "expo-audio": "~1.1.1",
     "expo-haptics": "~15.0.8",
     "expo-keep-awake": "~15.0.8",
@@ -21,5 +24,9 @@
     "react": "19.1.0",
     "react-native": "0.81.4",
     "react-native-safe-area-context": "5.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.4",
+    "eslint-config-expo": "^55.0.0"
   }
 }
