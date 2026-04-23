@@ -1,68 +1,62 @@
 # Stride Zero
 
-Stride Zero is a focused Expo / React Native running app that guides a beginner from short run-walk intervals to a first 5K.
+Stride Zero is a minimal running app for beginners working toward a first 5K.
+
+It is built around a simple idea: black, white, clear structure, and no extra noise. Pick a starting point, follow the plan, run the session, and keep moving.
 
 ## What It Does
 
-- Builds a personalized 9-week plan from onboarding choices
-- Saves progress locally on the device
-- Includes a guided run timer with sound, speech, and vibration cues
-- Tracks completion stats and achievement milestones
-- Supports light and dark appearance modes
+- Builds a beginner-friendly run-walk plan
+- Guides each workout with timed cues
+- Saves progress locally on-device
+- Tracks simple stats and milestones
+- Keeps the interface clean and direct
 
-## Stack
+## Screenshots
 
-- Expo
-- React Native
-- AsyncStorage
-- expo-audio
-- expo-speech
-- expo-navigation-bar
+The README is set up for the three core screens: dashboard, training plan, and progress.
 
-## Project Structure
+<p align="center">
+  <img src="docs/screenshots/dashboard.jpeg" alt="Dashboard" width="30%" />
+  <img src="docs/screenshots/plan.jpeg" alt="Training Plan" width="30%" />
+  <img src="docs/screenshots/stats.jpeg" alt="Progress" width="30%" />
+</p>
 
-```text
-src/
-  components/ui/   shared UI primitives
-  config/          option lists and storage keys
-  data/            training plan data
-  lib/             profile and state helpers
-  screens/         app screens
-  theme/           theme tokens and shared styles
-App.js             app entry and screen orchestration
-```
-
-## Getting Started
+## Run
 
 ```bash
 npm install
 npm run start
 ```
 
-Native shortcuts:
+Shortcuts:
 
 ```bash
 npm run android
 npm run ios
+npm run check
 ```
 
-Validation:
+## Structure
 
-```bash
-npm run check
+```text
+src/
+  components/ui/
+  config/
+  data/
+  lib/
+  screens/
+  theme/
+  types/
+App.js
 ```
 
 ## Notes
 
-- This project is currently scoped as a native Expo app.
-- App state is stored locally on-device with AsyncStorage.
-- Changing plan-shaping setup options resets progress intentionally so completed runs always match the active training plan.
+- Native Expo app
+- Local storage with AsyncStorage
+- Setup changes that reshape the plan can reset progress so the schedule stays accurate
 
-## Showcase Focus
+## Repo Description
 
-This repo is meant to demonstrate:
-
-- product thinking around a narrow, clear use case
-- clean React Native screen composition
-- shared theme and component organization
-- safer local-state handling for persisted user progress
+`Minimal Expo running app for first-5K training with guided sessions, local progress tracking, and a clean black-and-white UI.`
