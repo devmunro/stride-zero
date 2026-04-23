@@ -159,26 +159,6 @@ export const achievements = [
   { id: "finish", title: "5K complete", detail: "Finish the full plan.", unlockAt: 27 },
 ];
 
-/** @type {Session} */
-export const demoSession = {
-  id: "demo-1",
-  week: 0,
-  run: 0,
-  title: "Timer test",
-  summary: "3 sec run, 3 sec walk",
-  blocks: [["Test", "Run 3 sec / Walk 3 sec"]],
-  longestRun: 0,
-  steps: [
-    { type: "walk", seconds: 3, label: "Warm up" },
-    { type: "run", seconds: 3, label: "Run" },
-    { type: "walk", seconds: 3, label: "Walk" },
-    { type: "walk", seconds: 3, label: "Cool down" },
-  ],
-  totalMinutes: 1,
-  totalSeconds: 12,
-  isFinal: false,
-};
-
 const scheduleMaps = {
   "3 days a week": ["Mon", "Wed", "Sat"],
   "Flexible schedule": ["A", "B", "C"],
