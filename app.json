@@ -17,6 +17,12 @@
     },
     "android": {
       "package": "com.stridezero.app"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "13d64108-4566-4141-97ef-412ce608b593"
+      }
+    },
+    "owner": "devmunro"
   }
 }
