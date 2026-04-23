@@ -12,11 +12,10 @@ import { styles } from "../theme/styles";
  * @param {Function} props.onChange Field update callback
  * @param {Function} props.onContinue Continue/save handler
  * @param {Function} [props.onReset] Optional reset handler
- * @param {Function} [props.onOpenTest] Optional timer test handler
  * @param {boolean} [props.compact=false] Whether to render the embedded edit version
  * @returns {JSX.Element} Setup screen
  */
-export function SetupScreen({ profile, onChange, onContinue, onReset, onOpenTest, compact = false }) {
+export function SetupScreen({ profile, onChange, onContinue, onReset, compact = false }) {
   const content = (
     <ScreenTransition style={styles.screenStack}>
       <Label>{compact ? "Edit setup" : "No login"}</Label>
@@ -49,7 +48,6 @@ export function SetupScreen({ profile, onChange, onContinue, onReset, onOpenTest
       </Card>
 
       <PrimaryButton label={compact ? "Save settings" : "Start plan"} onPress={onContinue} />
-      {compact && onOpenTest ? <GhostButton label="Open timer test" onPress={onOpenTest} /> : null}
       {compact && onReset ? <GhostButton label="Clear saved data" onPress={onReset} /> : null}
     </ScreenTransition>
   );
