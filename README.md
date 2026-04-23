@@ -14,7 +14,6 @@ It is built around a simple idea: black, white, clear structure, and no extra no
 
 ## Screenshots
 
-The README is set up for the three core screens: dashboard, training plan, and progress.
 
 <p align="center">
   <img src="docs/screenshots/dashboard.jpeg" alt="Dashboard" width="30%" />

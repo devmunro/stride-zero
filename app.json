@@ -8,7 +8,7 @@
     "splash": {
       "image": "./assets/splash-logo.png",
       "resizeMode": "contain",
-      "backgroundColor": "#f4f4f1"
+      "backgroundColor": "#05070a"
     },
     "androidNavigationBar": {
       "visible": "sticky-immersive",
@@ -16,7 +16,7 @@
       "backgroundColor": "#05070a"
     },
     "android": {
-      "package": "com.smashit.stridezero"
+      "package": "com.stridezero.app"
     }
   }
 }
