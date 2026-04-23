@@ -5,7 +5,7 @@ import { StatusBar } from "expo-status-bar";
 import { ActivityIndicator, Alert, Pressable, ScrollView, Text, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { STORAGE_KEY } from "./src/config/storage";
-import { achievements, buildTrainingPlan, demoSession } from "./src/data/trainingPlan";
+import { achievements, buildTrainingPlan } from "./src/data/trainingPlan";
 import { buildSavedSetupState, defaultAppState, defaultProfile, hydrateAppState, shouldResetPlanProgress } from "./src/lib/profileState";
 import { SetupScreen } from "./src/screens/SetupScreen";
 import { DashboardScreen } from "./src/screens/DashboardScreen";
@@ -36,6 +36,9 @@ export default function App() {
   }, []);
 
   useEffect(() => {
+    // Hide the Android system navigation by default, while still allowing
+    // a swipe from the edge to reveal it temporarily when the user needs it.
+    NavigationBar.setPositionAsync("absolute").catch(() => {});
     NavigationBar.setBehaviorAsync("overlay-swipe").catch(() => {});
     NavigationBar.setVisibilityAsync("hidden").catch(() => {});
   }, []);
@@ -264,14 +267,6 @@ export default function App() {
                     onFinished={completeSelectedSession}
                   />
                 )}
-                {appState.ui.currentScreen === "test" && (
-                  <RunScreen
-                    session={demoSession}
-                    cueMode={appState.profile.cueMode}
-                    onBack={() => setScreen("setup")}
-                    onFinished={() => setScreen("setup")}
-                  />
-                )}
                 {appState.ui.currentScreen === "progress" && (
                   <ProgressScreen
                     weeklyCompletion={weeklyCompletion}
@@ -290,13 +285,12 @@ export default function App() {
                     onChange={updateProfile}
                     onContinue={saveSetup}
                     onReset={resetApp}
-                    onOpenTest={() => setScreen("test")}
                     compact
                   />
                 )}
               </ScrollView>
 
-              {!["finish", "run", "test"].includes(appState.ui.currentScreen) && (
+              {!["finish", "run"].includes(appState.ui.currentScreen) && (
                 <TabBar currentScreen={appState.ui.currentScreen} onChange={setScreen} />
               )}
             </>
