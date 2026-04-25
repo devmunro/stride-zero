@@ -7,11 +7,13 @@
  * @type {Profile}
  */
 export const defaultProfile = {
-  startPoint: "Complete beginner",
-  weeklyPattern: "3 days a week",
-  focus: "Build consistency",
+  experienceLevel: "Beginner",
+  goal: "Finish 5K",
+  weeklyPattern: "3 runs most weeks",
   cueMode: "Sound + vibration",
   darkMode: false,
+  reminderEnabled: false,
+  reminderTime: "18:30",
 };
 
 /**
@@ -24,12 +26,25 @@ export const defaultAppState = {
   plan: {
     hasSetup: false,
     selectedSessionId: "1-1",
+    recoveryWeek: {
+      active: false,
+      completedRuns: 0,
+      targetSessionId: null,
+    },
+    repeatWeek: {
+      active: false,
+      week: null,
+      sessionIndex: 0,
+    },
   },
   progress: {
     completedSessionIds: [],
+    sessionLogs: [],
   },
   ui: {
     currentScreen: "setup",
+    detailScreen: null,
+    runMode: "complete",
   },
 };
 
@@ -45,7 +60,18 @@ export function hydrateAppState(parsed) {
 
   return {
     ...defaultAppState,
-    profile: { ...defaultProfile, ...(legacyState.profile ?? {}) },
+    profile: {
+      ...defaultProfile,
+      ...(legacyState.profile ?? {}),
+      experienceLevel:
+        legacyState.profile?.experienceLevel ??
+        mapLegacyExperience(legacyState.profile?.startPoint) ??
+        defaultProfile.experienceLevel,
+      goal:
+        legacyState.profile?.goal ??
+        mapLegacyGoal(legacyState.profile?.focus) ??
+        defaultProfile.goal,
+    },
     plan: {
       ...defaultAppState.plan,
       ...(legacyState.plan ?? {}),
@@ -56,11 +82,14 @@ export function hydrateAppState(parsed) {
       ...defaultAppState.progress,
       ...(legacyState.progress ?? {}),
       completedSessionIds: legacyState.progress?.completedSessionIds ?? legacyState.completedSessionIds ?? defaultAppState.progress.completedSessionIds,
+      sessionLogs: legacyState.progress?.sessionLogs ?? defaultAppState.progress.sessionLogs,
     },
     ui: {
       ...defaultAppState.ui,
       ...(legacyState.ui ?? {}),
       currentScreen: legacyState.ui?.currentScreen ?? legacyState.currentScreen ?? defaultAppState.ui.currentScreen,
+      detailScreen: legacyState.ui?.detailScreen ?? defaultAppState.ui.detailScreen,
+      runMode: legacyState.ui?.runMode ?? defaultAppState.ui.runMode,
     },
   };
 }
@@ -75,9 +104,9 @@ export function hydrateAppState(parsed) {
  */
 export function shouldResetPlanProgress(previousProfile, nextProfile) {
   return (
-    previousProfile.startPoint !== nextProfile.startPoint ||
-    previousProfile.weeklyPattern !== nextProfile.weeklyPattern ||
-    previousProfile.focus !== nextProfile.focus
+    previousProfile.experienceLevel !== nextProfile.experienceLevel ||
+    previousProfile.goal !== nextProfile.goal ||
+    previousProfile.weeklyPattern !== nextProfile.weeklyPattern
   );
 }
 
@@ -98,14 +127,26 @@ export function buildSavedSetupState(currentState, nextProfile, isFirstSetup) {
         ...currentState.plan,
         hasSetup: true,
         selectedSessionId: "1-1",
+        recoveryWeek: {
+          active: false,
+          completedRuns: 0,
+          targetSessionId: null,
+        },
+        repeatWeek: {
+          active: false,
+          week: null,
+          sessionIndex: 0,
+        },
       },
       progress: {
         ...currentState.progress,
         completedSessionIds: [],
+        sessionLogs: [],
       },
       ui: {
         ...currentState.ui,
         currentScreen: "dashboard",
+        detailScreen: null,
       },
     };
   }
@@ -120,6 +161,32 @@ export function buildSavedSetupState(currentState, nextProfile, isFirstSetup) {
     ui: {
       ...currentState.ui,
       currentScreen: "dashboard",
+      detailScreen: null,
     },
   };
+}
+
+function mapLegacyExperience(startPoint) {
+  switch (startPoint) {
+    case "Complete beginner":
+      return "Very new to running";
+    case "Walking regularly":
+      return "Beginner";
+    case "Coming back":
+      return "Getting back into it";
+    default:
+      return null;
+  }
+}
+
+function mapLegacyGoal(focus) {
+  switch (focus) {
+    case "Stay comfortable":
+      return "Build to 30 minutes";
+    case "Reach 5K":
+      return "Finish 5K";
+    case "Build consistency":
+    default:
+      return null;
+  }
 }

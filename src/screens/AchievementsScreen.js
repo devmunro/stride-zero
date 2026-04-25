@@ -10,13 +10,14 @@ import { useTheme } from "../theme/theme";
  *
  * @param {Object} props Component props
  * @param {Object[]} props.unlocked Achievements unlocked by the user
+ * @param {Function} props.onBack Back navigation handler
  * @returns {JSX.Element} Achievements screen
  */
-export function AchievementsScreen({ unlocked }) {
+export function AchievementsScreen({ unlocked, onBack }) {
   const theme = useTheme();
   return (
     <ScreenTransition style={styles.screenStack}>
-      <SectionHeader label="Achievements" title="Milestones" badge={`${unlocked.length} unlocked`} />
+      <SectionHeader label="Achievements" title="Milestones" action="Back" onAction={onBack}  />
       {unlocked.length === 0 ? (
         <Card style={styles.emptyCard}>
           <Title style={[styles.emptyTitle, { color: theme.text }]}>Milestones will show up here</Title>

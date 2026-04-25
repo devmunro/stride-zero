@@ -1,23 +1,33 @@
 /**
- * Available starting-point options for onboarding.
+ * Available experience options for onboarding.
  *
  * @type {string[]}
  */
-export const START_POINT_OPTIONS = ["Complete beginner", "Walking regularly", "Coming back"];
+export const EXPERIENCE_LEVEL_OPTIONS = [
+  "Very new to running",
+  "Beginner",
+  "Getting back into it",
+  "Already comfortable at 5K",
+];
+
+/**
+ * Available goal options for onboarding.
+ *
+ * @type {string[]}
+ */
+export const GOAL_OPTIONS = [
+  "Build to 30 minutes",
+  "Finish 5K",
+  "Run a better 5K",
+  "Build to 10K",
+];
 
 /**
  * Available schedule presets for the training plan.
  *
  * @type {string[]}
  */
-export const WEEKLY_PATTERN_OPTIONS = ["3 days a week", "Flexible schedule", "Weekday focused"];
-
-/**
- * Available training focus presets.
- *
- * @type {string[]}
- */
-export const FOCUS_OPTIONS = ["Build consistency", "Stay comfortable", "Reach 5K"];
+export const WEEKLY_PATTERN_OPTIONS = ["2 runs most weeks", "3 runs most weeks", "4 runs most weeks"];
 
 /**
  * Available cue-mode options for the run timer.
@@ -32,3 +42,10 @@ export const CUE_MODE_OPTIONS = ["Sound + vibration", "Vibration only", "Off"];
  * @type {string[]}
  */
 export const APPEARANCE_OPTIONS = ["Light", "Dark"];
+
+/**
+ * Reminder time presets used in settings.
+ *
+ * @type {string[]}
+ */
+export const REMINDER_TIME_OPTIONS = ["06:30", "07:30", "12:30", "18:30", "20:00"];

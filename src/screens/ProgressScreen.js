@@ -5,18 +5,12 @@ import { styles } from "../theme/styles";
 import { useTheme } from "../theme/theme";
 
 /**
- * Summarizes progress using simple visual stats and the next workout cue.
+ * Summarizes progress using richer visual stats.
  *
  * @param {Object} props Component props
- * @param {number[]} props.weeklyCompletion Completed sessions per week
- * @param {number} props.longestRun Longest completed continuous run in minutes
- * @param {number} props.totalMinutes Total completed workout minutes
- * @param {Object[]} props.unlocked Unlocked achievements
- * @param {Object} props.nextSession Next recommended session
- * @param {number} props.completedCount Number of completed sessions
  * @returns {JSX.Element} Progress screen
  */
-export function ProgressScreen({ weeklyCompletion, longestRun, totalMinutes, unlocked, nextSession, completedCount }) {
+export function ProgressScreen({ weeklyCompletion, unlocked, nextSession, completedCount, summary, roadTitle = "Road to goal" }) {
   const theme = useTheme();
 
   if (completedCount === 0) {
@@ -26,7 +20,7 @@ export function ProgressScreen({ weeklyCompletion, longestRun, totalMinutes, unl
         <Card style={styles.emptyCard}>
           <Title style={[styles.emptyTitle, { color: theme.text }]}>No runs logged yet</Title>
           <Body style={[styles.emptyNote, { color: theme.textMuted }]}>
-            Finish your first workout to unlock weekly progress bars, longest-run tracking, and milestone badges.
+            Finish your first workout to unlock weekly progress bars, your completion calendar, personal bests, and goal milestones.
           </Body>
         </Card>
       </ScreenTransition>
@@ -49,15 +43,54 @@ export function ProgressScreen({ weeklyCompletion, longestRun, totalMinutes, unl
       </Card>
 
       <View style={styles.metricsRow}>
-        <MetricCard label="Longest run" value={`${longestRun} min`} note="continuous" />
-        <MetricCard label="Time moving" value={`${totalMinutes} min`} note="total" />
+        <MetricCard label="Longest run" value={`${summary.longestRun} min`} note="continuous" />
+        <MetricCard label="Time moving" value={`${summary.totalMinutes} min`} note="all logged work" />
       </View>
+
+      <Card>
+        <Label>Personal bests</Label>
+        {summary.personalBests.map((item, index) => (
+          <InfoLine key={item.label} title={item.label} value={item.value} first={index === 0} />
+        ))}
+      </Card>
+
+      <Card>
+        <Label>{roadTitle}</Label>
+        <View style={styles.roadList}>
+          {summary.road.map((item) => (
+            <View key={item.id} style={[styles.roadRow, { borderColor: theme.border, backgroundColor: item.reached ? theme.chip : "transparent" }]}>
+              <Text style={[styles.roadTitle, { color: theme.text }]}>{item.label}</Text>
+              <Text style={[styles.listMeta, { color: theme.textSoft }]}>{item.reached ? "Reached" : `${item.minutes} min`}</Text>
+            </View>
+          ))}
+        </View>
+      </Card>
+
+      <Card>
+        <Label>Completion calendar</Label>
+        <View style={styles.calendarGrid}>
+          {summary.calendar.map((item) => (
+            <View
+              key={item.dateKey}
+              style={[
+                styles.calendarCell,
+                {
+                  backgroundColor: item.count === 0 ? theme.surfaceMuted : item.count === 1 ? theme.chip : theme.text,
+                  borderColor: theme.border,
+                },
+              ]}
+            />
+          ))}
+        </View>
+        <Body style={styles.inlineTopSpacing}>Last 35 days. Darker cells mean more sessions on that day.</Body>
+      </Card>
 
       <Card>
         <Label>Next up</Label>
         <InfoLine title="Completed" value={`${completedCount}`} first />
         <InfoLine title="Latest badge" value={unlocked[unlocked.length - 1]?.title ?? "Not yet"} />
-        <InfoLine title="Next workout" value={`Week ${nextSession.week} - Run ${nextSession.run}`} />
+        <InfoLine title="Latest log" value={summary.latestLabel} />
+        <InfoLine title="Next workout" value={`Week ${nextSession.week} - ${nextSession.dayLabel ?? `Run ${nextSession.run}`}`} />
       </Card>
     </ScreenTransition>
   );

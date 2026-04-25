@@ -3,4 +3,4 @@
  *
  * @type {string}
  */
-export const STORAGE_KEY = "stride-zero-state-v2";
+export const STORAGE_KEY = "stride-zero-state-v3";

@@ -4,28 +4,22 @@ import { Body, Card, HeroTitle, InfoLine, Label, PrimaryButton, ScreenTransition
 import { styles } from "../theme/styles";
 import { useTheme } from "../theme/theme";
 
-/**
- * Final completion screen shown after the full 5K plan is finished.
- *
- * @param {Object} props Component props
- * @param {Function} props.onReviewPlan Opens the full plan review
- * @returns {JSX.Element} Finish screen
- */
-export function FinishScreen({ onReviewPlan }) {
+export function FinishScreen({ onReviewPlan, summary, finishLabel }) {
   const theme = useTheme();
+
   return (
     <ScreenTransition style={styles.screenStack}>
       <View style={styles.runScreen}>
-        <Label>5K complete</Label>
+        <Label>Plan complete</Label>
         <View style={styles.finishBadge}>
-          <Text style={[styles.finishBadgeText, { color: theme.text }]}>5K</Text>
+          <Text style={[styles.finishBadgeText, { color: theme.text }]}>{finishLabel}</Text>
         </View>
-        <HeroTitle style={styles.centeredTitle}>Done.</HeroTitle>
-        <Body style={styles.centeredBody}>You followed the plan and finished your first 5K.</Body>
+        <HeroTitle style={styles.centeredTitle}>You made it.</HeroTitle>
+        <Body style={styles.centeredBody}>You followed the plan, logged the work, and finished this build with a real training history behind it.</Body>
         <Card>
-          <InfoLine title="Journey" value="9 weeks" first />
-          <InfoLine title="Runs" value="27" />
-          <InfoLine title="Result" value="5K complete" />
+          <InfoLine title="Longest run" value={`${summary.longestRun} min`} first />
+          <InfoLine title="Time moving" value={`${summary.totalMinutes} min`} />
+          <InfoLine title="Result" value={`${finishLabel} complete`} />
         </Card>
         <PrimaryButton label="See the full plan" onPress={onReviewPlan} />
       </View>

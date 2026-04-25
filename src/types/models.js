@@ -2,11 +2,13 @@
  * User profile choices that influence plan generation and app presentation.
  *
  * @typedef {Object} Profile
- * @property {string} startPoint Selected starting point
+ * @property {string} experienceLevel Selected experience level
+ * @property {string} goal Selected running goal
  * @property {string} weeklyPattern Selected weekly schedule
- * @property {string} focus Selected training focus
  * @property {string} cueMode Cue preference for the timer
  * @property {boolean} darkMode Whether dark mode is enabled
+ * @property {boolean} reminderEnabled Whether daily reminders are enabled
+ * @property {string} reminderTime Reminder time in HH:MM
  */
 
 /**
@@ -35,6 +37,8 @@
  * @property {boolean} isFinal Whether this is the final plan session
  * @property {string} [dayLabel] Optional weekly label for the session
  * @property {number} [sourceWeek] Source plan week used to build the session
+ * @property {boolean} [countsTowardPlan] Whether this session advances the plan
+ * @property {boolean} [isOptional] Whether this session is optional support work
  */
 
 /**
@@ -53,6 +57,8 @@
  * @typedef {Object} PlanState
  * @property {boolean} hasSetup Whether onboarding is complete
  * @property {string} selectedSessionId Selected session id
+ * @property {{active: boolean, completedRuns: number, targetSessionId: string|null}} recoveryWeek Recovery-week status
+ * @property {{active: boolean, week: number|null, sessionIndex: number}} repeatWeek Repeat-week status
  */
 
 /**
@@ -60,6 +66,7 @@
  *
  * @typedef {Object} ProgressState
  * @property {string[]} completedSessionIds Completed session ids
+ * @property {Object[]} sessionLogs Workout history
  */
 
 /**
@@ -67,6 +74,8 @@
  *
  * @typedef {Object} UiState
  * @property {string} currentScreen Active screen key
+ * @property {string|null} detailScreen Active detail screen key
+ * @property {"complete"|"repeat"|"recovery"} [runMode] Current run save mode
  */
 
 /**
