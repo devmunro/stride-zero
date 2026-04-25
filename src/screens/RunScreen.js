@@ -118,6 +118,15 @@ export function RunScreen({ session, cueMode, onBack, onFinished, runMode }) {
     }
 
     countdownCueRef.current = cueKey;
+
+    if (remaining === 1) {
+      playDing();
+      playDing(120);
+      playDing(240);
+      playDing(360);
+      return;
+    }
+
     playDing();
   }, [cues.sound, finished, playDing, remaining, running, stepIndex]);
 
