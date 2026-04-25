@@ -1,19 +1,17 @@
 # Stride Zero
 
-Stride Zero is a minimal running app for beginners working toward a first 5K.
+Stride Zero is a beginner-first running coach built with Expo.
 
-It is built around a simple idea: black, white, clear structure, and no extra noise. Pick a starting point, follow the plan, run the session, and keep moving.
 
 ## What It Does
 
-- Builds a beginner-friendly run-walk plan
-- Guides each workout with timed cues
-- Saves progress locally on-device
-- Tracks simple stats and milestones
-- Keeps the interface clean and direct
+- Builds a simple-friendly plan around current level, goal, and realistic weekly rhythm
+- Avoids fixed weekdays and recommends a run frequency that fits the runner
+- Guides each workout with countdown beeps, voice cues, and vibration
+- Saves plan state, workout history, reminders, and progress locally on-device
+- Tracks milestones, personal bests, a road-to-goal view, and a completion calendar
 
 ## Screenshots
-
 
 <p align="center">
   <img src="docs/screenshots/dashboard.jpeg" alt="Dashboard" width="30%" />
@@ -34,28 +32,35 @@ Shortcuts:
 npm run android
 npm run ios
 npm run check
+npm run lint
+npm run smoke
 ```
 
 ## Structure
 
 ```text
 src/
-  components/ui/
+  components/
   config/
   data/
   lib/
   screens/
   theme/
   types/
+docs/
+assets/
 App.js
 ```
 
-## Notes
+## Product Notes
 
 - Native Expo app
 - Local storage with AsyncStorage
+- Daily reminders with `expo-notifications`
 - Setup changes that reshape the plan can reset progress so the schedule stays accurate
+- Includes in-app help, safety, privacy, andsupport content
+
 
 ## Repo Description
 
-`Minimal Expo running app for first-5K training with guided sessions, local progress tracking, and a clean black-and-white UI.`
+`Adaptive Expo running app for beginner running plans with guided sessions, reminders, local progress tracking, and a clean simple-friendly UI.`
