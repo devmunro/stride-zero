@@ -7,41 +7,19 @@ import { Body, Card, GhostButton, InfoLine, PrimaryButton, Title } from "../comp
 import { styles } from "../theme/styles";
 import { useTheme } from "../theme/theme";
 
-/**
- * Formats seconds as MM:SS for the workout timer display.
- *
- * @param {number} totalSeconds Remaining time in seconds
- * @returns {string} Formatted timer text
- */
 function formatTime(totalSeconds) {
   const minutes = Math.floor(totalSeconds / 60);
   const seconds = totalSeconds % 60;
   return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
 }
 
-/**
- * Resolves cue preferences into sound and vibration flags.
- *
- * @param {string} mode Cue mode selected in setup
- * @returns {{sound: boolean, vibration: boolean}} Cue flags
- */
 function cueFlags(mode) {
   if (mode === "Vibration only") return { sound: false, vibration: true };
   if (mode === "Off") return { sound: false, vibration: false };
   return { sound: true, vibration: true };
 }
 
-/**
- * Runs the active workout timer, cues, and lock controls.
- *
- * @param {Object} props Component props
- * @param {Object} props.session Active workout session
- * @param {string} props.cueMode Current cue preference
- * @param {Function} props.onBack Returns to the workout summary
- * @param {Function} props.onFinished Saves the workout as complete
- * @returns {JSX.Element} Run screen
- */
-export function RunScreen({ session, cueMode, onBack, onFinished }) {
+export function RunScreen({ session, cueMode, onBack, onFinished, runMode }) {
   useKeepAwake();
   const theme = useTheme();
   const player = useAudioPlayer(require("../../assets/ding.wav"));
@@ -50,28 +28,20 @@ export function RunScreen({ session, cueMode, onBack, onFinished }) {
   const [running, setRunning] = useState(true);
   const [finished, setFinished] = useState(false);
   const [locked, setLocked] = useState(true);
+  const [unlockProgress, setUnlockProgress] = useState(0);
   const [cues, setCues] = useState(cueFlags(cueMode));
-  const unlockTimeout = useRef(null);
+  const unlockProgressInterval = useRef(null);
+  const unlockStartedAt = useRef(null);
   const cueTimeouts = useRef([]);
   const startedCueRef = useRef(null);
+  const countdownCueRef = useRef(null);
 
-  /**
-   * Clears any pending cue timers before scheduling a new cue pattern.
-   *
-   * @returns {void}
-   */
   function clearCueTimeouts() {
     cueTimeouts.current.forEach((timeoutId) => clearTimeout(timeoutId));
     cueTimeouts.current = [];
   }
 
-  /**
-   * Schedules a short ding sound after the provided delay.
-   *
-   * @param {number} delay Delay in milliseconds
-   * @returns {void}
-   */
-  function playDing(delay) {
+  const playDing = useCallback((delay = 0) => {
     const timeoutId = setTimeout(() => {
       try {
         player.seekTo(0);
@@ -79,35 +49,25 @@ export function RunScreen({ session, cueMode, onBack, onFinished }) {
       } catch {}
     }, delay);
     cueTimeouts.current.push(timeoutId);
-  }
+  }, [player]);
 
-  /**
-   * Plays the cue sequence and follows it with spoken guidance.
-   *
-   * @param {string} message Spoken cue message
-   * @returns {void}
-   */
-  function playCuePattern(message) {
+  const playSpeechCue = useCallback((message, delay = 60) => {
     clearCueTimeouts();
     Speech.stop();
-    playDing(0);
-    playDing(240);
-    playDing(520);
-
     const speechTimeout = setTimeout(() => {
       Speech.speak(message, {
         rate: 0.95,
         pitch: 1,
       });
-    }, 760);
+    }, delay);
 
     cueTimeouts.current.push(speechTimeout);
-  }
+  }, []);
 
   const fireCueRef = useRef();
   fireCueRef.current = (isFinish, targetType) => {
     if (cues.sound) {
-      playCuePattern(isFinish ? "Workout completed" : `Start ${targetType === "run" ? "running" : "walking"}`);
+      playSpeechCue(isFinish ? "Workout completed" : `Start ${targetType === "run" ? "running" : "walking"}`);
     }
 
     if (cues.vibration) {
@@ -127,18 +87,18 @@ export function RunScreen({ session, cueMode, onBack, onFinished }) {
     setRunning(true);
     setFinished(false);
     setLocked(true);
+    setUnlockProgress(0);
     setCues(cueFlags(cueMode));
     startedCueRef.current = null;
+    countdownCueRef.current = null;
   }, [session.id, session.steps, cueMode]);
 
-  useEffect(() => {
-    return () => {
-      if (unlockTimeout.current) {
-        clearTimeout(unlockTimeout.current);
-      }
-      clearCueTimeouts();
-      Speech.stop();
-    };
+  useEffect(() => () => {
+    if (unlockProgressInterval.current) {
+      clearInterval(unlockProgressInterval.current);
+    }
+    clearCueTimeouts();
+    Speech.stop();
   }, []);
 
   useEffect(() => {
@@ -146,6 +106,20 @@ export function RunScreen({ session, cueMode, onBack, onFinished }) {
     startedCueRef.current = session.id;
     fireCue(false, session.steps[0]?.type ?? "walk");
   }, [running, session.id, session.steps, fireCue]);
+
+  useEffect(() => {
+    if (!running || finished || !cues.sound || remaining > 3 || remaining < 1) {
+      return;
+    }
+
+    const cueKey = `${stepIndex}-${remaining}`;
+    if (countdownCueRef.current === cueKey) {
+      return;
+    }
+
+    countdownCueRef.current = cueKey;
+    playDing();
+  }, [cues.sound, finished, playDing, remaining, running, stepIndex]);
 
   useEffect(() => {
     if (!running) return undefined;
@@ -166,6 +140,7 @@ export function RunScreen({ session, cueMode, onBack, onFinished }) {
         }
 
         setStepIndex(nextIndex);
+        countdownCueRef.current = null;
         fireCue(false, nextStep.type);
         return nextStep.seconds;
       });
@@ -182,15 +157,40 @@ export function RunScreen({ session, cueMode, onBack, onFinished }) {
   );
 
   function beginHoldUnlock() {
-    unlockTimeout.current = setTimeout(() => setLocked(false), 850);
+    if (!locked) {
+      return;
+    }
+
+    unlockStartedAt.current = Date.now();
+    setUnlockProgress(0);
+
+    unlockProgressInterval.current = setInterval(() => {
+      const elapsed = Date.now() - unlockStartedAt.current;
+      const nextProgress = Math.min(1, elapsed / 900);
+      setUnlockProgress(nextProgress);
+
+      if (nextProgress >= 1) {
+        if (unlockProgressInterval.current) {
+          clearInterval(unlockProgressInterval.current);
+          unlockProgressInterval.current = null;
+        }
+        setLocked(false);
+      }
+    }, 16);
   }
 
   function cancelHoldUnlock() {
-    if (unlockTimeout.current) {
-      clearTimeout(unlockTimeout.current);
-      unlockTimeout.current = null;
+    if (unlockProgressInterval.current) {
+      clearInterval(unlockProgressInterval.current);
+      unlockProgressInterval.current = null;
+    }
+    unlockStartedAt.current = null;
+    if (locked) {
+      setUnlockProgress(0);
     }
   }
+
+  const finishLabel = runMode === "repeat" ? "Save repeat run" : runMode === "recovery" ? "Save recovery run" : "Complete run";
 
   return (
     <View style={styles.runScreen}>
@@ -201,17 +201,17 @@ export function RunScreen({ session, cueMode, onBack, onFinished }) {
           </View>
           <Text style={[styles.timer, { color: theme.text }]}>Done</Text>
           <Title style={[styles.centeredTitle, { color: theme.text }]}>Workout completed</Title>
-          <Body style={styles.centeredBody}>Nice work. Save this run and move on.</Body>
+          <Body style={styles.centeredBody}>Nice work. Save this run and keep moving.</Body>
 
           <Card>
             <InfoLine title="Workout" value={session.title} first />
             <InfoLine title="Time" value={`${session.totalMinutes} min`} />
-            <InfoLine title="Status" value="Ready to save" />
+            <InfoLine title="Save as" value={runMode === "repeat" ? "Repeat-week run" : runMode === "recovery" ? "Recovery run" : "Plan completion"} />
           </Card>
 
           <View style={styles.buttonRow}>
             <GhostButton label="Back" onPress={onBack} />
-            <PrimaryButton label="Complete run" onPress={onFinished} />
+            <PrimaryButton label={finishLabel} onPress={() => onFinished(runMode)} />
           </View>
         </>
       ) : (
@@ -237,20 +237,40 @@ export function RunScreen({ session, cueMode, onBack, onFinished }) {
               </View>
               <View style={styles.buttonRow}>
                 <GhostButton label={running ? "Pause" : "Resume"} onPress={() => setRunning((value) => !value)} />
-                <PrimaryButton label="Lock" onPress={() => setLocked(true)} />
+                <PrimaryButton
+                  label="Lock"
+                  onPress={() => {
+                    setLocked(true);
+                    setUnlockProgress(0);
+                  }}
+                />
               </View>
             </>
           ) : null}
 
-          <View>
+          <View style={styles.unlockWrap}>
             <Pressable
               accessibilityRole="button"
               accessibilityLabel={locked ? "Hold to unlock controls" : "Controls unlocked"}
-              style={[styles.lockHint, { backgroundColor: theme.chip }]}
+              style={[styles.lockHint, { backgroundColor: theme.chip, overflow: "hidden" }]}
               onPressIn={beginHoldUnlock}
               onPressOut={cancelHoldUnlock}
             >
-              <Text style={{ color: theme.textSoft, fontWeight: "600" }}>{locked ? "Hold to unlock" : "Controls unlocked"}</Text>
+              {locked ? (
+                <View
+                  pointerEvents="none"
+                  style={[
+                    styles.unlockButtonFill,
+                    {
+                      width: `${unlockProgress * 100}%`,
+                      backgroundColor: theme.text,
+                    },
+                  ]}
+                />
+              ) : null}
+              <Text style={[styles.lockHintText, { color: locked ? theme.textSoft : theme.textSoft }]}>
+                {locked ? "Hold to unlock" : "Controls unlocked"}
+              </Text>
             </Pressable>
             {!locked ? (
               <Pressable accessibilityRole="button" accessibilityLabel="Stop workout" onPress={onBack}>
