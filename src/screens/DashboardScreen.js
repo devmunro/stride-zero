@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "react-native";
-import { Body, Card, Label, MetricCard, ScreenTransition, SecondaryButton, SectionHeader, Title } from "../components/ui/UI";
+import { Body, Card, GhostButton, Label, MetricCard, ScreenTransition, SecondaryButton, SectionHeader, Title } from "../components/ui/UI";
 import { styles } from "../theme/styles";
 import { useTheme } from "../theme/theme";
 
@@ -8,30 +8,40 @@ import { useTheme } from "../theme/theme";
  * Shows the next workout and a compact summary of current progress.
  *
  * @param {Object} props Component props
- * @param {Object} props.profile Active user profile
- * @param {Object} props.nextSession Next recommended session
- * @param {number} props.completionPercent Plan completion percentage
- * @param {number} props.completedCount Number of completed sessions
- * @param {number} props.streak Number of fully completed weeks
- * @param {Function} props.onOpenWorkout Opens the workout screen
- * @param {Function} props.onOpenSetup Opens the setup editor
  * @returns {JSX.Element} Dashboard screen
  */
-export function DashboardScreen({ profile, nextSession, completionPercent, completedCount, streak, onOpenWorkout, onOpenSetup }) {
+export function DashboardScreen({
+  nextSession,
+  completionPercent,
+  completedCount,
+  streak,
+  onOpenWorkout,
+  onOpenSetup,
+  onTakeRecoveryWeek,
+  recoveryWeekActive,
+}) {
   const theme = useTheme();
+
   return (
     <ScreenTransition style={styles.screenStack}>
-      <SectionHeader label="Dashboard" title="Ready for your next run" action="Edit setup" onAction={onOpenSetup} />
+      <SectionHeader label="Dashboard" title="Ready for your next run" action="Settings" onAction={onOpenSetup} />
 
       <Card dark>
-        <Label style={[styles.darkLabel, { color: theme.heroMutedText }]}>Up next</Label>
-        <Title style={[styles.darkTitle, { color: theme.heroText }]}>{`Week ${nextSession.week} - Run ${nextSession.run}`}</Title>
+        <View style={styles.headerRow}>
+          <View style={styles.flex}>
+            <Label style={[styles.darkLabel, { color: theme.heroMutedText }]}>{recoveryWeekActive ? "Recovery week active" : "Up next"}</Label>
+            <Title style={[styles.darkTitle, { color: theme.heroText }]}>{`Week ${nextSession.week} - ${nextSession.dayLabel ?? `Run ${nextSession.run}`}`}</Title>
+          </View>
+        </View>
         <Body style={[styles.darkBody, { color: theme.heroMutedText }]}>{nextSession.summary}</Body>
-        <SecondaryButton label="Start workout" light onPress={onOpenWorkout} />
+        <View style={styles.buttonColumn}>
+          <SecondaryButton label="Start workout" light onPress={onOpenWorkout} />
+          <GhostButton label={recoveryWeekActive ? "Turn off recovery week" : "Take recovery week"} onPress={onTakeRecoveryWeek} compact />
+        </View>
       </Card>
 
       <View style={styles.metricsRow}>
-        <MetricCard label="Done" value={`${completionPercent}%`} note={`${completedCount} sessions`} />
+        <MetricCard label="Done" value={`${completionPercent}%`} note={`${completedCount} core runs`} />
         <MetricCard label="Streak" value={`${streak}`} note="full weeks" />
       </View>
 
@@ -39,11 +49,10 @@ export function DashboardScreen({ profile, nextSession, completionPercent, compl
         <Card style={styles.emptyCard}>
           <Title style={[styles.emptyTitle, { color: theme.text }]}>First run coming up</Title>
           <Body style={[styles.emptyNote, { color: theme.textMuted }]}>
-            Start your next guided workout and the app will begin building your streak, stats, and unlocked milestones.
+            Start your first guided workout to unlock the completion calendar, personal bests, and your road-to-goal progress.
           </Body>
         </Card>
       ) : null}
-
     </ScreenTransition>
   );
 }

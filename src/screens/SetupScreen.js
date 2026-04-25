@@ -1,6 +1,6 @@
 import React from "react";
 import { ScrollView, View } from "react-native";
-import { APPEARANCE_OPTIONS, CUE_MODE_OPTIONS, FOCUS_OPTIONS, START_POINT_OPTIONS, WEEKLY_PATTERN_OPTIONS } from "../config/profileOptions";
+import { APPEARANCE_OPTIONS, CUE_MODE_OPTIONS, EXPERIENCE_LEVEL_OPTIONS, GOAL_OPTIONS, WEEKLY_PATTERN_OPTIONS } from "../config/profileOptions";
 import { Body, Card, GhostButton, HeroTitle, Label, OptionRow, PrimaryButton, ScreenTransition } from "../components/ui/UI";
 import { styles } from "../theme/styles";
 
@@ -18,23 +18,25 @@ import { styles } from "../theme/styles";
 export function SetupScreen({ profile, onChange, onContinue, onReset, compact = false }) {
   const content = (
     <ScreenTransition style={styles.screenStack}>
-      <Label>{compact ? "Edit setup" : "No login"}</Label>
-      <HeroTitle>{compact ? "Keep it simple." : "Set up once. Start right away."}</HeroTitle>
-      <Body>Choose a few basics and the plan stays saved on this device.</Body>
+      <View style={styles.flex}>
+        <Label>{compact ? "Plan settings" : "Coach-built setup"}</Label>
+        <HeroTitle>{compact ? "Update your plan." : "Start with the right plan."}</HeroTitle>
+        <Body>Keep it simple. Tell us where you are now, what you want next, and how many runs fit your week.</Body>
+      </View>
 
       <Card>
-        <Label>Starting point</Label>
-        <OptionRow value={profile.startPoint} options={START_POINT_OPTIONS} onSelect={(value) => onChange("startPoint", value)} />
+        <Label>Where are you right now?</Label>
+        <OptionRow value={profile.experienceLevel} options={EXPERIENCE_LEVEL_OPTIONS} onSelect={(value) => onChange("experienceLevel", value)} />
       </Card>
 
       <Card>
-        <Label>Weekly rhythm</Label>
+        <Label>What are you building toward?</Label>
+        <OptionRow value={profile.goal} options={GOAL_OPTIONS} onSelect={(value) => onChange("goal", value)} />
+      </Card>
+
+      <Card>
+        <Label>Runs most weeks</Label>
         <OptionRow value={profile.weeklyPattern} options={WEEKLY_PATTERN_OPTIONS} onSelect={(value) => onChange("weeklyPattern", value)} />
-      </Card>
-
-      <Card>
-        <Label>Main focus</Label>
-        <OptionRow value={profile.focus} options={FOCUS_OPTIONS} onSelect={(value) => onChange("focus", value)} />
       </Card>
 
       <Card>
@@ -47,7 +49,7 @@ export function SetupScreen({ profile, onChange, onContinue, onReset, compact = 
         <OptionRow value={profile.darkMode ? "Dark" : "Light"} options={APPEARANCE_OPTIONS} onSelect={(value) => onChange("darkMode", value === "Dark")} />
       </Card>
 
-      <PrimaryButton label={compact ? "Save settings" : "Start plan"} onPress={onContinue} />
+      <PrimaryButton label={compact ? "Save settings" : "Build my plan"} onPress={onContinue} />
       {compact && onReset ? <GhostButton label="Clear saved data" onPress={onReset} /> : null}
     </ScreenTransition>
   );

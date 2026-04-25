@@ -10,11 +10,13 @@ import { useTheme } from "../../theme/theme";
  * @param {React.ReactNode} props.children Card content
  * @param {Object|Object[]} [props.style] Additional style overrides
  * @param {boolean} [props.dark=false] Whether to use the hero card treatment
+ * @param {boolean} [props.highlight=false] Whether to use the highlighted support treatment
  * @returns {JSX.Element} Card container
  */
-export function Card({ children, style, dark = false, ...props }) {
+export function Card({ children, style, dark = false, highlight = false, ...props }) {
   const theme = useTheme();
-  return <View style={[styles.card, { backgroundColor: dark ? theme.heroSurface : theme.surface, borderColor: theme.border }, style]} {...props}>{children}</View>;
+  const backgroundColor = dark ? theme.heroSurface : highlight ? theme.highlightSurface : theme.surface;
+  return <View style={[styles.card, { backgroundColor, borderColor: theme.border }, style]} {...props}>{children}</View>;
 }
 
 /**
@@ -207,9 +209,7 @@ export function OptionRow({ value, options, onSelect }) {
           ]}
           onPress={() => onSelect(option)}
         >
-          <Text style={[styles.optionText, { color: theme.textMuted }, value === option && { color: theme.inverseText }]}>
-            {value === option ? `Selected: ${option}` : option}
-          </Text>
+          <Text style={[styles.optionText, { color: theme.textMuted }, value === option && { color: theme.inverseText }]}>{option}</Text>
         </Pressable>
       ))}
     </View>

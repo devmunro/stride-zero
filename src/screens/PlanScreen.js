@@ -1,6 +1,6 @@
 import React from "react";
 import { Pressable, Text, View } from "react-native";
-import { Card, Label, Pill, ScreenTransition, SectionHeader, Title } from "../components/ui/UI";
+import { Card, GhostButton, Label, Pill, ScreenTransition, SectionHeader, Title } from "../components/ui/UI";
 import { styles } from "../theme/styles";
 import { useTheme } from "../theme/theme";
 
@@ -8,36 +8,34 @@ import { useTheme } from "../theme/theme";
  * Renders the full training plan with completion state and quick navigation.
  *
  * @param {Object} props Component props
- * @param {Object[]} props.trainingPlan Display-ready training plan
- * @param {Set<string>} props.completedSet Completed session ids
- * @param {string} props.nextSessionId Next recommended session id
- * @param {Function} props.onSelectSession Opens a selected session
- * @param {Object} props.scrollRef Parent scroll view ref
  * @returns {JSX.Element} Plan screen
  */
-export function PlanScreen({ trainingPlan, completedSet, nextSessionId, onSelectSession, scrollRef }) {
+export function PlanScreen({ trainingPlan, completedSet, nextSessionId, onSelectSession, scrollRef, recoveryWeekActive, repeatWeekWeek, onRepeatWeek, planLabel }) {
   const theme = useTheme();
   const currentWeek = Number(nextSessionId.split("-")[0]);
+  const sessionsPerWeek = trainingPlan[0]?.sessions.filter((session) => session.countsTowardPlan !== false).length || 1;
 
   return (
     <ScreenTransition style={styles.screenStack}>
-      <SectionHeader label="Training plan" title="9 weeks" />
+      <SectionHeader label={planLabel} title={`${trainingPlan.length} weeks`} badge={recoveryWeekActive ? "Recovery week active" : undefined} mutedBadge />
       {trainingPlan.map((week) => {
-        const done = week.sessions.filter((session) => completedSet.has(session.id)).length;
+        const coreSessions = week.sessions.filter((session) => session.countsTowardPlan !== false);
+        const done = coreSessions.filter((session) => completedSet.has(session.id)).length;
         const isFuture = week.week > currentWeek && done === 0;
         const isCurrent = week.week === currentWeek;
-        const sessionsRequired = Math.max(0, (week.week - 1) * week.sessions.length);
+        const isRepeatWeek = repeatWeekWeek === week.week;
+        const sessionsRequired = Math.max(0, (week.week - 1) * sessionsPerWeek);
         const completedBeforeWeek = trainingPlan
           .filter((candidateWeek) => candidateWeek.week < week.week)
           .flatMap((candidateWeek) => candidateWeek.sessions)
-          .filter((session) => completedSet.has(session.id)).length;
+          .filter((session) => session.countsTowardPlan !== false && completedSet.has(session.id)).length;
         const unlockRatio = sessionsRequired === 0 ? 1 : completedBeforeWeek / sessionsRequired;
 
         return (
           <Card
             key={week.week}
             style={[
-              done === 3 ? styles.doneWeek : null,
+              done === coreSessions.length ? styles.doneWeek : null,
               isFuture ? styles.futureWeek : null,
               isCurrent ? [styles.currentWeek, { borderColor: theme.text }] : null,
             ]}
@@ -56,9 +54,7 @@ export function PlanScreen({ trainingPlan, completedSet, nextSessionId, onSelect
                 <Title style={[styles.cardTitle, { color: theme.text }]}>{week.goal}</Title>
                 {isFuture ? (
                   <View style={styles.unlockWrap}>
-                    <Text style={[styles.unlockCopy, { color: theme.textSoft }]}>
-                      {`Unlock progress ${completedBeforeWeek}/${sessionsRequired}`}
-                    </Text>
+                    <Text style={[styles.unlockCopy, { color: theme.textSoft }]}>{`Unlock progress ${completedBeforeWeek}/${sessionsRequired}`}</Text>
                     <View style={[styles.unlockTrack, { backgroundColor: theme.chip }]}>
                       <View
                         style={[
@@ -73,15 +69,29 @@ export function PlanScreen({ trainingPlan, completedSet, nextSessionId, onSelect
                   </View>
                 ) : null}
               </View>
-              <Pill label={`${done}/3`} muted />
+              <Pill label={isRepeatWeek ? "Repeat week" : `${done}/${coreSessions.length}`} muted />
             </View>
+
+            {!isFuture && isCurrent && !recoveryWeekActive ? (
+              <GhostButton label={isRepeatWeek ? "Repeating this week" : "Repeat this week"} onPress={() => onRepeatWeek(week.week)} compact />
+            ) : null}
 
             {week.sessions.map((session, index) => (
               <Pressable
                 key={session.id}
                 disabled={isFuture}
                 accessibilityRole="button"
-                accessibilityLabel={`${session.dayLabel} ${session.title}. ${completedSet.has(session.id) ? "Completed" : session.id === nextSessionId ? "Next workout" : isFuture ? "Locked" : `${session.totalMinutes} minutes`}`}
+                accessibilityLabel={`${session.dayLabel} ${session.title}. ${
+                  completedSet.has(session.id)
+                    ? "Completed"
+                    : session.id === nextSessionId
+                      ? "Next workout"
+                      : isFuture
+                        ? "Locked"
+                        : session.countsTowardPlan === false
+                          ? "Optional support run"
+                          : `${session.totalMinutes} minutes`
+                }`}
                 accessibilityState={{ disabled: isFuture }}
                 style={[styles.listRow, index === 0 && styles.listRowFirst]}
                 onPress={() => {
@@ -93,7 +103,15 @@ export function PlanScreen({ trainingPlan, completedSet, nextSessionId, onSelect
                   <Text style={[styles.listCopy, { color: theme.textMuted }]}>{session.summary}</Text>
                 </View>
                 <Text style={[isFuture ? styles.lockedText : styles.listMeta, { color: theme.textSoft }]}>
-                  {completedSet.has(session.id) ? "Done" : session.id === nextSessionId ? "Next" : isFuture ? "Locked" : `${session.totalMinutes} min`}
+                  {completedSet.has(session.id)
+                    ? "Done"
+                    : session.id === nextSessionId
+                      ? "Next"
+                      : isFuture
+                        ? "Locked"
+                        : session.countsTowardPlan === false
+                          ? "Optional"
+                          : `${session.totalMinutes} min`}
                 </Text>
               </Pressable>
             ))}
