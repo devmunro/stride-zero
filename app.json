@@ -2,9 +2,11 @@
   "expo": {
     "name": "Stride Zero",
     "slug": "stride-zero",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "orientation": "portrait",
     "userInterfaceStyle": "automatic",
+    "scheme": "stridezero",
+    "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash-logo.png",
       "resizeMode": "contain",
@@ -16,8 +18,34 @@
       "backgroundColor": "#05070a"
     },
     "android": {
-      "package": "com.stridezero.app"
+      "package": "com.stridezero.app",
+      "versionCode": 2,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#f4f1ea"
+      },
+      "permissions": [
+        "POST_NOTIFICATIONS",
+        "VIBRATE"
+      ]
     },
+    "ios": {
+      "bundleIdentifier": "com.stridezero.app",
+      "buildNumber": "2",
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSUserNotificationsUsageDescription": "Stride Zero sends local reminders for your planned runs.",
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "defaultChannel": "training-reminders"
+        }
+      ]
+    ],
     "extra": {
       "eas": {
         "projectId": "13d64108-4566-4141-97ef-412ce608b593"
