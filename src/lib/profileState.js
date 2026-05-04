@@ -105,8 +105,7 @@ export function hydrateAppState(parsed) {
 export function shouldResetPlanProgress(previousProfile, nextProfile) {
   return (
     previousProfile.experienceLevel !== nextProfile.experienceLevel ||
-    previousProfile.goal !== nextProfile.goal ||
-    previousProfile.weeklyPattern !== nextProfile.weeklyPattern
+    previousProfile.goal !== nextProfile.goal
   );
 }
 
