@@ -1,4 +1,11 @@
-# Stride Zero
+<div style="display: flex; align-items: center; gap: 16px;">
+  <img 
+    src="https://github.com/user-attachments/assets/4c88a4c8-9acf-482f-854d-5d814dc41b05" 
+    alt="Stride Zero Logo" 
+    width="80"
+  />
+  <h1 style="margin: 0;">Stride Zero</h1>
+</div>
 
 Stride Zero is a beginner-first running coach built with Expo.
 
