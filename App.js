@@ -2,17 +2,18 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as NavigationBar from "expo-navigation-bar";
 import { StatusBar } from "expo-status-bar";
-import { ActivityIndicator, Alert, Pressable, ScrollView, Text, View } from "react-native";
+import { ActivityIndicator, Alert, Animated, Pressable, ScrollView, Text, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { STORAGE_KEY } from "./src/config/storage";
 import { APP_VERSION } from "./src/config/product";
 import {
   achievements,
+  getUnlockedAchievements,
   buildRecoveryWeek,
   buildTrainingPlan,
   getPlanLabel,
   getPlanMilestones,
-} from "./src/data/trainingPlan";
+} from "./src/engine";
 import { createWorkoutLog, countCompletedWeeks, summarizeProgress } from "./src/lib/progress";
 import { syncDailyReminder } from "./src/lib/notifications";
 import { buildSavedSetupState, defaultAppState, defaultProfile, hydrateAppState, shouldResetPlanProgress } from "./src/lib/profileState";
@@ -37,10 +38,34 @@ export default function App() {
   const [ready, setReady] = useState(false);
   const [reminderPermissionGranted, setReminderPermissionGranted] = useState(false);
   const scrollRef = useRef(null);
+  const lastScrollY = useRef(0);
+  const tabTranslateY = useRef(new Animated.Value(0)).current;
+
+  const handleScroll = (event) => {
+    const currentY = event.nativeEvent.contentOffset.y;
+    const diff = currentY - lastScrollY.current;
+    
+    if (diff > 5 && currentY > 50) {
+      Animated.timing(tabTranslateY, {
+        toValue: 120,
+        duration: 250,
+        useNativeDriver: true,
+      }).start();
+    } else if (diff < -5 || currentY <= 0) {
+      Animated.timing(tabTranslateY, {
+        toValue: 0,
+        duration: 250,
+        useNativeDriver: true,
+      }).start();
+    }
+    lastScrollY.current = currentY;
+  };
+
   const trainingPlan = useMemo(() => buildTrainingPlan(appState.profile), [appState.profile]);
   const allSessions = useMemo(() => trainingPlan.flatMap((week) => week.sessions), [trainingPlan]);
   const coreSessions = useMemo(() => allSessions.filter((session) => session.countsTowardPlan !== false), [allSessions]);
   const completedSet = useMemo(() => new Set(appState.progress.completedSessionIds), [appState.progress.completedSessionIds]);
+  const [toast, setToast] = useState(null);
   const nextSession = coreSessions.find((session) => !completedSet.has(session.id)) ?? coreSessions[coreSessions.length - 1];
   const currentWeekSessions = useMemo(
     () => trainingPlan.find((week) => week.week === nextSession.week)?.sessions ?? [],
@@ -66,18 +91,30 @@ export default function App() {
       ? repeatWeekSessions[appState.plan.repeatWeek.sessionIndex] ?? repeatWeekSessions[0] ?? selectedSession
       : selectedSession;
   const completionPercent = Math.round((appState.progress.completedSessionIds.filter((id) => coreSessions.some((session) => session.id === id)).length / coreSessions.length) * 100 || 0);
-  const unlocked = achievements.filter((item) => appState.progress.completedSessionIds.length >= item.unlockAt);
+  const streak = countCompletedWeeks(trainingPlan, completedSet);
+  const unlocked = getUnlockedAchievements(appState, coreSessions.length, streak);
+  const prevUnlockedRef = useRef(unlocked);
   const weeklyCompletion = trainingPlan.map((week) =>
     week.sessions.filter((session) => session.countsTowardPlan !== false && completedSet.has(session.id)).length
   );
   const planLabel = useMemo(() => getPlanLabel(appState.profile), [appState.profile]);
   const planMilestones = useMemo(() => getPlanMilestones(appState.profile), [appState.profile]);
   const progressSummary = useMemo(() => summarizeProgress(appState.progress.sessionLogs, planMilestones), [appState.progress.sessionLogs, planMilestones]);
-  const streak = countCompletedWeeks(trainingPlan, completedSet);
 
   useEffect(() => {
     loadState();
   }, []);
+
+  useEffect(() => {
+    if (ready && unlocked.length > prevUnlockedRef.current.length) {
+      const newAchievements = unlocked.filter((u) => !prevUnlockedRef.current.some((pu) => pu.id === u.id));
+      if (newAchievements.length > 0) {
+        setToast(newAchievements[newAchievements.length - 1]);
+        setTimeout(() => setToast(null), 4000);
+      }
+    }
+    prevUnlockedRef.current = unlocked;
+  }, [unlocked, ready]);
 
   useEffect(() => {
     NavigationBar.setPositionAsync("absolute").catch(() => {});
@@ -186,6 +223,78 @@ export default function App() {
     await AsyncStorage.removeItem(STORAGE_KEY);
     setAppState(defaultAppState);
     setDraftProfile(defaultProfile);
+  }
+
+  function restartCurrentWeek() {
+    setAppState((current) => {
+      // Find the week that the user is currently on
+      const week = nextSession ? nextSession.week : null;
+      if (!week) return current;
+      
+      const weekPrefix = `${week}-`;
+      const completedSessionIds = current.progress.completedSessionIds.filter(
+        (id) => !id.startsWith(weekPrefix)
+      );
+
+      return {
+        ...current,
+        progress: {
+          ...current.progress,
+          completedSessionIds,
+        },
+        ui: {
+          ...current.ui,
+          currentScreen: "dashboard",
+        },
+      };
+    });
+  }
+
+  function restartProgram() {
+    setAppState((current) => ({
+      ...current,
+      progress: {
+        ...current.progress,
+        completedSessionIds: [],
+        sessionLogs: [],
+      },
+      ui: {
+        ...current.ui,
+        currentScreen: "dashboard",
+      },
+    }));
+  }
+
+  function injectDummyData() {
+    setAppState((current) => {
+      const dummyLogs = [];
+      const dummySessionIds = [];
+      const now = new Date();
+      
+      coreSessions.slice(0, 15).forEach((session, i) => {
+         const log = createWorkoutLog(session, "complete");
+         const pastDate = new Date(now.getTime() - (15 - i) * 86400000 * 2.3);
+         log.completedAt = pastDate.toISOString();
+         const month = String(pastDate.getMonth() + 1).padStart(2, "0");
+         const day = String(pastDate.getDate()).padStart(2, "0");
+         log.dateKey = `${pastDate.getFullYear()}-${month}-${day}`;
+         dummyLogs.push(log);
+         dummySessionIds.push(session.id);
+      });
+
+      return {
+        ...current,
+        progress: {
+          ...current.progress,
+          completedSessionIds: [...new Set([...current.progress.completedSessionIds, ...dummySessionIds])],
+          sessionLogs: [...current.progress.sessionLogs, ...dummyLogs],
+        },
+        ui: {
+          ...current.ui,
+          currentScreen: "dashboard",
+        }
+      };
+    });
   }
 
   function beginRun(runMode) {
@@ -340,7 +449,7 @@ export default function App() {
           <ThemedAppFrame>
             {appState.plan.hasSetup ? (
               <>
-                <ScrollView ref={scrollRef} showsVerticalScrollIndicator={false} contentContainerStyle={styles.scrollContent}>
+                <ScrollView ref={scrollRef} showsVerticalScrollIndicator={false} contentContainerStyle={styles.scrollContent} scrollEventThrottle={16} onScroll={handleScroll}>
                   {appState.ui.currentScreen === "dashboard" && (
                     <DashboardScreen
                       nextSession={activeSession}
@@ -414,6 +523,9 @@ export default function App() {
                       onOpenSetup={editPlanSetup}
                       onBack={() => setScreen("more")}
                       onReset={resetApp}
+                      onRestartWeek={restartCurrentWeek}
+                      onRestartProgram={restartProgram}
+                      onInjectDummyData={injectDummyData}
                       reminderPermissionGranted={reminderPermissionGranted}
                     />
                   )}
@@ -431,7 +543,13 @@ export default function App() {
                   )}
                 </ScrollView>
 
-                {!["finish", "run"].includes(appState.ui.currentScreen) && <TabBar currentScreen={appState.ui.currentScreen} onChange={setScreen} />}
+                {!["finish", "run"].includes(appState.ui.currentScreen) && <TabBar currentScreen={appState.ui.currentScreen} onChange={setScreen} style={{ transform: [{ translateY: tabTranslateY }] }} />}
+                {toast && (
+                  <View style={styles.toastContainer}>
+                    <Text style={styles.toastTitle}>Achievement Unlocked</Text>
+                    <Text style={styles.toastBody}>{toast.title}</Text>
+                  </View>
+                )}
               </>
             ) : (
               <SetupScreen
@@ -472,12 +590,12 @@ function ThemedAppFrame({ children }) {
   );
 }
 
-function TabBar({ currentScreen, onChange }) {
+function TabBar({ currentScreen, onChange, style }) {
   const theme = useTheme();
   const activeKey = ["settings", "help", "privacy", "support", "safety", "achievements"].includes(currentScreen) ? "more" : currentScreen;
 
   return (
-    <View style={[styles.tabBar, { backgroundColor: theme.overlay, borderColor: theme.border }]}>
+    <Animated.View style={[styles.tabBar, { backgroundColor: theme.overlay, borderColor: theme.border }, style]}>
       {[
         ["dashboard", "Home"],
         ["plan", "Plan"],
@@ -495,6 +613,6 @@ function TabBar({ currentScreen, onChange }) {
           <Text style={[styles.tabText, { color: theme.textSoft }, activeKey === key && { color: theme.inverseText }]}>{label}</Text>
         </Pressable>
       ))}
-    </View>
+    </Animated.View>
   );
 }
