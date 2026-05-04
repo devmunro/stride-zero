@@ -1,0 +1,1421 @@
+{
+  "id": "tenKPlan",
+  "name": "tenKPlan",
+  "weeks": [
+    {
+      "week": 1,
+      "goal": "Build from your 5K base.",
+      "sessions": [
+        {
+          "logicalId": "easy-30",
+          "run": 1,
+          "title": "Easy 30",
+          "summary": "Run 30 min easy",
+          "blocks": [
+            [
+              "Main set",
+              "Run 30 min easy"
+            ]
+          ],
+          "longestRun": 30,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 1800,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 40,
+          "totalSeconds": 2400,
+          "isFinal": false
+        },
+        {
+          "logicalId": "steady-24",
+          "run": 2,
+          "title": "Steady 24",
+          "summary": "Run 24 min steady",
+          "blocks": [
+            [
+              "Main set",
+              "Run 24 min steady"
+            ]
+          ],
+          "longestRun": 24,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 1440,
+              "label": "Steady run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 34,
+          "totalSeconds": 2040,
+          "isFinal": false
+        },
+        {
+          "logicalId": "long-38",
+          "run": 3,
+          "title": "Long 38",
+          "summary": "Run 38 min easy",
+          "blocks": [
+            [
+              "Main set",
+              "Run 38 min easy"
+            ]
+          ],
+          "longestRun": 38,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 2280,
+              "label": "Long easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 48,
+          "totalSeconds": 2880,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "goal": "Stretch the long run.",
+      "sessions": [
+        {
+          "logicalId": "easy-30",
+          "run": 1,
+          "title": "Easy 30",
+          "summary": "Run 30 min easy",
+          "blocks": [
+            [
+              "Main set",
+              "Run 30 min easy"
+            ]
+          ],
+          "longestRun": 30,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 1800,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 40,
+          "totalSeconds": 2400,
+          "isFinal": false
+        },
+        {
+          "logicalId": "steady-26",
+          "run": 2,
+          "title": "Steady 26",
+          "summary": "Run 26 min steady",
+          "blocks": [
+            [
+              "Main set",
+              "Run 26 min steady"
+            ]
+          ],
+          "longestRun": 26,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 1560,
+              "label": "Steady run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 36,
+          "totalSeconds": 2160,
+          "isFinal": false
+        },
+        {
+          "logicalId": "long-42",
+          "run": 3,
+          "title": "Long 42",
+          "summary": "Run 42 min easy",
+          "blocks": [
+            [
+              "Main set",
+              "Run 42 min easy"
+            ]
+          ],
+          "longestRun": 42,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 2520,
+              "label": "Long easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 52,
+          "totalSeconds": 3120,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "goal": "Hold the aerobic work.",
+      "sessions": [
+        {
+          "logicalId": "easy-32",
+          "run": 1,
+          "title": "Easy 32",
+          "summary": "Run 32 min easy",
+          "blocks": [
+            [
+              "Main set",
+              "Run 32 min easy"
+            ]
+          ],
+          "longestRun": 32,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 1920,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 42,
+          "totalSeconds": 2520,
+          "isFinal": false
+        },
+        {
+          "logicalId": "steady-28",
+          "run": 2,
+          "title": "Steady 28",
+          "summary": "Run 28 min steady",
+          "blocks": [
+            [
+              "Main set",
+              "Run 28 min steady"
+            ]
+          ],
+          "longestRun": 28,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 1680,
+              "label": "Steady run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 38,
+          "totalSeconds": 2280,
+          "isFinal": false
+        },
+        {
+          "logicalId": "long-45",
+          "run": 3,
+          "title": "Long 45",
+          "summary": "Run 45 min easy",
+          "blocks": [
+            [
+              "Main set",
+              "Run 45 min easy"
+            ]
+          ],
+          "longestRun": 45,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 2700,
+              "label": "Long easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 55,
+          "totalSeconds": 3300,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "goal": "Add some rhythm.",
+      "sessions": [
+        {
+          "logicalId": "easy-30",
+          "run": 1,
+          "title": "Easy 30",
+          "summary": "Run 30 min easy",
+          "blocks": [
+            [
+              "Main set",
+              "Run 30 min easy"
+            ]
+          ],
+          "longestRun": 30,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 1800,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 40,
+          "totalSeconds": 2400,
+          "isFinal": false
+        },
+        {
+          "logicalId": "tempo-steps",
+          "run": 2,
+          "title": "Tempo steps",
+          "summary": "3 x 8 min steady with 2 min walk",
+          "blocks": [
+            [
+              "Main set",
+              "3 x 8 min steady / 2 min walk"
+            ]
+          ],
+          "longestRun": 8,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 480,
+              "label": "Steady run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Walk reset"
+            },
+            {
+              "type": "run",
+              "seconds": 480,
+              "label": "Steady run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Walk reset"
+            },
+            {
+              "type": "run",
+              "seconds": 480,
+              "label": "Steady run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Walk reset"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 40,
+          "totalSeconds": 2400,
+          "isFinal": false
+        },
+        {
+          "logicalId": "long-48",
+          "run": 3,
+          "title": "Long 48",
+          "summary": "Run 48 min easy",
+          "blocks": [
+            [
+              "Main set",
+              "Run 48 min easy"
+            ]
+          ],
+          "longestRun": 48,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 2880,
+              "label": "Long easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 58,
+          "totalSeconds": 3480,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "goal": "Keep building.",
+      "sessions": [
+        {
+          "logicalId": "easy-32",
+          "run": 1,
+          "title": "Easy 32",
+          "summary": "Run 32 min easy",
+          "blocks": [
+            [
+              "Main set",
+              "Run 32 min easy"
+            ]
+          ],
+          "longestRun": 32,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 1920,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 42,
+          "totalSeconds": 2520,
+          "isFinal": false
+        },
+        {
+          "logicalId": "steady-30",
+          "run": 2,
+          "title": "Steady 30",
+          "summary": "Run 30 min steady",
+          "blocks": [
+            [
+              "Main set",
+              "Run 30 min steady"
+            ]
+          ],
+          "longestRun": 30,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 1800,
+              "label": "Steady run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 40,
+          "totalSeconds": 2400,
+          "isFinal": false
+        },
+        {
+          "logicalId": "long-52",
+          "run": 3,
+          "title": "Long 52",
+          "summary": "Run 52 min easy",
+          "blocks": [
+            [
+              "Main set",
+              "Run 52 min easy"
+            ]
+          ],
+          "longestRun": 52,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 3120,
+              "label": "Long easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 62,
+          "totalSeconds": 3720,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "goal": "Absorb the work.",
+      "sessions": [
+        {
+          "logicalId": "easy-28",
+          "run": 1,
+          "title": "Easy 28",
+          "summary": "Run 28 min easy",
+          "blocks": [
+            [
+              "Main set",
+              "Run 28 min easy"
+            ]
+          ],
+          "longestRun": 28,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 1680,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 38,
+          "totalSeconds": 2280,
+          "isFinal": false
+        },
+        {
+          "logicalId": "cruise-blocks",
+          "run": 2,
+          "title": "Cruise blocks",
+          "summary": "4 x 6 min steady with 90 sec walk",
+          "blocks": [
+            [
+              "Main set",
+              "4 x 6 min steady / 90 sec walk"
+            ]
+          ],
+          "longestRun": 6,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 360,
+              "label": "Steady run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk reset"
+            },
+            {
+              "type": "run",
+              "seconds": 360,
+              "label": "Steady run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk reset"
+            },
+            {
+              "type": "run",
+              "seconds": 360,
+              "label": "Steady run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk reset"
+            },
+            {
+              "type": "run",
+              "seconds": 360,
+              "label": "Steady run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk reset"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 40,
+          "totalSeconds": 2400,
+          "isFinal": false
+        },
+        {
+          "logicalId": "long-46",
+          "run": 3,
+          "title": "Long 46",
+          "summary": "Run 46 min easy",
+          "blocks": [
+            [
+              "Main set",
+              "Run 46 min easy"
+            ]
+          ],
+          "longestRun": 46,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 2760,
+              "label": "Long easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 56,
+          "totalSeconds": 3360,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "goal": "Push the range.",
+      "sessions": [
+        {
+          "logicalId": "easy-34",
+          "run": 1,
+          "title": "Easy 34",
+          "summary": "Run 34 min easy",
+          "blocks": [
+            [
+              "Main set",
+              "Run 34 min easy"
+            ]
+          ],
+          "longestRun": 34,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 2040,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 44,
+          "totalSeconds": 2640,
+          "isFinal": false
+        },
+        {
+          "logicalId": "steady-32",
+          "run": 2,
+          "title": "Steady 32",
+          "summary": "Run 32 min steady",
+          "blocks": [
+            [
+              "Main set",
+              "Run 32 min steady"
+            ]
+          ],
+          "longestRun": 32,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 1920,
+              "label": "Steady run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 42,
+          "totalSeconds": 2520,
+          "isFinal": false
+        },
+        {
+          "logicalId": "long-56",
+          "run": 3,
+          "title": "Long 56",
+          "summary": "Run 56 min easy",
+          "blocks": [
+            [
+              "Main set",
+              "Run 56 min easy"
+            ]
+          ],
+          "longestRun": 56,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 3360,
+              "label": "Long easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 66,
+          "totalSeconds": 3960,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "goal": "Hold your calm pace.",
+      "sessions": [
+        {
+          "logicalId": "easy-34",
+          "run": 1,
+          "title": "Easy 34",
+          "summary": "Run 34 min easy",
+          "blocks": [
+            [
+              "Main set",
+              "Run 34 min easy"
+            ]
+          ],
+          "longestRun": 34,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 2040,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 44,
+          "totalSeconds": 2640,
+          "isFinal": false
+        },
+        {
+          "logicalId": "tempo-24",
+          "run": 2,
+          "title": "Tempo 24",
+          "summary": "2 x 12 min steady with 3 min walk",
+          "blocks": [
+            [
+              "Main set",
+              "2 x 12 min steady / 3 min walk"
+            ]
+          ],
+          "longestRun": 12,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 720,
+              "label": "Steady run"
+            },
+            {
+              "type": "walk",
+              "seconds": 180,
+              "label": "Walk reset"
+            },
+            {
+              "type": "run",
+              "seconds": 720,
+              "label": "Steady run"
+            },
+            {
+              "type": "walk",
+              "seconds": 180,
+              "label": "Walk reset"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 40,
+          "totalSeconds": 2400,
+          "isFinal": false
+        },
+        {
+          "logicalId": "long-60",
+          "run": 3,
+          "title": "Long 60",
+          "summary": "Run 60 min easy",
+          "blocks": [
+            [
+              "Main set",
+              "Run 60 min easy"
+            ]
+          ],
+          "longestRun": 60,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 3600,
+              "label": "Long easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 70,
+          "totalSeconds": 4200,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "goal": "Stay consistent.",
+      "sessions": [
+        {
+          "logicalId": "easy-32",
+          "run": 1,
+          "title": "Easy 32",
+          "summary": "Run 32 min easy",
+          "blocks": [
+            [
+              "Main set",
+              "Run 32 min easy"
+            ]
+          ],
+          "longestRun": 32,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 1920,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 42,
+          "totalSeconds": 2520,
+          "isFinal": false
+        },
+        {
+          "logicalId": "steady-34",
+          "run": 2,
+          "title": "Steady 34",
+          "summary": "Run 34 min steady",
+          "blocks": [
+            [
+              "Main set",
+              "Run 34 min steady"
+            ]
+          ],
+          "longestRun": 34,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 2040,
+              "label": "Steady run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 44,
+          "totalSeconds": 2640,
+          "isFinal": false
+        },
+        {
+          "logicalId": "long-62",
+          "run": 3,
+          "title": "Long 62",
+          "summary": "Run 62 min easy",
+          "blocks": [
+            [
+              "Main set",
+              "Run 62 min easy"
+            ]
+          ],
+          "longestRun": 62,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 3720,
+              "label": "Long easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 72,
+          "totalSeconds": 4320,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 10,
+      "goal": "Fresh but strong.",
+      "sessions": [
+        {
+          "logicalId": "easy-30",
+          "run": 1,
+          "title": "Easy 30",
+          "summary": "Run 30 min easy",
+          "blocks": [
+            [
+              "Main set",
+              "Run 30 min easy"
+            ]
+          ],
+          "longestRun": 30,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 1800,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 40,
+          "totalSeconds": 2400,
+          "isFinal": false
+        },
+        {
+          "logicalId": "cruise-24",
+          "run": 2,
+          "title": "Cruise 24",
+          "summary": "3 x 8 min steady with 2 min walk",
+          "blocks": [
+            [
+              "Main set",
+              "3 x 8 min steady / 2 min walk"
+            ]
+          ],
+          "longestRun": 8,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 480,
+              "label": "Steady run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Walk reset"
+            },
+            {
+              "type": "run",
+              "seconds": 480,
+              "label": "Steady run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Walk reset"
+            },
+            {
+              "type": "run",
+              "seconds": 480,
+              "label": "Steady run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Walk reset"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 40,
+          "totalSeconds": 2400,
+          "isFinal": false
+        },
+        {
+          "logicalId": "long-58",
+          "run": 3,
+          "title": "Long 58",
+          "summary": "Run 58 min easy",
+          "blocks": [
+            [
+              "Main set",
+              "Run 58 min easy"
+            ]
+          ],
+          "longestRun": 58,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 3480,
+              "label": "Long easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 68,
+          "totalSeconds": 4080,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 11,
+      "goal": "Ease into race shape.",
+      "sessions": [
+        {
+          "logicalId": "easy-28",
+          "run": 1,
+          "title": "Easy 28",
+          "summary": "Run 28 min easy",
+          "blocks": [
+            [
+              "Main set",
+              "Run 28 min easy"
+            ]
+          ],
+          "longestRun": 28,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 1680,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 38,
+          "totalSeconds": 2280,
+          "isFinal": false
+        },
+        {
+          "logicalId": "steady-20",
+          "run": 2,
+          "title": "Steady 20",
+          "summary": "Run 20 min steady",
+          "blocks": [
+            [
+              "Main set",
+              "Run 20 min steady"
+            ]
+          ],
+          "longestRun": 20,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 1200,
+              "label": "Steady run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 30,
+          "totalSeconds": 1800,
+          "isFinal": false
+        },
+        {
+          "logicalId": "long-46",
+          "run": 3,
+          "title": "Long 46",
+          "summary": "Run 46 min easy",
+          "blocks": [
+            [
+              "Main set",
+              "Run 46 min easy"
+            ]
+          ],
+          "longestRun": 46,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 2760,
+              "label": "Long easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 56,
+          "totalSeconds": 3360,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "goal": "Run your 10K.",
+      "sessions": [
+        {
+          "logicalId": "easy-24",
+          "run": 1,
+          "title": "Easy 24",
+          "summary": "Run 24 min easy",
+          "blocks": [
+            [
+              "Main set",
+              "Run 24 min easy"
+            ]
+          ],
+          "longestRun": 24,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 1440,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 34,
+          "totalSeconds": 2040,
+          "isFinal": false
+        },
+        {
+          "logicalId": "quick-opener",
+          "run": 2,
+          "title": "Quick opener",
+          "summary": "6 x 60 sec steady with 90 sec walk",
+          "blocks": [
+            [
+              "Main set",
+              "6 x 60 sec steady / 90 sec walk"
+            ]
+          ],
+          "longestRun": 1,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Steady run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk reset"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Steady run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk reset"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Steady run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk reset"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Steady run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk reset"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Steady run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk reset"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Steady run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk reset"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 25,
+          "totalSeconds": 1500,
+          "isFinal": false
+        },
+        {
+          "logicalId": "run-your-10k",
+          "run": 3,
+          "title": "Run your 10K",
+          "summary": "Run the full 10K",
+          "blocks": [
+            [
+              "Main event",
+              "Run a controlled 10K"
+            ]
+          ],
+          "longestRun": 70,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 4200,
+              "label": "Run 10K"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 80,
+          "totalSeconds": 4800,
+          "isFinal": true
+        }
+      ]
+    }
+  ]
+}

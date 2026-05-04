@@ -1,0 +1,1788 @@
+{
+  "id": "veryNewToRunningPlan",
+  "name": "veryNewToRunningPlan",
+  "weeks": [
+    {
+      "week": 1,
+      "goal": "Learn the rhythm.",
+      "sessions": [
+        {
+          "logicalId": "walk-first-starter",
+          "run": 1,
+          "title": "Walk-first starter",
+          "summary": "Run 30 sec, walk 90 sec x8",
+          "blocks": [
+            [
+              "Main set",
+              "Run 30 sec / Walk 90 sec x8"
+            ]
+          ],
+          "longestRun": 1,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 26,
+          "totalSeconds": 1560,
+          "isFinal": false
+        },
+        {
+          "logicalId": "keep-it-easy",
+          "run": 2,
+          "title": "Keep it easy",
+          "summary": "Run 30 sec, walk 90 sec x8",
+          "blocks": [
+            [
+              "Main set",
+              "Run 30 sec / Walk 90 sec x8"
+            ]
+          ],
+          "longestRun": 1,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 26,
+          "totalSeconds": 1560,
+          "isFinal": false
+        },
+        {
+          "logicalId": "another-easy-win",
+          "run": 3,
+          "title": "Another easy win",
+          "summary": "Run 30 sec, walk 90 sec x8",
+          "blocks": [
+            [
+              "Main set",
+              "Run 30 sec / Walk 90 sec x8"
+            ]
+          ],
+          "longestRun": 1,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 26,
+          "totalSeconds": 1560,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "goal": "Build comfort.",
+      "sessions": [
+        {
+          "logicalId": "light-pickups",
+          "run": 1,
+          "title": "Light pickups",
+          "summary": "Run 45 sec, walk 90 sec x8",
+          "blocks": [
+            [
+              "Main set",
+              "Run 45 sec / Walk 90 sec x8"
+            ]
+          ],
+          "longestRun": 1,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 28,
+          "totalSeconds": 1680,
+          "isFinal": false
+        },
+        {
+          "logicalId": "stay-relaxed",
+          "run": 2,
+          "title": "Stay relaxed",
+          "summary": "Run 45 sec, walk 90 sec x8",
+          "blocks": [
+            [
+              "Main set",
+              "Run 45 sec / Walk 90 sec x8"
+            ]
+          ],
+          "longestRun": 1,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 28,
+          "totalSeconds": 1680,
+          "isFinal": false
+        },
+        {
+          "logicalId": "comfort-first",
+          "run": 3,
+          "title": "Comfort first",
+          "summary": "Run 45 sec, walk 90 sec x8",
+          "blocks": [
+            [
+              "Main set",
+              "Run 45 sec / Walk 90 sec x8"
+            ]
+          ],
+          "longestRun": 1,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 28,
+          "totalSeconds": 1680,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "goal": "Introduce longer efforts.",
+      "sessions": [
+        {
+          "logicalId": "one-minute-rhythm",
+          "run": 1,
+          "title": "One-minute rhythm",
+          "summary": "Run 60 sec, walk 90 sec x8",
+          "blocks": [
+            [
+              "Main set",
+              "Run 60 sec / Walk 90 sec x8"
+            ]
+          ],
+          "longestRun": 1,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 30,
+          "totalSeconds": 1800,
+          "isFinal": false
+        },
+        {
+          "logicalId": "steady-repeats",
+          "run": 2,
+          "title": "Steady repeats",
+          "summary": "Run 60 sec, walk 90 sec x8",
+          "blocks": [
+            [
+              "Main set",
+              "Run 60 sec / Walk 90 sec x8"
+            ]
+          ],
+          "longestRun": 1,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 30,
+          "totalSeconds": 1800,
+          "isFinal": false
+        },
+        {
+          "logicalId": "keep-moving",
+          "run": 3,
+          "title": "Keep moving",
+          "summary": "Run 60 sec, walk 90 sec x8",
+          "blocks": [
+            [
+              "Main set",
+              "Run 60 sec / Walk 90 sec x8"
+            ]
+          ],
+          "longestRun": 1,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 30,
+          "totalSeconds": 1800,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "goal": "Settle into routine.",
+      "sessions": [
+        {
+          "logicalId": "longer-minute",
+          "run": 1,
+          "title": "Longer minute",
+          "summary": "Run 75 sec, walk 90 sec x7",
+          "blocks": [
+            [
+              "Main set",
+              "Run 75 sec / Walk 90 sec x7"
+            ]
+          ],
+          "longestRun": 2,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 75,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 75,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 75,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 75,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 75,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 75,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 75,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 29,
+          "totalSeconds": 1755,
+          "isFinal": false
+        },
+        {
+          "logicalId": "relaxed-build",
+          "run": 2,
+          "title": "Relaxed build",
+          "summary": "Run 75 sec, walk 90 sec x7",
+          "blocks": [
+            [
+              "Main set",
+              "Run 75 sec / Walk 90 sec x7"
+            ]
+          ],
+          "longestRun": 2,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 75,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 75,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 75,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 75,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 75,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 75,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 75,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 29,
+          "totalSeconds": 1755,
+          "isFinal": false
+        },
+        {
+          "logicalId": "hold-the-habit",
+          "run": 3,
+          "title": "Hold the habit",
+          "summary": "Run 75 sec, walk 90 sec x7",
+          "blocks": [
+            [
+              "Main set",
+              "Run 75 sec / Walk 90 sec x7"
+            ]
+          ],
+          "longestRun": 2,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 75,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 75,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 75,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 75,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 75,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 75,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 75,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 29,
+          "totalSeconds": 1755,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "goal": "Step forward.",
+      "sessions": [
+        {
+          "logicalId": "two-minute-confidence",
+          "run": 1,
+          "title": "Two-minute confidence",
+          "summary": "Run 90 sec, walk 2 min x6",
+          "blocks": [
+            [
+              "Main set",
+              "Run 90 sec / Walk 2 min x6"
+            ]
+          ],
+          "longestRun": 2,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 31,
+          "totalSeconds": 1860,
+          "isFinal": false
+        },
+        {
+          "logicalId": "stay-calm",
+          "run": 2,
+          "title": "Stay calm",
+          "summary": "Run 90 sec, walk 2 min x6",
+          "blocks": [
+            [
+              "Main set",
+              "Run 90 sec / Walk 2 min x6"
+            ]
+          ],
+          "longestRun": 2,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 31,
+          "totalSeconds": 1860,
+          "isFinal": false
+        },
+        {
+          "logicalId": "keep-the-rhythm",
+          "run": 3,
+          "title": "Keep the rhythm",
+          "summary": "Run 90 sec, walk 2 min x6",
+          "blocks": [
+            [
+              "Main set",
+              "Run 90 sec / Walk 2 min x6"
+            ]
+          ],
+          "longestRun": 2,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 31,
+          "totalSeconds": 1860,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "goal": "Touch three minutes.",
+      "sessions": [
+        {
+          "logicalId": "three-minute-intro",
+          "run": 1,
+          "title": "Three-minute intro",
+          "summary": "Run 90 sec, 3 min run, repeat twice",
+          "blocks": [
+            [
+              "Round 1",
+              "Run 90 sec / Walk 90 sec / Run 3 min / Walk 3 min"
+            ],
+            [
+              "Round 2",
+              "Repeat once"
+            ]
+          ],
+          "longestRun": 3,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 180,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 180,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 180,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 180,
+              "label": "Walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 28,
+          "totalSeconds": 1680,
+          "isFinal": false
+        },
+        {
+          "logicalId": "confidence-builder",
+          "run": 2,
+          "title": "Confidence builder",
+          "summary": "Run 90 sec, 3 min run, repeat twice",
+          "blocks": [
+            [
+              "Round 1",
+              "Run 90 sec / Walk 90 sec / Run 3 min / Walk 3 min"
+            ],
+            [
+              "Round 2",
+              "Repeat once"
+            ]
+          ],
+          "longestRun": 3,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 180,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 180,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 180,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 180,
+              "label": "Walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 28,
+          "totalSeconds": 1680,
+          "isFinal": false
+        },
+        {
+          "logicalId": "stay-consistent",
+          "run": 3,
+          "title": "Stay consistent",
+          "summary": "Run 90 sec, 3 min run, repeat twice",
+          "blocks": [
+            [
+              "Round 1",
+              "Run 90 sec / Walk 90 sec / Run 3 min / Walk 3 min"
+            ],
+            [
+              "Round 2",
+              "Repeat once"
+            ]
+          ],
+          "longestRun": 3,
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 180,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 180,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Walk"
+            },
+            {
+              "type": "run",
+              "seconds": 180,
+              "label": "Run"
+            },
+            {
+              "type": "walk",
+              "seconds": 180,
+              "label": "Walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down"
+            }
+          ],
+          "totalMinutes": 28,
+          "totalSeconds": 1680,
+          "isFinal": false
+        }
+      ]
+    }
+  ]
+}
