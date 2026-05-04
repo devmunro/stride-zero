@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import { Body, Card, InfoLine, Label, MetricCard, ScreenTransition, SectionHeader, Title } from "../components/ui/UI";
 import { styles } from "../theme/styles";
 import { useTheme } from "../theme/theme";
@@ -32,14 +32,16 @@ export function ProgressScreen({ weeklyCompletion, unlocked, nextSession, comple
       <SectionHeader label="Progress" title="Simple stats" badge="Saved locally" mutedBadge />
       <Card>
         <Label>Weeks</Label>
-        <View style={styles.chart}>
-          {weeklyCompletion.map((count, index) => (
-            <View key={`week-${index + 1}`} style={styles.barSlot}>
-              <View style={[styles.bar, { height: 22 + count * 32, backgroundColor: theme.text }]} />
-              <Text style={[styles.barLabel, { color: theme.textSoft }]}>{`W${index + 1}`}</Text>
-            </View>
-          ))}
-        </View>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ minWidth: "100%" }}>
+          <View style={[styles.chart, { flex: 1 }]}>
+            {weeklyCompletion.map((count, index) => (
+              <View key={`week-${index + 1}`} style={[styles.barSlot, { minWidth: 28 }]}>
+                <View style={[styles.bar, { height: 22 + count * 32, backgroundColor: theme.text }]} />
+                <Text style={[styles.barLabel, { color: theme.textSoft }]} numberOfLines={1}>{`W${index + 1}`}</Text>
+              </View>
+            ))}
+          </View>
+        </ScrollView>
       </Card>
 
       <View style={styles.metricsRow}>
@@ -50,6 +52,13 @@ export function ProgressScreen({ weeklyCompletion, unlocked, nextSession, comple
       <Card>
         <Label>Personal bests</Label>
         {summary.personalBests.map((item, index) => (
+          <InfoLine key={item.label} title={item.label} value={item.value} first={index === 0} />
+        ))}
+      </Card>
+
+      <Card>
+        <Label>Run milestones</Label>
+        {summary.durationMilestones.map((item, index) => (
           <InfoLine key={item.label} title={item.label} value={item.value} first={index === 0} />
         ))}
       </Card>
@@ -75,8 +84,8 @@ export function ProgressScreen({ weeklyCompletion, unlocked, nextSession, comple
               style={[
                 styles.calendarCell,
                 {
-                  backgroundColor: item.count === 0 ? theme.surfaceMuted : item.count === 1 ? theme.chip : theme.text,
-                  borderColor: theme.border,
+                  backgroundColor: item.count === 0 ? theme.surfaceMuted : item.count === 1 ? (theme.name === "dark" ? theme.textSoft : theme.chip) : theme.text,
+                  borderColor: item.count === 0 ? theme.border : "transparent",
                 },
               ]}
             />

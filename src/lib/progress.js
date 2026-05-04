@@ -40,11 +40,16 @@ export function summarizeProgress(logs, milestones) {
   const recoveryRuns = logs.filter((item) => item.kind === "recovery").length;
   const weekCounts = logs.reduce((accumulator, item) => {
     const key = getWeekBucket(item.dateKey);
-    accumulator[key] = (accumulator[key] ?? 0) + 1;
+    accumulator[key] = (accumulator[key] + 1) || 1;
     return accumulator;
   }, {});
-  const busiestWeekCount = Math.max(0, ...Object.values(weekCounts));
+  const busiestWeekCount = Math.max(0, ...Object.values(weekCounts), 0);
   const lastRun = logs.at(-1);
+
+  const oneMinCount = logs.filter(item => item.longestRun >= 1 && item.longestRun < 5).length;
+  const fiveMinCount = logs.filter(item => item.longestRun >= 5 && item.longestRun < 20).length;
+  const twentyMinCount = logs.filter(item => item.longestRun >= 20 && item.longestRun < 30).length;
+  const thirtyMinCount = logs.filter(item => item.longestRun >= 30).length;
 
   return {
     longestRun,
@@ -56,6 +61,12 @@ export function summarizeProgress(logs, milestones) {
       { label: "Longest run", value: `${longestRun} min`, note: "best continuous effort" },
       { label: "Longest workout", value: `${Math.max(0, ...logs.map((item) => item.totalMinutes))} min`, note: "biggest single session" },
       { label: "Best week", value: `${busiestWeekCount} runs`, note: "most sessions in one week" },
+    ],
+    durationMilestones: [
+      { label: "1+ min runs", value: `${oneMinCount}`, note: "short continuous runs" },
+      { label: "5+ min runs", value: `${fiveMinCount}`, note: "solid continuous efforts" },
+      { label: "20+ min runs", value: `${twentyMinCount}`, note: "longer sustained runs" },
+      { label: "30+ min runs", value: `${thirtyMinCount}`, note: "half-hour pushes" },
     ],
     calendar: buildCalendar(logs),
     road: milestones.map((item) => ({ ...item, reached: longestRun >= item.minutes })),
