@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View } from "react-native";
-import { achievements } from "../data/trainingPlan";
+import { achievements } from "../engine";
 import { Body, Card, ScreenTransition, SectionHeader, Title } from "../components/ui/UI";
 import { styles } from "../theme/styles";
 import { useTheme } from "../theme/theme";

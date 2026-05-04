@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Pressable, Text, View } from "react-native";
 import { Card, GhostButton, Label, Pill, ScreenTransition, SectionHeader, Title } from "../components/ui/UI";
 import { styles } from "../theme/styles";
@@ -14,6 +14,7 @@ export function PlanScreen({ trainingPlan, completedSet, nextSessionId, onSelect
   const theme = useTheme();
   const currentWeek = Number(nextSessionId.split("-")[0]);
   const sessionsPerWeek = trainingPlan[0]?.sessions.filter((session) => session.countsTowardPlan !== false).length || 1;
+  const hasScrolledRef = useRef(false);
 
   return (
     <ScreenTransition style={styles.screenStack}>
@@ -35,12 +36,13 @@ export function PlanScreen({ trainingPlan, completedSet, nextSessionId, onSelect
           <Card
             key={week.week}
             style={[
-              done === coreSessions.length ? styles.doneWeek : null,
+              done === coreSessions.length ? { backgroundColor: theme.surfaceMuted, opacity: 0.6 } : null,
               isFuture ? styles.futureWeek : null,
               isCurrent ? [styles.currentWeek, { borderColor: theme.text }] : null,
             ]}
             onLayout={(event) => {
-              if (isCurrent && scrollRef?.current) {
+              if (isCurrent && scrollRef?.current && !hasScrolledRef.current) {
+                hasScrolledRef.current = true;
                 const y = event.nativeEvent.layout.y;
                 requestAnimationFrame(() => {
                   scrollRef.current?.scrollTo({ y: Math.max(0, y - 12), animated: true });
