@@ -10,6 +10,7 @@
     "ios": "expo start --ios",
     "check": "expo export --platform android",
     "lint": "expo lint",
+    "placement-check": "node scripts/placement-check.cjs",
     "smoke": "node scripts/smoke-check.cjs"
   },
   "dependencies": {
