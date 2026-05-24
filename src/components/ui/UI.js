@@ -222,12 +222,20 @@ export function OptionRow({ value, options, onSelect }) {
  * @param {Object} props Component props
  * @param {string} props.label Button text
  * @param {Function} props.onPress Press handler
+ * @param {boolean} [props.disabled=false] Whether the button is disabled
  * @returns {JSX.Element} Primary button
  */
-export function PrimaryButton({ label, onPress }) {
+export function PrimaryButton({ label, onPress, disabled = false }) {
   const theme = useTheme();
   return (
-    <Pressable accessibilityRole="button" accessibilityLabel={label} style={[styles.button, { backgroundColor: theme.text }]} onPress={onPress}>
+    <Pressable
+      accessibilityRole="button"
+      accessibilityLabel={label}
+      accessibilityState={{ disabled }}
+      disabled={disabled}
+      style={[styles.button, { backgroundColor: theme.text }, disabled && { opacity: 0.45 }]}
+      onPress={onPress}
+    >
       <Text style={[styles.primaryButtonText, { color: theme.inverseText }]}>{label}</Text>
     </Pressable>
   );

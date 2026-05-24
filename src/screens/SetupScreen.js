@@ -1,6 +1,16 @@
 import React from "react";
 import { ScrollView, View } from "react-native";
-import { APPEARANCE_OPTIONS, CUE_MODE_OPTIONS, EXPERIENCE_LEVEL_OPTIONS, GOAL_OPTIONS, WEEKLY_PATTERN_OPTIONS } from "../config/profileOptions";
+import {
+  APPEARANCE_OPTIONS,
+  COMEBACK_STATUS_OPTIONS,
+  CONTINUOUS_RUN_LEVEL_OPTIONS,
+  CUE_MODE_OPTIONS,
+  EXPERIENCE_LEVEL_OPTIONS,
+  FIVE_K_STATUS_OPTIONS,
+  GOAL_OPTIONS,
+  RECENT_RUN_PATTERN_OPTIONS,
+  WEEKLY_PATTERN_OPTIONS,
+} from "../config/profileOptions";
 import { Body, Card, GhostButton, HeroTitle, Label, OptionRow, PrimaryButton, ScreenTransition } from "../components/ui/UI";
 import { styles } from "../theme/styles";
 
@@ -13,9 +23,10 @@ import { styles } from "../theme/styles";
  * @param {Function} props.onContinue Continue/save handler
  * @param {Function} [props.onReset] Optional reset handler
  * @param {boolean} [props.compact=false] Whether to render the embedded edit version
+ * @param {boolean} [props.canContinue=false] Whether the setup submission is ready
  * @returns {JSX.Element} Setup screen
  */
-export function SetupScreen({ profile, onChange, onContinue, onReset, compact = false }) {
+export function SetupScreen({ profile, onChange, onContinue, onReset, compact = false, canContinue = false }) {
   const content = (
     <ScreenTransition style={styles.screenStack}>
       <View style={styles.flex}>
@@ -32,6 +43,27 @@ export function SetupScreen({ profile, onChange, onContinue, onReset, compact = 
       <Card>
         <Label>What are you building toward?</Label>
         <OptionRow value={profile.goal} options={GOAL_OPTIONS} onSelect={(value) => onChange("goal", value)} />
+        <Body style={styles.inlineTopSpacing}>We use your current base to keep sharper 5K and 10K plans reserved for runners who are already ready for them.</Body>
+      </Card>
+
+      <Card>
+        <Label>How long can you run right now?</Label>
+        <OptionRow value={profile.continuousRunLevel} options={CONTINUOUS_RUN_LEVEL_OPTIONS} onSelect={(value) => onChange("continuousRunLevel", value)} />
+      </Card>
+
+      <Card>
+        <Label>How consistent have you been lately?</Label>
+        <OptionRow value={profile.recentRunPattern} options={RECENT_RUN_PATTERN_OPTIONS} onSelect={(value) => onChange("recentRunPattern", value)} />
+      </Card>
+
+      <Card>
+        <Label>What is your 5K background?</Label>
+        <OptionRow value={profile.fiveKStatus} options={FIVE_K_STATUS_OPTIONS} onSelect={(value) => onChange("fiveKStatus", value)} />
+      </Card>
+
+      <Card>
+        <Label>Are you coming back from time off?</Label>
+        <OptionRow value={profile.comebackStatus} options={COMEBACK_STATUS_OPTIONS} onSelect={(value) => onChange("comebackStatus", value)} />
       </Card>
 
       <Card>
@@ -49,7 +81,7 @@ export function SetupScreen({ profile, onChange, onContinue, onReset, compact = 
         <OptionRow value={profile.darkMode ? "Dark" : "Light"} options={APPEARANCE_OPTIONS} onSelect={(value) => onChange("darkMode", value === "Dark")} />
       </Card>
 
-      <PrimaryButton label={compact ? "Save settings" : "Build my plan"} onPress={onContinue} />
+      <PrimaryButton label={compact ? "Save settings" : "Build my plan"} onPress={onContinue} disabled={!canContinue} />
       {compact && onReset ? <GhostButton label="Clear saved data" onPress={onReset} /> : null}
     </ScreenTransition>
   );

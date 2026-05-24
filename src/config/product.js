@@ -20,6 +20,11 @@ export const INFO_CONTENT = {
           "The app does not lock you into fixed weekdays. You pick how many runs you can usually handle, and the plan stays flexible around that rhythm whether you are building to 30 minutes, 5K, or 10K.",
       },
       {
+        heading: "Plan matching",
+        body:
+          "Sharper 5K work is meant for runners who can already finish 5K comfortably, and 10K plans assume an established 5K base. Setup uses your current running answers to keep you on the safest match for now.",
+      },
+      {
         heading: "Reminders",
         body:
           "Daily reminders can be turned on in Settings. Pick the time you are most likely to train and the app will nudge you when your next guided session is waiting.",
@@ -41,6 +46,11 @@ export const INFO_CONTENT = {
         heading: "Recovery week",
         body:
           "Use a recovery week when motivation dips, life gets busy, or your legs feel overloaded. It is there to keep you consistent, not to punish you for needing a step back.",
+      },
+      {
+        heading: "Effort cues",
+        body:
+          "Easy should feel conversational. Steady should feel controlled but purposeful. Strong or fast efforts are short harder blocks, not all-out sprinting from the first second.",
       },
       {
         heading: "Medical note",

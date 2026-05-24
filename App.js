@@ -13,6 +13,8 @@ import {
   buildTrainingPlan,
   getPlanLabel,
   getPlanMilestones,
+  hasPlacementAnswers,
+  resolvePlanPlacement,
 } from "./src/engine";
 import { createWorkoutLog, countCompletedWeeks, summarizeProgress } from "./src/lib/progress";
 import { syncDailyReminder } from "./src/lib/notifications";
@@ -100,6 +102,7 @@ export default function App() {
   const planLabel = useMemo(() => getPlanLabel(appState.profile), [appState.profile]);
   const planMilestones = useMemo(() => getPlanMilestones(appState.profile), [appState.profile]);
   const progressSummary = useMemo(() => summarizeProgress(appState.progress.sessionLogs, planMilestones), [appState.progress.sessionLogs, planMilestones]);
+  const canContinueSetup = useMemo(() => hasPlacementAnswers(draftProfile), [draftProfile]);
 
   useEffect(() => {
     loadState();
@@ -181,14 +184,15 @@ export default function App() {
     }));
   }
 
-  function finishSetup() {
-    setAppState((current) => buildSavedSetupState(current, draftProfile, true));
+  function commitSetup(nextProfile, isFirstSetup) {
+    setAppState((current) => buildSavedSetupState(current, nextProfile, isFirstSetup));
   }
 
-  function saveSetup() {
+  function confirmSetupSave(nextProfile, isFirstSetup) {
     const willResetProgress =
+      !isFirstSetup &&
       appState.progress.completedSessionIds.length > 0 &&
-      shouldResetPlanProgress(appState.profile, draftProfile);
+      shouldResetPlanProgress(appState.profile, nextProfile);
 
     if (willResetProgress) {
       Alert.alert(
@@ -200,7 +204,7 @@ export default function App() {
             text: "Save and reset",
             style: "destructive",
             onPress: () => {
-              setAppState((current) => buildSavedSetupState(current, draftProfile, false));
+              commitSetup(nextProfile, isFirstSetup);
             },
           },
         ]
@@ -208,7 +212,44 @@ export default function App() {
       return;
     }
 
-    setAppState((current) => buildSavedSetupState(current, draftProfile, false));
+    commitSetup(nextProfile, isFirstSetup);
+  }
+
+  function submitSetup(isFirstSetup) {
+    if (!hasPlacementAnswers(draftProfile)) {
+      return;
+    }
+
+    const placement = resolvePlanPlacement(draftProfile);
+    const nextProfile = placement.effectiveProfile;
+
+    if (placement.placementMode === "redirected") {
+      const reasons = placement.reasons.map((reason) => `• ${reason}`).join("\n");
+      const recommendedPlan = getPlanLabel(nextProfile);
+
+      Alert.alert(
+        "Better plan match",
+        `${reasons}\n\nWe recommend switching you to ${recommendedPlan} for now.`,
+        [
+          { text: "Review answers", style: "cancel" },
+          {
+            text: "Use recommended plan",
+            onPress: () => confirmSetupSave(nextProfile, isFirstSetup),
+          },
+        ]
+      );
+      return;
+    }
+
+    confirmSetupSave(nextProfile, isFirstSetup);
+  }
+
+  function finishSetup() {
+    submitSetup(true);
+  }
+
+  function saveSetup() {
+    submitSetup(false);
   }
 
   function selectSession(sessionId) {
@@ -539,6 +580,7 @@ export default function App() {
                       onContinue={saveSetup}
                       onReset={resetApp}
                       compact
+                      canContinue={canContinueSetup}
                     />
                   )}
                 </ScrollView>
@@ -556,6 +598,7 @@ export default function App() {
                 profile={draftProfile}
                 onChange={updateProfile}
                 onContinue={finishSetup}
+                canContinue={canContinueSetup}
               />
             )}
           </ThemedAppFrame>
