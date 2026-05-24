@@ -4,6 +4,10 @@
  * @typedef {Object} Profile
  * @property {string} experienceLevel Selected experience level
  * @property {string} goal Selected running goal
+ * @property {string|null} continuousRunLevel Selected current continuous-running ability
+ * @property {string|null} recentRunPattern Selected recent run frequency pattern
+ * @property {string|null} fiveKStatus Selected prior 5K experience level
+ * @property {string|null} comebackStatus Selected comeback or injury status
  * @property {string} weeklyPattern Selected weekly schedule
  * @property {string} cueMode Cue preference for the timer
  * @property {boolean} darkMode Whether dark mode is enabled

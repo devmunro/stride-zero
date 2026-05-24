@@ -4,4 +4,5 @@
 export { getUnlockedAchievements, achievements } from './achievements/index.js';
 export { executeEngine as buildTrainingPlan, getPlanLabel } from './engine.js';
 export { getPlanMilestones } from './milestones/index.js';
+export { hasPlacementAnswers, resolvePlanPlacement } from './placement.js';
 export { buildRecoveryWeek } from './utils/recoveryHelpers.js';

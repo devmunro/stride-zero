@@ -9,6 +9,10 @@
 export const defaultProfile = {
   experienceLevel: "Beginner",
   goal: "Finish 5K",
+  continuousRunLevel: null,
+  recentRunPattern: null,
+  fiveKStatus: null,
+  comebackStatus: null,
   weeklyPattern: "3 runs most weeks",
   cueMode: "Sound + vibration",
   darkMode: false,
@@ -105,7 +109,12 @@ export function hydrateAppState(parsed) {
 export function shouldResetPlanProgress(previousProfile, nextProfile) {
   return (
     previousProfile.experienceLevel !== nextProfile.experienceLevel ||
-    previousProfile.goal !== nextProfile.goal
+    previousProfile.goal !== nextProfile.goal ||
+    previousProfile.continuousRunLevel !== nextProfile.continuousRunLevel ||
+    previousProfile.recentRunPattern !== nextProfile.recentRunPattern ||
+    previousProfile.fiveKStatus !== nextProfile.fiveKStatus ||
+    previousProfile.comebackStatus !== nextProfile.comebackStatus ||
+    previousProfile.weeklyPattern !== nextProfile.weeklyPattern
   );
 }
 
