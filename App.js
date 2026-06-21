@@ -56,7 +56,8 @@ export default function App() {
   const repeatWeekSessions = appState.plan.repeatWeek.active
     ? trainingPlan.find((week) => week.week === appState.plan.repeatWeek.week)?.sessions ?? []
     : [];
-  const selectedSession = allSessions.find((session) => session.id === appState.plan.selectedSessionId) ?? nextSession;
+  const storedSelectedSession = allSessions.find((session) => session.id === appState.plan.selectedSessionId);
+  const selectedSession = completedSet.size === 0 ? nextSession : storedSelectedSession ?? nextSession;
   const activeSession = appState.plan.recoveryWeek.active
     ? recoveryWeekSessions[appState.plan.recoveryWeek.completedRuns] ?? recoveryWeekSessions[0] ?? selectedSession
     : appState.plan.repeatWeek.active

@@ -22,7 +22,7 @@ export const defaultAppState = {
   profile: defaultProfile,
   plan: {
     hasSetup: true,
-    selectedSessionId: "wc26-w02-thu",
+    selectedSessionId: "wc26-w01-mon",
     recoveryWeek: {
       active: false,
       completedRuns: 0,
