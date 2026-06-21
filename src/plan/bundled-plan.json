@@ -1,55 +1,48 @@
 {
   "planId": "dufton-alston-2026",
-  "planVersion": 1,
-  "publishedAt": "2026-06-21T00:00:00.000Z",
-  "revisionSummary": "Initial 26-week challenge plan.",
-  "effectiveSessionId": null,
+  "planVersion": 4,
+  "publishedAt": "2026-06-21T12:00:00.000Z",
+  "revisionSummary": "Canonical plan version updated; the run-only schedule and completed-session preservation rules are unchanged.",
+  "effectiveSessionId": "wc26-w01-mon",
   "startDate": "2026-06-22",
   "challengeDate": "2026-12-20",
   "title": "Winter Challenge Run Plan",
   "weeks": [
     {
       "week": 1,
-      "phase": "Foundation Reset",
+      "phase": "Starter Foundation",
       "startDate": "2026-06-22",
       "endDate": "2026-06-28",
-      "goal": "6-8 x 45 sec jog / 90 sec walk",
-      "sessions": []
-    },
-    {
-      "week": 2,
-      "phase": "Base Building",
-      "startDate": "2026-06-29",
-      "endDate": "2026-07-05",
-      "goal": "30 sec jog / 2 min walk x 8",
+      "goal": "Two short run/walk sessions",
       "sessions": [
         {
-          "id": "wc26-w02-thu",
-          "week": 2,
+          "id": "wc26-w01-mon",
+          "week": 1,
           "run": 1,
-          "date": "2026-07-02",
-          "dayLabel": "Thu",
-          "phase": "Base Building",
-          "title": "30 sec jog / 2 min walk x 8",
-          "summary": "First cautious run/walk ladder.",
-          "purpose": "Bridge into July by keeping the strength work and introducing more controlled run/walk.",
-          "effort": "4-5",
+          "date": "2026-06-22",
+          "dayLabel": "Mon",
+          "phase": "Starter Foundation",
+          "title": "8 × 30 sec run / 90 sec walk",
+          "summary": "First controlled running exposure. Stay relaxed and finish wanting more.",
+          "purpose": "Two short run/walk sessions",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
           "coachingNotes": [
-            "This is the first week with running exposure. The run/walk only counts as progress if joints and calves stay settled the next day.",
-            "If the jog/walk causes next-day pain above 4/10, repeat this exact week before advancing."
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
           ],
           "blocks": [
             [
               "Purpose",
-              "First cautious run/walk ladder."
+              "First controlled running exposure. Stay relaxed and finish wanting more."
             ],
             [
               "Effort",
-              "4-5"
+              "3–4"
             ],
             [
               "Fallback",
-              "If the jog/walk causes next-day pain above 4/10, repeat this exact week before advancing."
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
             ]
           ],
           "steps": [
@@ -65,7 +58,7 @@
             },
             {
               "type": "walk",
-              "seconds": 120,
+              "seconds": 90,
               "label": "Recovery walk"
             },
             {
@@ -75,7 +68,7 @@
             },
             {
               "type": "walk",
-              "seconds": 120,
+              "seconds": 90,
               "label": "Recovery walk"
             },
             {
@@ -85,7 +78,7 @@
             },
             {
               "type": "walk",
-              "seconds": 120,
+              "seconds": 90,
               "label": "Recovery walk"
             },
             {
@@ -95,7 +88,7 @@
             },
             {
               "type": "walk",
-              "seconds": 120,
+              "seconds": 90,
               "label": "Recovery walk"
             },
             {
@@ -105,7 +98,7 @@
             },
             {
               "type": "walk",
-              "seconds": 120,
+              "seconds": 90,
               "label": "Recovery walk"
             },
             {
@@ -115,7 +108,7 @@
             },
             {
               "type": "walk",
-              "seconds": 120,
+              "seconds": 90,
               "label": "Recovery walk"
             },
             {
@@ -125,7 +118,7 @@
             },
             {
               "type": "walk",
-              "seconds": 120,
+              "seconds": 90,
               "label": "Recovery walk"
             },
             {
@@ -135,7 +128,270 @@
             },
             {
               "type": "walk",
-              "seconds": 120,
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 1560,
+          "totalMinutes": 26,
+          "longestRun": 1,
+          "isFinal": false
+        },
+        {
+          "id": "wc26-w01-thu",
+          "week": 1,
+          "run": 2,
+          "date": "2026-06-25",
+          "dayLabel": "Thu",
+          "phase": "Starter Foundation",
+          "title": "8 × 45 sec run / 90 sec walk",
+          "summary": "A small second exposure, not a fitness test.",
+          "purpose": "Two short run/walk sessions",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "A small second exposure, not a fitness test."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Controlled jog"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Controlled jog"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Controlled jog"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Controlled jog"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Controlled jog"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Controlled jog"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Controlled jog"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 45,
+              "label": "Controlled jog"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 1680,
+          "totalMinutes": 28,
+          "longestRun": 1,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "phase": "Starter Foundation",
+      "startDate": "2026-06-29",
+      "endDate": "2026-07-05",
+      "goal": "60–75 second running intervals",
+      "sessions": [
+        {
+          "id": "wc26-w02-mon",
+          "week": 2,
+          "run": 1,
+          "date": "2026-06-29",
+          "dayLabel": "Mon",
+          "phase": "Starter Foundation",
+          "title": "8 × 60 sec run / 90 sec walk",
+          "summary": "Easy conversational running with consistent form.",
+          "purpose": "60–75 second running intervals",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Easy conversational running with consistent form."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
               "label": "Recovery walk"
             },
             {
@@ -148,43 +404,35 @@
           "totalMinutes": 30,
           "longestRun": 1,
           "isFinal": false
-        }
-      ]
-    },
-    {
-      "week": 3,
-      "phase": "Base Building",
-      "startDate": "2026-07-06",
-      "endDate": "2026-07-12",
-      "goal": "1 min jog / 2 min walk x 8",
-      "sessions": [
+        },
         {
-          "id": "wc26-w03-wed",
-          "week": 3,
-          "run": 1,
-          "date": "2026-07-08",
-          "dayLabel": "Wed",
-          "phase": "Base Building",
-          "title": "1 min jog / 2 min walk x 8",
-          "summary": "Controlled breathing, no pace chase.",
-          "purpose": "Daily walk logging opens. Walk daily, then layer intervals, strength, and one longer hike on top.",
-          "effort": "5",
+          "id": "wc26-w02-thu",
+          "week": 2,
+          "run": 2,
+          "date": "2026-07-02",
+          "dayLabel": "Thu",
+          "phase": "Starter Foundation",
+          "title": "8 × 75 sec run / 90 sec walk",
+          "summary": "Keep the final repetition as tidy as the first.",
+          "purpose": "60–75 second running intervals",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
           "coachingNotes": [
-            "The win this week is steady form and repeatability, not a harder run/walk effort.",
-            "If Wednesday feels clunky, repeat Level 2 next week instead of moving on automatically."
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
           ],
           "blocks": [
             [
               "Purpose",
-              "Controlled breathing, no pace chase."
+              "Keep the final repetition as tidy as the first."
             ],
             [
               "Effort",
-              "5"
+              "3–4"
             ],
             [
               "Fallback",
-              "If Wednesday feels clunky, repeat Level 2 next week instead of moving on automatically."
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
             ]
           ],
           "steps": [
@@ -195,82 +443,218 @@
             },
             {
               "type": "run",
-              "seconds": 60,
+              "seconds": 75,
               "label": "Easy run"
             },
             {
               "type": "walk",
-              "seconds": 120,
+              "seconds": 90,
               "label": "Recovery walk"
             },
             {
               "type": "run",
-              "seconds": 60,
+              "seconds": 75,
               "label": "Easy run"
             },
             {
               "type": "walk",
-              "seconds": 120,
+              "seconds": 90,
               "label": "Recovery walk"
             },
             {
               "type": "run",
-              "seconds": 60,
+              "seconds": 75,
               "label": "Easy run"
             },
             {
               "type": "walk",
-              "seconds": 120,
+              "seconds": 90,
               "label": "Recovery walk"
             },
             {
               "type": "run",
-              "seconds": 60,
+              "seconds": 75,
               "label": "Easy run"
             },
             {
               "type": "walk",
-              "seconds": 120,
+              "seconds": 90,
               "label": "Recovery walk"
             },
             {
               "type": "run",
-              "seconds": 60,
+              "seconds": 75,
               "label": "Easy run"
             },
             {
               "type": "walk",
-              "seconds": 120,
+              "seconds": 90,
               "label": "Recovery walk"
             },
             {
               "type": "run",
-              "seconds": 60,
+              "seconds": 75,
               "label": "Easy run"
             },
             {
               "type": "walk",
-              "seconds": 120,
+              "seconds": 90,
               "label": "Recovery walk"
             },
             {
               "type": "run",
-              "seconds": 60,
+              "seconds": 75,
               "label": "Easy run"
             },
             {
               "type": "walk",
-              "seconds": 120,
+              "seconds": 90,
               "label": "Recovery walk"
             },
             {
               "type": "run",
-              "seconds": 60,
+              "seconds": 75,
               "label": "Easy run"
             },
             {
               "type": "walk",
-              "seconds": 120,
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 1920,
+          "totalMinutes": 32,
+          "longestRun": 1,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "phase": "Starter Foundation",
+      "startDate": "2026-07-06",
+      "endDate": "2026-07-12",
+      "goal": "90 sec and 2 min intervals",
+      "sessions": [
+        {
+          "id": "wc26-w03-mon",
+          "week": 3,
+          "run": 1,
+          "date": "2026-07-06",
+          "dayLabel": "Mon",
+          "phase": "Starter Foundation",
+          "title": "8 × 90 sec run / 90 sec walk",
+          "summary": "Relax shoulders and keep breathing controlled.",
+          "purpose": "90 sec and 2 min intervals",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Relax shoulders and keep breathing controlled."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
               "label": "Recovery walk"
             },
             {
@@ -281,45 +665,37 @@
           ],
           "totalSeconds": 2040,
           "totalMinutes": 34,
-          "longestRun": 1,
+          "longestRun": 2,
           "isFinal": false
-        }
-      ]
-    },
-    {
-      "week": 4,
-      "phase": "Base Building",
-      "startDate": "2026-07-13",
-      "endDate": "2026-07-19",
-      "goal": "1 min jog / 2 min walk x 10",
-      "sessions": [
+        },
         {
-          "id": "wc26-w04-wed",
-          "week": 4,
-          "run": 1,
-          "date": "2026-07-15",
-          "dayLabel": "Wed",
-          "phase": "Base Building",
-          "title": "1 min jog / 2 min walk x 10",
-          "summary": "Slightly longer run/walk exposure.",
-          "purpose": "Keep the walk base steady, add a second quality session, and protect recovery.",
-          "effort": "5",
+          "id": "wc26-w03-fri",
+          "week": 3,
+          "run": 2,
+          "date": "2026-07-10",
+          "dayLabel": "Fri",
+          "phase": "Starter Foundation",
+          "title": "6 × 2 min run / 90 sec walk",
+          "summary": "First two-minute repeats; stay deliberately easy.",
+          "purpose": "90 sec and 2 min intervals",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
           "coachingNotes": [
-            "This week starts to feel like training rather than just restarting. Respect that by keeping the easy work truly easy.",
-            "If the hike trashes the next two days, reduce the next long day by 15-20 percent."
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
           ],
           "blocks": [
             [
               "Purpose",
-              "Slightly longer run/walk exposure."
+              "First two-minute repeats; stay deliberately easy."
             ],
             [
               "Effort",
-              "5"
+              "3–4"
             ],
             [
               "Fallback",
-              "If the hike trashes the next two days, reduce the next long day by 15-20 percent."
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
             ]
           ],
           "steps": [
@@ -330,102 +706,62 @@
             },
             {
               "type": "run",
-              "seconds": 60,
+              "seconds": 120,
               "label": "Easy run"
             },
             {
               "type": "walk",
-              "seconds": 120,
+              "seconds": 90,
               "label": "Recovery walk"
             },
             {
               "type": "run",
-              "seconds": 60,
+              "seconds": 120,
               "label": "Easy run"
             },
             {
               "type": "walk",
-              "seconds": 120,
+              "seconds": 90,
               "label": "Recovery walk"
             },
             {
               "type": "run",
-              "seconds": 60,
+              "seconds": 120,
               "label": "Easy run"
             },
             {
               "type": "walk",
-              "seconds": 120,
+              "seconds": 90,
               "label": "Recovery walk"
             },
             {
               "type": "run",
-              "seconds": 60,
+              "seconds": 120,
               "label": "Easy run"
             },
             {
               "type": "walk",
-              "seconds": 120,
+              "seconds": 90,
               "label": "Recovery walk"
             },
             {
               "type": "run",
-              "seconds": 60,
+              "seconds": 120,
               "label": "Easy run"
             },
             {
               "type": "walk",
-              "seconds": 120,
+              "seconds": 90,
               "label": "Recovery walk"
             },
             {
               "type": "run",
-              "seconds": 60,
+              "seconds": 120,
               "label": "Easy run"
             },
             {
               "type": "walk",
-              "seconds": 120,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 60,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 120,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 60,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 120,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 60,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 120,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 60,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 120,
+              "seconds": 90,
               "label": "Recovery walk"
             },
             {
@@ -434,182 +770,155 @@
               "label": "Cool down walk"
             }
           ],
-          "totalSeconds": 2400,
-          "totalMinutes": 40,
-          "longestRun": 1,
-          "isFinal": false
-        }
-      ]
-    },
-    {
-      "week": 5,
-      "phase": "Base Building",
-      "startDate": "2026-07-20",
-      "endDate": "2026-07-26",
-      "goal": "90 sec jog / 2 min walk x 8",
-      "sessions": [
-        {
-          "id": "wc26-w05-wed",
-          "week": 5,
-          "run": 1,
-          "date": "2026-07-22",
-          "dayLabel": "Wed",
-          "phase": "Base Building",
-          "title": "90 sec jog / 2 min walk x 8",
-          "summary": "Longer controlled efforts.",
-          "purpose": "Add hill-strength support and a longer hike, keeping the walk habit and recovery in order.",
-          "effort": "5-6",
-          "coachingNotes": [
-            "This is the first week where hill strength and long-day demand start to meet. Keep form high and ego low.",
-            "If Wednesday or Saturday pushes joint signal to 5+, back the next run/walk down a level."
-          ],
-          "blocks": [
-            [
-              "Purpose",
-              "Longer controlled efforts."
-            ],
-            [
-              "Effort",
-              "5-6"
-            ],
-            [
-              "Fallback",
-              "If Wednesday or Saturday pushes joint signal to 5+, back the next run/walk down a level."
-            ]
-          ],
-          "steps": [
-            {
-              "type": "walk",
-              "seconds": 300,
-              "label": "Warm up walk"
-            },
-            {
-              "type": "run",
-              "seconds": 90,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 120,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 90,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 120,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 90,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 120,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 90,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 120,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 90,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 120,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 90,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 120,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 90,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 120,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 90,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 120,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "walk",
-              "seconds": 300,
-              "label": "Cool down walk"
-            }
-          ],
-          "totalSeconds": 2280,
-          "totalMinutes": 38,
+          "totalSeconds": 1860,
+          "totalMinutes": 31,
           "longestRun": 2,
           "isFinal": false
         }
       ]
     },
     {
-      "week": 6,
-      "phase": "Base Building",
-      "startDate": "2026-07-27",
-      "endDate": "2026-08-02",
-      "goal": "Easy 20 min run/walk",
+      "week": 4,
+      "phase": "Starter Foundation — Deload",
+      "startDate": "2026-07-13",
+      "endDate": "2026-07-19",
+      "goal": "Two easier run/walk sessions",
       "sessions": [
         {
-          "id": "wc26-w06-wed",
-          "week": 6,
+          "id": "wc26-w04-mon",
+          "week": 4,
           "run": 1,
-          "date": "2026-07-29",
-          "dayLabel": "Wed",
-          "phase": "Base Building",
-          "title": "Easy 20 min run/walk",
-          "summary": "Absorb, do not test.",
-          "purpose": "Take an easier week, absorb the load, and keep the walking base simple.",
-          "effort": "4",
+          "date": "2026-07-13",
+          "dayLabel": "Mon",
+          "phase": "Starter Foundation — Deload",
+          "title": "6 × 90 sec run / 90 sec walk",
+          "summary": "Reduced repeat count for the deload.",
+          "purpose": "Two easier run/walk sessions",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
           "coachingNotes": [
-            "Easier weeks are part of the plan, not a reward for good behavior. Let this one absorb the last three weeks.",
-            "If you feel great, keep the plan unchanged anyway."
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
           ],
           "blocks": [
             [
               "Purpose",
-              "Absorb, do not test."
+              "Reduced repeat count for the deload."
             ],
             [
               "Effort",
-              "4"
+              "3–4"
             ],
             [
               "Fallback",
-              "If you feel great, keep the plan unchanged anyway."
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 1680,
+          "totalMinutes": 28,
+          "longestRun": 2,
+          "isFinal": false
+        },
+        {
+          "id": "wc26-w04-fri",
+          "week": 4,
+          "run": 2,
+          "date": "2026-07-17",
+          "dayLabel": "Fri",
+          "phase": "Starter Foundation — Deload",
+          "title": "Easy 20 min run/walk",
+          "summary": "Use 2 min easy run / 1 min walk and keep it playful.",
+          "purpose": "Two easier run/walk sessions",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Use 2 min easy run / 1 min walk and keep it playful."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
             ]
           ],
           "steps": [
@@ -652,39 +961,40 @@
       ]
     },
     {
-      "week": 7,
-      "phase": "Endurance Foundation",
-      "startDate": "2026-08-03",
-      "endDate": "2026-08-09",
-      "goal": "2 min jog / 2 min walk x 8",
+      "week": 5,
+      "phase": "Starter Foundation",
+      "startDate": "2026-07-20",
+      "endDate": "2026-07-26",
+      "goal": "3-minute intervals",
       "sessions": [
         {
-          "id": "wc26-w07-wed",
-          "week": 7,
+          "id": "wc26-w05-mon",
+          "week": 5,
           "run": 1,
-          "date": "2026-08-05",
-          "dayLabel": "Wed",
-          "phase": "Endurance Foundation",
-          "title": "2 min jog / 2 min walk x 8",
-          "summary": "Longer smooth run segments.",
-          "purpose": "Normalise longer time on feet while maintaining strength work.",
-          "effort": "5-6",
+          "date": "2026-07-20",
+          "dayLabel": "Mon",
+          "phase": "Starter Foundation",
+          "title": "6 × 3 min run / 90 sec walk",
+          "summary": "Settle into a sustainable rhythm.",
+          "purpose": "3-minute intervals",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
           "coachingNotes": [
-            "Endurance foundation begins here. The body should start seeing longer trail time as normal rather than exceptional.",
-            "If Saturday becomes a grind, hold 15 km again next week rather than pushing distance."
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
           ],
           "blocks": [
             [
               "Purpose",
-              "Longer smooth run segments."
+              "Settle into a sustainable rhythm."
             ],
             [
               "Effort",
-              "5-6"
+              "3–4"
             ],
             [
               "Fallback",
-              "If Saturday becomes a grind, hold 15 km again next week rather than pushing distance."
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
             ]
           ],
           "steps": [
@@ -695,82 +1005,62 @@
             },
             {
               "type": "run",
-              "seconds": 120,
+              "seconds": 180,
               "label": "Easy run"
             },
             {
               "type": "walk",
-              "seconds": 120,
+              "seconds": 90,
               "label": "Recovery walk"
             },
             {
               "type": "run",
-              "seconds": 120,
+              "seconds": 180,
               "label": "Easy run"
             },
             {
               "type": "walk",
-              "seconds": 120,
+              "seconds": 90,
               "label": "Recovery walk"
             },
             {
               "type": "run",
-              "seconds": 120,
+              "seconds": 180,
               "label": "Easy run"
             },
             {
               "type": "walk",
-              "seconds": 120,
+              "seconds": 90,
               "label": "Recovery walk"
             },
             {
               "type": "run",
-              "seconds": 120,
+              "seconds": 180,
               "label": "Easy run"
             },
             {
               "type": "walk",
-              "seconds": 120,
+              "seconds": 90,
               "label": "Recovery walk"
             },
             {
               "type": "run",
-              "seconds": 120,
+              "seconds": 180,
               "label": "Easy run"
             },
             {
               "type": "walk",
-              "seconds": 120,
+              "seconds": 90,
               "label": "Recovery walk"
             },
             {
               "type": "run",
-              "seconds": 120,
+              "seconds": 180,
               "label": "Easy run"
             },
             {
               "type": "walk",
-              "seconds": 120,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 120,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 120,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 120,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 120,
+              "seconds": 90,
               "label": "Recovery walk"
             },
             {
@@ -779,47 +1069,808 @@
               "label": "Cool down walk"
             }
           ],
-          "totalSeconds": 2520,
-          "totalMinutes": 42,
-          "longestRun": 2,
+          "totalSeconds": 2220,
+          "totalMinutes": 37,
+          "longestRun": 3,
+          "isFinal": false
+        },
+        {
+          "id": "wc26-w05-fri",
+          "week": 5,
+          "run": 2,
+          "date": "2026-07-24",
+          "dayLabel": "Fri",
+          "phase": "Starter Foundation",
+          "title": "Easy 25 min run/walk",
+          "summary": "Use 3 min run / 1 min walk at conversational effort.",
+          "purpose": "3-minute intervals",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Use 3 min run / 1 min walk at conversational effort."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 1500,
+          "totalMinutes": 25,
+          "longestRun": 4,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "phase": "Starter Foundation",
+      "startDate": "2026-07-27",
+      "endDate": "2026-08-02",
+      "goal": "4–5-minute running blocks",
+      "sessions": [
+        {
+          "id": "wc26-w06-mon",
+          "week": 6,
+          "run": 1,
+          "date": "2026-07-27",
+          "dayLabel": "Mon",
+          "phase": "Starter Foundation",
+          "title": "6 × 4 min run / 90 sec walk",
+          "summary": "Keep every block controlled.",
+          "purpose": "4–5-minute running blocks",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Keep every block controlled."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 2580,
+          "totalMinutes": 43,
+          "longestRun": 4,
+          "isFinal": false
+        },
+        {
+          "id": "wc26-w06-fri",
+          "week": 6,
+          "run": 2,
+          "date": "2026-07-31",
+          "dayLabel": "Fri",
+          "phase": "Starter Foundation",
+          "title": "5 × 5 min run / 90 sec walk",
+          "summary": "Patient aerobic work, not pace work.",
+          "purpose": "4–5-minute running blocks",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Patient aerobic work, not pace work."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 300,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 300,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 300,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 300,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 300,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 2550,
+          "totalMinutes": 43,
+          "longestRun": 5,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "phase": "Starter Foundation",
+      "startDate": "2026-08-03",
+      "endDate": "2026-08-09",
+      "goal": "Three runs: easy, development, recovery",
+      "sessions": [
+        {
+          "id": "wc26-w07-mon",
+          "week": 7,
+          "run": 1,
+          "date": "2026-08-03",
+          "dayLabel": "Mon",
+          "phase": "Starter Foundation",
+          "title": "Easy 25 min run/walk",
+          "summary": "Use 5 min run / 1 min walk.",
+          "purpose": "Three runs: easy, development, recovery",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Use 5 min run / 1 min walk."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 1500,
+          "totalMinutes": 25,
+          "longestRun": 4,
+          "isFinal": false
+        },
+        {
+          "id": "wc26-w07-wed",
+          "week": 7,
+          "run": 2,
+          "date": "2026-08-05",
+          "dayLabel": "Wed",
+          "phase": "Starter Foundation",
+          "title": "6 × 5 min run / 1 min walk",
+          "summary": "Development session; stay conversational.",
+          "purpose": "Three runs: easy, development, recovery",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Development session; stay conversational."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 300,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 300,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 300,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 300,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 300,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 300,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 2760,
+          "totalMinutes": 46,
+          "longestRun": 5,
+          "isFinal": false
+        },
+        {
+          "id": "wc26-w07-fri",
+          "week": 7,
+          "run": 3,
+          "date": "2026-08-07",
+          "dayLabel": "Fri",
+          "phase": "Starter Foundation",
+          "title": "15 min recovery run/walk",
+          "summary": "Very easy third exposure; walking is fine.",
+          "purpose": "Three runs: easy, development, recovery",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Very easy third exposure; walking is fine."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 900,
+          "totalMinutes": 15,
+          "longestRun": 4,
           "isFinal": false
         }
       ]
     },
     {
       "week": 8,
-      "phase": "Endurance Foundation",
+      "phase": "Starter Foundation — Deload",
       "startDate": "2026-08-10",
       "endDate": "2026-08-16",
-      "goal": "30 min easy run/walk",
+      "goal": "Three short easy sessions",
       "sessions": [
         {
-          "id": "wc26-w08-wed",
+          "id": "wc26-w08-mon",
           "week": 8,
           "run": 1,
-          "date": "2026-08-12",
-          "dayLabel": "Wed",
-          "phase": "Endurance Foundation",
-          "title": "30 min easy run/walk",
-          "summary": "Keep cadence smooth and calm.",
-          "purpose": "Keep hikes growing and stay patient.",
-          "effort": "5",
+          "date": "2026-08-10",
+          "dayLabel": "Mon",
+          "phase": "Starter Foundation — Deload",
+          "title": "Easy 20 min run/walk",
+          "summary": "Short and comfortable.",
+          "purpose": "Three short easy sessions",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
           "coachingNotes": [
-            "This week is about accumulating sensible work, not one standout hero session.",
-            "If lower back or hips take over from legs, reduce the next hill-strength load slightly."
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
           ],
           "blocks": [
             [
               "Purpose",
-              "Keep cadence smooth and calm."
+              "Short and comfortable."
             ],
             [
               "Effort",
-              "5"
+              "3–4"
             ],
             [
               "Fallback",
-              "If lower back or hips take over from legs, reduce the next hill-strength load slightly."
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 1200,
+          "totalMinutes": 20,
+          "longestRun": 4,
+          "isFinal": false
+        },
+        {
+          "id": "wc26-w08-wed",
+          "week": 8,
+          "run": 2,
+          "date": "2026-08-12",
+          "dayLabel": "Wed",
+          "phase": "Starter Foundation — Deload",
+          "title": "4 × 5 min run / 90 sec walk",
+          "summary": "Fewer blocks than last week.",
+          "purpose": "Three short easy sessions",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Fewer blocks than last week."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 300,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 300,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 300,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 300,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 90,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 2160,
+          "totalMinutes": 36,
+          "longestRun": 5,
+          "isFinal": false
+        },
+        {
+          "id": "wc26-w08-fri",
+          "week": 8,
+          "run": 3,
+          "date": "2026-08-14",
+          "dayLabel": "Fri",
+          "phase": "Starter Foundation — Deload",
+          "title": "12–15 min recovery run/walk",
+          "summary": "Optional if legs are not fresh.",
+          "purpose": "Three short easy sessions",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Optional if legs are not fresh."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 900,
+          "totalMinutes": 15,
+          "longestRun": 4,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "phase": "Build & Physique",
+      "startDate": "2026-08-17",
+      "endDate": "2026-08-23",
+      "goal": "30–35 min easy running",
+      "sessions": [
+        {
+          "id": "wc26-w09-mon",
+          "week": 9,
+          "run": 1,
+          "date": "2026-08-17",
+          "dayLabel": "Mon",
+          "phase": "Build & Physique",
+          "title": "30 min easy run/walk",
+          "summary": "Use 8 min run / 1 min walk if helpful.",
+          "purpose": "30–35 min easy running",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Use 8 min run / 1 min walk if helpful."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
             ]
           ],
           "steps": [
@@ -878,43 +1929,35 @@
           "totalMinutes": 30,
           "longestRun": 4,
           "isFinal": false
-        }
-      ]
-    },
-    {
-      "week": 9,
-      "phase": "Endurance Foundation",
-      "startDate": "2026-08-17",
-      "endDate": "2026-08-23",
-      "goal": "35 min easy run/walk",
-      "sessions": [
+        },
         {
           "id": "wc26-w09-wed",
           "week": 9,
-          "run": 1,
+          "run": 2,
           "date": "2026-08-19",
           "dayLabel": "Wed",
-          "phase": "Endurance Foundation",
-          "title": "35 min easy run/walk",
-          "summary": "Stay below breathless effort.",
-          "purpose": "Blend hill walking with a long hike.",
-          "effort": "5-6",
+          "phase": "Build & Physique",
+          "title": "35 min development run/walk",
+          "summary": "Easy aerobic development.",
+          "purpose": "30–35 min easy running",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
           "coachingNotes": [
-            "You are starting to build a real long-day engine now. The key is still restraint early in the hike.",
-            "If descents push pain above 4/10, find gentler terrain next week and strengthen downhill-specific control."
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
           ],
           "blocks": [
             [
               "Purpose",
-              "Stay below breathless effort."
+              "Easy aerobic development."
             ],
             [
               "Effort",
-              "5-6"
+              "3–4"
             ],
             [
               "Fallback",
-              "If descents push pain above 4/10, find gentler terrain next week and strengthen downhill-specific control."
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
             ]
           ],
           "steps": [
@@ -983,43 +2026,111 @@
           "totalMinutes": 35,
           "longestRun": 4,
           "isFinal": false
+        },
+        {
+          "id": "wc26-w09-fri",
+          "week": 9,
+          "run": 3,
+          "date": "2026-08-21",
+          "dayLabel": "Fri",
+          "phase": "Build & Physique",
+          "title": "20 min recovery run/walk",
+          "summary": "Very easy; this is frequency practice.",
+          "purpose": "30–35 min easy running",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Very easy; this is frequency practice."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 1200,
+          "totalMinutes": 20,
+          "longestRun": 4,
+          "isFinal": false
         }
       ]
     },
     {
       "week": 10,
-      "phase": "Endurance Foundation",
+      "phase": "Build & Physique",
       "startDate": "2026-08-24",
       "endDate": "2026-08-30",
-      "goal": "Easy 25 min run/walk",
+      "goal": "35–40 min running",
       "sessions": [
         {
-          "id": "wc26-w10-wed",
+          "id": "wc26-w10-mon",
           "week": 10,
           "run": 1,
-          "date": "2026-08-26",
-          "dayLabel": "Wed",
-          "phase": "Endurance Foundation",
-          "title": "Easy 25 min run/walk",
-          "summary": "Keep rhythm, trim fatigue.",
-          "purpose": "Bank an easier week before September.",
-          "effort": "4",
+          "date": "2026-08-24",
+          "dayLabel": "Mon",
+          "phase": "Build & Physique",
+          "title": "35 min easy run/walk",
+          "summary": "Stay relaxed.",
+          "purpose": "35–40 min running",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
           "coachingNotes": [
-            "This week should feel easier before it feels impressive. That is exactly the point.",
-            "If you still feel cooked, strip Wednesday back to walking only."
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
           ],
           "blocks": [
             [
               "Purpose",
-              "Keep rhythm, trim fatigue."
+              "Stay relaxed."
             ],
             [
               "Effort",
-              "4"
+              "3–4"
             ],
             [
               "Fallback",
-              "If you still feel cooked, strip Wednesday back to walking only."
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
             ]
           ],
           "steps": [
@@ -1059,52 +2170,64 @@
               "label": "Recovery walk"
             },
             {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
               "type": "walk",
               "seconds": 300,
               "label": "Cool down walk"
             }
           ],
-          "totalSeconds": 1500,
-          "totalMinutes": 25,
+          "totalSeconds": 2100,
+          "totalMinutes": 35,
           "longestRun": 4,
           "isFinal": false
-        }
-      ]
-    },
-    {
-      "week": 11,
-      "phase": "Trail-Specific Build",
-      "startDate": "2026-08-31",
-      "endDate": "2026-09-06",
-      "goal": "40 min run/walk",
-      "sessions": [
+        },
         {
-          "id": "wc26-w11-wed",
-          "week": 11,
-          "run": 1,
-          "date": "2026-09-02",
+          "id": "wc26-w10-wed",
+          "week": 10,
+          "run": 2,
+          "date": "2026-08-26",
           "dayLabel": "Wed",
-          "phase": "Trail-Specific Build",
-          "title": "40 min run/walk",
-          "summary": "Stable run-walk rhythm.",
-          "purpose": "Step into bigger trail-specific volume.",
-          "effort": "5-6",
+          "phase": "Build & Physique",
+          "title": "40 min development run/walk",
+          "summary": "Keep pace even and conversational.",
+          "purpose": "35–40 min running",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
           "coachingNotes": [
-            "This is the first week that should start feeling close to real event preparation. Strong pacing matters more than bravado.",
-            "If Saturday wipes you out for more than 48 hours, hold this level before progressing."
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
           ],
           "blocks": [
             [
               "Purpose",
-              "Stable run-walk rhythm."
+              "Keep pace even and conversational."
             ],
             [
               "Effort",
-              "5-6"
+              "3–4"
             ],
             [
               "Fallback",
-              "If Saturday wipes you out for more than 48 hours, hold this level before progressing."
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
             ]
           ],
           "steps": [
@@ -1183,43 +2306,218 @@
           "totalMinutes": 40,
           "longestRun": 4,
           "isFinal": false
-        }
-      ]
-    },
-    {
-      "week": 12,
-      "phase": "Trail-Specific Build",
-      "startDate": "2026-09-07",
-      "endDate": "2026-09-13",
-      "goal": "45 min run/walk",
-      "sessions": [
+        },
         {
-          "id": "wc26-w12-wed",
-          "week": 12,
-          "run": 1,
-          "date": "2026-09-09",
-          "dayLabel": "Wed",
-          "phase": "Trail-Specific Build",
-          "title": "45 min run/walk",
-          "summary": "Controlled aerobic development.",
-          "purpose": "Practice a longer trail-style outing.",
-          "effort": "5-6",
+          "id": "wc26-w10-fri",
+          "week": 10,
+          "run": 3,
+          "date": "2026-08-28",
+          "dayLabel": "Fri",
+          "phase": "Build & Physique",
+          "title": "20 min recovery run",
+          "summary": "Walk breaks remain welcome.",
+          "purpose": "35–40 min running",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
           "coachingNotes": [
-            "Trail confidence is a skill. Use this week to become calmer on uneven ground rather than faster.",
-            "If footing makes you tense, repeat similar terrain before increasing distance."
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
           ],
           "blocks": [
             [
               "Purpose",
-              "Controlled aerobic development."
+              "Walk breaks remain welcome."
             ],
             [
               "Effort",
-              "5-6"
+              "3–4"
             ],
             [
               "Fallback",
-              "If footing makes you tense, repeat similar terrain before increasing distance."
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 1200,
+          "totalMinutes": 20,
+          "longestRun": 4,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 11,
+      "phase": "Build & Physique",
+      "startDate": "2026-08-31",
+      "endDate": "2026-09-06",
+      "goal": "40–45 min running",
+      "sessions": [
+        {
+          "id": "wc26-w11-mon",
+          "week": 11,
+          "run": 1,
+          "date": "2026-08-31",
+          "dayLabel": "Mon",
+          "phase": "Build & Physique",
+          "title": "40 min easy run/walk",
+          "summary": "Comfortable aerobic running.",
+          "purpose": "40–45 min running",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Comfortable aerobic running."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 2400,
+          "totalMinutes": 40,
+          "longestRun": 4,
+          "isFinal": false
+        },
+        {
+          "id": "wc26-w11-wed",
+          "week": 11,
+          "run": 2,
+          "date": "2026-09-02",
+          "dayLabel": "Wed",
+          "phase": "Build & Physique",
+          "title": "45 min development run/walk",
+          "summary": "Use planned walk breaks before form fades.",
+          "purpose": "40–45 min running",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Use planned walk breaks before form fades."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
             ]
           ],
           "steps": [
@@ -1308,43 +2606,488 @@
           "totalMinutes": 45,
           "longestRun": 4,
           "isFinal": false
+        },
+        {
+          "id": "wc26-w11-fri",
+          "week": 11,
+          "run": 3,
+          "date": "2026-09-04",
+          "dayLabel": "Fri",
+          "phase": "Build & Physique",
+          "title": "20–25 min recovery run",
+          "summary": "Keep this genuinely easy.",
+          "purpose": "40–45 min running",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Keep this genuinely easy."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 1500,
+          "totalMinutes": 25,
+          "longestRun": 4,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "phase": "Build & Physique — Deload",
+      "startDate": "2026-09-07",
+      "endDate": "2026-09-13",
+      "goal": "Three shorter runs",
+      "sessions": [
+        {
+          "id": "wc26-w12-mon",
+          "week": 12,
+          "run": 1,
+          "date": "2026-09-07",
+          "dayLabel": "Mon",
+          "phase": "Build & Physique — Deload",
+          "title": "30 min easy run/walk",
+          "summary": "Deload pace and duration.",
+          "purpose": "Three shorter runs",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Deload pace and duration."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 1800,
+          "totalMinutes": 30,
+          "longestRun": 4,
+          "isFinal": false
+        },
+        {
+          "id": "wc26-w12-wed",
+          "week": 12,
+          "run": 2,
+          "date": "2026-09-09",
+          "dayLabel": "Wed",
+          "phase": "Build & Physique — Deload",
+          "title": "35 min easy run/walk",
+          "summary": "No development push this week.",
+          "purpose": "Three shorter runs",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "No development push this week."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 2100,
+          "totalMinutes": 35,
+          "longestRun": 4,
+          "isFinal": false
+        },
+        {
+          "id": "wc26-w12-fri",
+          "week": 12,
+          "run": 3,
+          "date": "2026-09-11",
+          "dayLabel": "Fri",
+          "phase": "Build & Physique — Deload",
+          "title": "15 min recovery run/walk",
+          "summary": "Optional and very easy.",
+          "purpose": "Three shorter runs",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Optional and very easy."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 900,
+          "totalMinutes": 15,
+          "longestRun": 4,
+          "isFinal": false
         }
       ]
     },
     {
       "week": 13,
-      "phase": "Trail-Specific Build",
+      "phase": "Build & Physique",
       "startDate": "2026-09-14",
       "endDate": "2026-09-20",
-      "goal": "45-50 min run/walk",
+      "goal": "45–50 min running",
       "sessions": [
         {
-          "id": "wc26-w13-wed",
+          "id": "wc26-w13-mon",
           "week": 13,
           "run": 1,
-          "date": "2026-09-16",
-          "dayLabel": "Wed",
-          "phase": "Trail-Specific Build",
-          "title": "45-50 min run/walk",
-          "summary": "Sustained aerobic work.",
-          "purpose": "Bring hill strength into a 22-25 km day.",
-          "effort": "5-6",
+          "date": "2026-09-14",
+          "dayLabel": "Mon",
+          "phase": "Build & Physique",
+          "title": "45 min easy run/walk",
+          "summary": "Controlled rhythm.",
+          "purpose": "45–50 min running",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
           "coachingNotes": [
-            "The big goal is still durability. A long day only helps if you can recover from it in a reasonable window.",
-            "If you finish shattered, reduce the next long day and improve fueling first."
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
           ],
           "blocks": [
             [
               "Purpose",
-              "Sustained aerobic work."
+              "Controlled rhythm."
             ],
             [
               "Effort",
-              "5-6"
+              "3–4"
             ],
             [
               "Fallback",
-              "If you finish shattered, reduce the next long day and improve fueling first."
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 2700,
+          "totalMinutes": 45,
+          "longestRun": 4,
+          "isFinal": false
+        },
+        {
+          "id": "wc26-w13-wed",
+          "week": 13,
+          "run": 2,
+          "date": "2026-09-16",
+          "dayLabel": "Wed",
+          "phase": "Build & Physique",
+          "title": "50 min development run/walk",
+          "summary": "Do not turn this into a race.",
+          "purpose": "45–50 min running",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Do not turn this into a race."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
             ]
           ],
           "steps": [
@@ -1443,43 +3186,121 @@
           "totalMinutes": 50,
           "longestRun": 4,
           "isFinal": false
+        },
+        {
+          "id": "wc26-w13-fri",
+          "week": 13,
+          "run": 3,
+          "date": "2026-09-18",
+          "dayLabel": "Fri",
+          "phase": "Build & Physique",
+          "title": "25 min recovery run",
+          "summary": "Flat and easy.",
+          "purpose": "45–50 min running",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Flat and easy."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 1500,
+          "totalMinutes": 25,
+          "longestRun": 4,
+          "isFinal": false
         }
       ]
     },
     {
       "week": 14,
-      "phase": "Trail-Specific Build",
+      "phase": "Build & Physique",
       "startDate": "2026-09-21",
       "endDate": "2026-09-27",
-      "goal": "Easy 30 min run/walk",
+      "goal": "5–8 km running",
       "sessions": [
         {
-          "id": "wc26-w14-wed",
+          "id": "wc26-w14-mon",
           "week": 14,
           "run": 1,
-          "date": "2026-09-23",
-          "dayLabel": "Wed",
-          "phase": "Trail-Specific Build",
-          "title": "Easy 30 min run/walk",
-          "summary": "Keep rhythm without stress.",
-          "purpose": "Ease back to protect the build.",
-          "effort": "4",
+          "date": "2026-09-21",
+          "dayLabel": "Mon",
+          "phase": "Build & Physique",
+          "title": "5 km easy run/walk",
+          "summary": "Choose a calm effort and finish fresh.",
+          "purpose": "5–8 km running",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
           "coachingNotes": [
-            "This is another absorb-and-reset week. Protect it so the next block lands well.",
-            "If you still feel beat up, turn Saturday into a flatter walk and keep the week truly easy."
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
           ],
           "blocks": [
             [
               "Purpose",
-              "Keep rhythm without stress."
+              "Choose a calm effort and finish fresh."
             ],
             [
               "Effort",
-              "4"
+              "3–4"
             ],
             [
               "Fallback",
-              "If you still feel beat up, turn Saturday into a flatter walk and keep the week truly easy."
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
             ]
           ],
           "steps": [
@@ -1529,13 +3350,262 @@
               "label": "Recovery walk"
             },
             {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
               "type": "walk",
               "seconds": 300,
               "label": "Cool down walk"
             }
           ],
-          "totalSeconds": 1800,
-          "totalMinutes": 30,
+          "totalSeconds": 2400,
+          "totalMinutes": 40,
+          "longestRun": 4,
+          "isFinal": false
+        },
+        {
+          "id": "wc26-w14-wed",
+          "week": 14,
+          "run": 2,
+          "date": "2026-09-23",
+          "dayLabel": "Wed",
+          "phase": "Build & Physique",
+          "title": "7–8 km development run/walk",
+          "summary": "Practice a sustainable run/walk rhythm.",
+          "purpose": "5–8 km running",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Practice a sustainable run/walk rhythm."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 3840,
+          "totalMinutes": 64,
+          "longestRun": 4,
+          "isFinal": false
+        },
+        {
+          "id": "wc26-w14-fri",
+          "week": 14,
+          "run": 3,
+          "date": "2026-09-25",
+          "dayLabel": "Fri",
+          "phase": "Build & Physique",
+          "title": "25 min recovery run",
+          "summary": "Easy frequency work.",
+          "purpose": "5–8 km running",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Easy frequency work."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 1500,
+          "totalMinutes": 25,
           "longestRun": 4,
           "isFinal": false
         }
@@ -1543,38 +3613,161 @@
     },
     {
       "week": 15,
-      "phase": "Half Marathon Build",
+      "phase": "Build & Physique",
       "startDate": "2026-09-28",
       "endDate": "2026-10-04",
-      "goal": "8-10 km run/walk",
+      "goal": "6–10 km running",
       "sessions": [
         {
-          "id": "wc26-w15-wed",
+          "id": "wc26-w15-mon",
           "week": 15,
           "run": 1,
-          "date": "2026-09-30",
-          "dayLabel": "Wed",
-          "phase": "Half Marathon Build",
-          "title": "8-10 km run/walk",
-          "summary": "Longer sustained checkpoint run/walk.",
-          "purpose": "Push the long hike without making running the hero.",
-          "effort": "6",
+          "date": "2026-09-28",
+          "dayLabel": "Mon",
+          "phase": "Build & Physique",
+          "title": "6 km easy run/walk",
+          "summary": "Comfortable and controlled.",
+          "purpose": "6–10 km running",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
           "coachingNotes": [
-            "The half marathon build starts to matter here, but hiking durability still has equal billing.",
-            "If run volume hurts recovery for Saturday, trim the Wednesday distance rather than the hike."
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
           ],
           "blocks": [
             [
               "Purpose",
-              "Longer sustained checkpoint run/walk."
+              "Comfortable and controlled."
             ],
             [
               "Effort",
-              "6"
+              "3–4"
             ],
             [
               "Fallback",
-              "If run volume hurts recovery for Saturday, trim the Wednesday distance rather than the hike."
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 180,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 2880,
+          "totalMinutes": 48,
+          "longestRun": 4,
+          "isFinal": false
+        },
+        {
+          "id": "wc26-w15-wed",
+          "week": 15,
+          "run": 2,
+          "date": "2026-09-30",
+          "dayLabel": "Wed",
+          "phase": "Build & Physique",
+          "title": "8–10 km development run/walk",
+          "summary": "Time on feet matters more than pace.",
+          "purpose": "6–10 km running",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Time on feet matters more than pace."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
             ]
           ],
           "steps": [
@@ -1733,43 +3926,228 @@
           "totalMinutes": 80,
           "longestRun": 4,
           "isFinal": false
+        },
+        {
+          "id": "wc26-w15-fri",
+          "week": 15,
+          "run": 3,
+          "date": "2026-10-02",
+          "dayLabel": "Fri",
+          "phase": "Build & Physique",
+          "title": "25 min recovery run",
+          "summary": "Keep it very easy.",
+          "purpose": "6–10 km running",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Keep it very easy."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 1500,
+          "totalMinutes": 25,
+          "longestRun": 4,
+          "isFinal": false
         }
       ]
     },
     {
       "week": 16,
-      "phase": "Half Marathon Build",
+      "phase": "Build & Physique — Deload",
       "startDate": "2026-10-05",
       "endDate": "2026-10-11",
-      "goal": "9-11 km run/walk",
+      "goal": "Shorter 5–7 km running",
       "sessions": [
         {
-          "id": "wc26-w16-wed",
+          "id": "wc26-w16-mon",
           "week": 16,
           "run": 1,
-          "date": "2026-10-07",
-          "dayLabel": "Wed",
-          "phase": "Half Marathon Build",
-          "title": "9-11 km run/walk",
-          "summary": "Progress checkpoint distance.",
-          "purpose": "Keep legs durable while volume stays high.",
-          "effort": "6",
+          "date": "2026-10-05",
+          "dayLabel": "Mon",
+          "phase": "Build & Physique — Deload",
+          "title": "5 km easy run/walk",
+          "summary": "Reduced volume.",
+          "purpose": "Shorter 5–7 km running",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
           "coachingNotes": [
-            "The combination of longer run/walk and long mixed trail day is the point this week. Keep both sub-maximal.",
-            "If Wednesday bleeds into Saturday, shorten the run/walk before cutting the trail-specific work."
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
           ],
           "blocks": [
             [
               "Purpose",
-              "Progress checkpoint distance."
+              "Reduced volume."
             ],
             [
               "Effort",
-              "6"
+              "3–4"
             ],
             [
               "Fallback",
-              "If Wednesday bleeds into Saturday, shorten the run/walk before cutting the trail-specific work."
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 2400,
+          "totalMinutes": 40,
+          "longestRun": 4,
+          "isFinal": false
+        },
+        {
+          "id": "wc26-w16-wed",
+          "week": 16,
+          "run": 2,
+          "date": "2026-10-07",
+          "dayLabel": "Wed",
+          "phase": "Build & Physique — Deload",
+          "title": "6–7 km easy run/walk",
+          "summary": "No pace target.",
+          "purpose": "Shorter 5–7 km running",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "No pace target."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
             ]
           ],
           "steps": [
@@ -1870,67 +4248,7 @@
             },
             {
               "type": "run",
-              "seconds": 240,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
               "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 240,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 240,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 240,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 240,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 240,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 180,
               "label": "Easy run"
             },
             {
@@ -1939,8 +4257,75 @@
               "label": "Cool down walk"
             }
           ],
-          "totalSeconds": 5280,
-          "totalMinutes": 88,
+          "totalSeconds": 3360,
+          "totalMinutes": 56,
+          "longestRun": 4,
+          "isFinal": false
+        },
+        {
+          "id": "wc26-w16-fri",
+          "week": 16,
+          "run": 3,
+          "date": "2026-10-09",
+          "dayLabel": "Fri",
+          "phase": "Build & Physique — Deload",
+          "title": "15–20 min recovery run/walk",
+          "summary": "Optional.",
+          "purpose": "Shorter 5–7 km running",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Optional."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 1200,
+          "totalMinutes": 20,
           "longestRun": 4,
           "isFinal": false
         }
@@ -1951,35 +4336,178 @@
       "phase": "Half Marathon Build",
       "startDate": "2026-10-12",
       "endDate": "2026-10-18",
-      "goal": "10-12 km run/walk",
+      "goal": "8–12 km development",
       "sessions": [
         {
-          "id": "wc26-w17-wed",
+          "id": "wc26-w17-mon",
           "week": 17,
           "run": 1,
-          "date": "2026-10-14",
-          "dayLabel": "Wed",
+          "date": "2026-10-12",
+          "dayLabel": "Mon",
           "phase": "Half Marathon Build",
-          "title": "10-12 km run/walk",
-          "summary": "Checkpoint build, still controlled.",
-          "purpose": "Peak hiking durability before the event taper.",
-          "effort": "6",
+          "title": "7 km easy run/walk",
+          "summary": "Calm aerobic work.",
+          "purpose": "8–12 km development",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
           "coachingNotes": [
-            "This is one of the heaviest trail weeks before the half. Pace matters less than how you manage the whole day.",
-            "If you are wrecked for more than two days, reduce peak volume before adding more running."
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
           ],
           "blocks": [
             [
               "Purpose",
-              "Checkpoint build, still controlled."
+              "Calm aerobic work."
             ],
             [
               "Effort",
-              "6"
+              "3–4"
             ],
             [
               "Fallback",
-              "If you are wrecked for more than two days, reduce peak volume before adding more running."
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 3360,
+          "totalMinutes": 56,
+          "longestRun": 4,
+          "isFinal": false
+        },
+        {
+          "id": "wc26-w17-wed",
+          "week": 17,
+          "run": 2,
+          "date": "2026-10-14",
+          "dayLabel": "Wed",
+          "phase": "Half Marathon Build",
+          "title": "10–12 km development run/walk",
+          "summary": "Practice the rhythm intended for the half marathon.",
+          "purpose": "8–12 km development",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Practice the rhythm intended for the half marathon."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
             ]
           ],
           "steps": [
@@ -2173,6 +4701,83 @@
           "totalMinutes": 96,
           "longestRun": 4,
           "isFinal": false
+        },
+        {
+          "id": "wc26-w17-fri",
+          "week": 17,
+          "run": 3,
+          "date": "2026-10-16",
+          "dayLabel": "Fri",
+          "phase": "Half Marathon Build",
+          "title": "25 min recovery run",
+          "summary": "Flat and very easy.",
+          "purpose": "8–12 km development",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Flat and very easy."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 1500,
+          "totalMinutes": 25,
+          "longestRun": 4,
+          "isFinal": false
         }
       ]
     },
@@ -2181,35 +4786,188 @@
       "phase": "Half Marathon Build",
       "startDate": "2026-10-19",
       "endDate": "2026-10-25",
-      "goal": "14-18 km run/walk",
+      "goal": "10–16 km development",
       "sessions": [
         {
-          "id": "wc26-w18-wed",
+          "id": "wc26-w18-mon",
           "week": 18,
           "run": 1,
-          "date": "2026-10-21",
-          "dayLabel": "Wed",
+          "date": "2026-10-19",
+          "dayLabel": "Mon",
           "phase": "Half Marathon Build",
-          "title": "14-18 km run/walk",
-          "summary": "Half-marathon-specific endurance.",
-          "purpose": "Peak the half build without chasing pace.",
-          "effort": "6-7",
+          "title": "8 km easy run/walk",
+          "summary": "Comfortable opening run.",
+          "purpose": "10–16 km development",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
           "coachingNotes": [
-            "This is the peak half-marathon week, but the route challenge still matters. That means restraint, not racing training.",
-            "If the Wednesday effort gets too hard, stop early and treat it as enough for the week."
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
           ],
           "blocks": [
             [
               "Purpose",
-              "Half-marathon-specific endurance."
+              "Comfortable opening run."
             ],
             [
               "Effort",
-              "6-7"
+              "3–4"
             ],
             [
               "Fallback",
-              "If the Wednesday effort gets too hard, stop early and treat it as enough for the week."
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 3840,
+          "totalMinutes": 64,
+          "longestRun": 4,
+          "isFinal": false
+        },
+        {
+          "id": "wc26-w18-wed",
+          "week": 18,
+          "run": 2,
+          "date": "2026-10-21",
+          "dayLabel": "Wed",
+          "phase": "Half Marathon Build",
+          "title": "14–16 km long run/walk",
+          "summary": "Final substantial half-marathon preparation; no pace chasing.",
+          "purpose": "10–16 km development",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Final substantial half-marathon preparation; no pace chasing."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
             ]
           ],
           "steps": [
@@ -2450,37 +5208,7 @@
             },
             {
               "type": "run",
-              "seconds": 240,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 240,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 240,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 240,
+              "seconds": 180,
               "label": "Easy run"
             },
             {
@@ -2489,8 +5217,75 @@
               "label": "Cool down walk"
             }
           ],
-          "totalSeconds": 8640,
-          "totalMinutes": 144,
+          "totalSeconds": 7680,
+          "totalMinutes": 128,
+          "longestRun": 4,
+          "isFinal": false
+        },
+        {
+          "id": "wc26-w18-fri",
+          "week": 18,
+          "run": 3,
+          "date": "2026-10-23",
+          "dayLabel": "Fri",
+          "phase": "Half Marathon Build",
+          "title": "20 min recovery run/walk",
+          "summary": "Only if recovery is good.",
+          "purpose": "10–16 km development",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Only if recovery is good."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 1200,
+          "totalMinutes": 20,
           "longestRun": 4,
           "isFinal": false
         }
@@ -2501,35 +5296,36 @@
       "phase": "Half Marathon Week",
       "startDate": "2026-10-26",
       "endDate": "2026-11-01",
-      "goal": "Half marathon run/walk",
+      "goal": "Two short runs plus event",
       "sessions": [
         {
-          "id": "wc26-w19-wed",
+          "id": "wc26-w19-mon",
           "week": 19,
           "run": 1,
-          "date": "2026-10-28",
-          "dayLabel": "Wed",
+          "date": "2026-10-26",
+          "dayLabel": "Mon",
           "phase": "Half Marathon Week",
-          "title": "Easy 25-30 min run/walk",
-          "summary": "Confidence, not conditioning.",
-          "purpose": "Arrive calm and finish safely.",
-          "effort": "4",
+          "title": "30 min easy run/walk",
+          "summary": "Easy confidence session.",
+          "purpose": "Two short runs plus event",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
           "coachingNotes": [
-            "The event is a checkpoint. A smart, even run/walk finish is more valuable than a messy overperformance.",
-            "If anything feels wrong on the day, convert the event fully to run/walk and protect the bigger winter goal."
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
           ],
           "blocks": [
             [
               "Purpose",
-              "Confidence, not conditioning."
+              "Easy confidence session."
             ],
             [
               "Effort",
-              "4"
+              "3–4"
             ],
             [
               "Fallback",
-              "If anything feels wrong on the day, convert the event fully to run/walk and protect the bigger winter goal."
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
             ]
           ],
           "steps": [
@@ -2540,7 +5336,7 @@
             },
             {
               "type": "run",
-              "seconds": 540,
+              "seconds": 240,
               "label": "Easy run"
             },
             {
@@ -2550,7 +5346,7 @@
             },
             {
               "type": "run",
-              "seconds": 540,
+              "seconds": 240,
               "label": "Easy run"
             },
             {
@@ -2560,7 +5356,7 @@
             },
             {
               "type": "run",
-              "seconds": 540,
+              "seconds": 240,
               "label": "Easy run"
             },
             {
@@ -2570,128 +5366,13 @@
             },
             {
               "type": "run",
-              "seconds": 540,
+              "seconds": 240,
               "label": "Easy run"
             },
             {
               "type": "walk",
               "seconds": 60,
               "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 540,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 540,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 540,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 540,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 540,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 540,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 540,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 540,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 540,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 540,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 540,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 300,
-              "label": "Easy run"
             },
             {
               "type": "walk",
@@ -2699,38 +5380,106 @@
               "label": "Cool down walk"
             }
           ],
-          "totalSeconds": 9900,
-          "totalMinutes": 165,
-          "longestRun": 9,
+          "totalSeconds": 1800,
+          "totalMinutes": 30,
+          "longestRun": 4,
+          "isFinal": false
+        },
+        {
+          "id": "wc26-w19-wed",
+          "week": 19,
+          "run": 2,
+          "date": "2026-10-28",
+          "dayLabel": "Wed",
+          "phase": "Half Marathon Week",
+          "title": "20 min easy run/walk",
+          "summary": "Short shakeout.",
+          "purpose": "Two short runs plus event",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Short shakeout."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 1200,
+          "totalMinutes": 20,
+          "longestRun": 4,
           "isFinal": false
         },
         {
           "id": "wc26-w19-sun",
           "week": 19,
-          "run": 2,
+          "run": 3,
           "date": "2026-11-01",
           "dayLabel": "Sun",
           "phase": "Half Marathon Week",
           "title": "Half marathon run/walk",
-          "summary": "Finish safely and evenly.",
-          "purpose": "Arrive calm and finish safely.",
-          "effort": "6-7",
+          "summary": "Start conservatively, use planned walk breaks, and finish safely.",
+          "purpose": "Two short runs plus event",
+          "effort": "5–7",
+          "optional": false,
+          "event": true,
           "coachingNotes": [
-            "The event is a checkpoint. A smart, even run/walk finish is more valuable than a messy overperformance.",
-            "If anything feels wrong on the day, convert the event fully to run/walk and protect the bigger winter goal."
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
           ],
           "blocks": [
             [
               "Purpose",
-              "Finish safely and evenly."
+              "Start conservatively, use planned walk breaks, and finish safely."
             ],
             [
               "Effort",
-              "6-7"
+              "5–7"
             ],
             [
               "Fallback",
-              "If anything feels wrong on the day, convert the event fully to run/walk and protect the bigger winter goal."
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
             ]
           ],
           "steps": [
@@ -2909,46 +5658,651 @@
     },
     {
       "week": 20,
-      "phase": "Recovery",
+      "phase": "Post-Half Recovery — Deload",
       "startDate": "2026-11-02",
       "endDate": "2026-11-08",
-      "goal": "None",
-      "sessions": []
-    },
-    {
-      "week": 21,
-      "phase": "Post-Half Trail Build",
-      "startDate": "2026-11-09",
-      "endDate": "2026-11-15",
-      "goal": "Easy 40 min run/walk",
+      "goal": "One optional short run/walk",
       "sessions": [
         {
-          "id": "wc26-w21-wed",
-          "week": 21,
+          "id": "wc26-w20-fri",
+          "week": 20,
           "run": 1,
-          "date": "2026-11-11",
-          "dayLabel": "Wed",
-          "phase": "Post-Half Trail Build",
-          "title": "Easy 40 min run/walk",
-          "summary": "Gentle post-event running.",
-          "purpose": "Return to trail-specific structure.",
-          "effort": "5",
+          "date": "2026-11-06",
+          "dayLabel": "Fri",
+          "phase": "Post-Half Recovery — Deload",
+          "title": "Optional 15–20 min recovery run/walk",
+          "summary": "Do this only if walking feels normal and soreness is low.",
+          "purpose": "One optional short run/walk",
+          "effort": "2–3",
+          "optional": true,
+          "event": false,
           "coachingNotes": [
-            "This is the pivot back to the real target. The half is done; now everything points toward winter trail durability.",
-            "If recovery is still sluggish from the half, cut the run/walk first, not the trail day."
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
           ],
           "blocks": [
             [
               "Purpose",
-              "Gentle post-event running."
+              "Do this only if walking feels normal and soreness is low."
             ],
             [
               "Effort",
-              "5"
+              "2–3"
             ],
             [
               "Fallback",
-              "If recovery is still sluggish from the half, cut the run/walk first, not the trail day."
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 1200,
+          "totalMinutes": 20,
+          "longestRun": 4,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 21,
+      "phase": "Challenge-Specific Build",
+      "startDate": "2026-11-09",
+      "endDate": "2026-11-15",
+      "goal": "Easy 6–8 km running",
+      "sessions": [
+        {
+          "id": "wc26-w21-mon",
+          "week": 21,
+          "run": 1,
+          "date": "2026-11-09",
+          "dayLabel": "Mon",
+          "phase": "Challenge-Specific Build",
+          "title": "6 km easy run/walk",
+          "summary": "Return gently after recovery week.",
+          "purpose": "Easy 6–8 km running",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Return gently after recovery week."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 180,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 2880,
+          "totalMinutes": 48,
+          "longestRun": 4,
+          "isFinal": false
+        },
+        {
+          "id": "wc26-w21-fri",
+          "week": 21,
+          "run": 2,
+          "date": "2026-11-13",
+          "dayLabel": "Fri",
+          "phase": "Challenge-Specific Build",
+          "title": "8 km steady run/walk",
+          "summary": "Comfortable maintenance.",
+          "purpose": "Easy 6–8 km running",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Comfortable maintenance."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 3840,
+          "totalMinutes": 64,
+          "longestRun": 4,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 22,
+      "phase": "Challenge-Specific Build",
+      "startDate": "2026-11-16",
+      "endDate": "2026-11-22",
+      "goal": "Two short maintenance runs",
+      "sessions": [
+        {
+          "id": "wc26-w22-mon",
+          "week": 22,
+          "run": 1,
+          "date": "2026-11-16",
+          "dayLabel": "Mon",
+          "phase": "Challenge-Specific Build",
+          "title": "5–6 km easy run/walk",
+          "summary": "Keep the legs turning over.",
+          "purpose": "Two short maintenance runs",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Keep the legs turning over."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 180,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 2880,
+          "totalMinutes": 48,
+          "longestRun": 4,
+          "isFinal": false
+        },
+        {
+          "id": "wc26-w22-fri",
+          "week": 22,
+          "run": 2,
+          "date": "2026-11-20",
+          "dayLabel": "Fri",
+          "phase": "Challenge-Specific Build",
+          "title": "6 km easy run/walk",
+          "summary": "Do not carry fatigue into Saturday.",
+          "purpose": "Two short maintenance runs",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Do not carry fatigue into Saturday."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 180,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 2880,
+          "totalMinutes": 48,
+          "longestRun": 4,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 23,
+      "phase": "Challenge-Specific Build",
+      "startDate": "2026-11-23",
+      "endDate": "2026-11-29",
+      "goal": "Two easy runs",
+      "sessions": [
+        {
+          "id": "wc26-w23-mon",
+          "week": 23,
+          "run": 1,
+          "date": "2026-11-23",
+          "dayLabel": "Mon",
+          "phase": "Challenge-Specific Build",
+          "title": "5 km easy run/walk",
+          "summary": "Only if legs have recovered.",
+          "purpose": "Two easy runs",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Only if legs have recovered."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
             ]
           ],
           "steps": [
@@ -3027,238 +6381,35 @@
           "totalMinutes": 40,
           "longestRun": 4,
           "isFinal": false
-        }
-      ]
-    },
-    {
-      "week": 22,
-      "phase": "Post-Half Trail Build",
-      "startDate": "2026-11-16",
-      "endDate": "2026-11-22",
-      "goal": "8-10 km run/walk",
-      "sessions": [
+        },
         {
-          "id": "wc26-w22-wed",
-          "week": 22,
-          "run": 1,
-          "date": "2026-11-18",
-          "dayLabel": "Wed",
-          "phase": "Post-Half Trail Build",
-          "title": "8-10 km run/walk",
-          "summary": "Maintain running confidence.",
-          "purpose": "Hit the key 30-35 km benchmark week.",
-          "effort": "5-6",
-          "coachingNotes": [
-            "This is the benchmark week. The goal is not speed. The goal is proving you can manage a long day and still think clearly.",
-            "If conditions or body state are poor, shorten the day intelligently and reschedule rather than forcing it."
-          ],
-          "blocks": [
-            [
-              "Purpose",
-              "Maintain running confidence."
-            ],
-            [
-              "Effort",
-              "5-6"
-            ],
-            [
-              "Fallback",
-              "If conditions or body state are poor, shorten the day intelligently and reschedule rather than forcing it."
-            ]
-          ],
-          "steps": [
-            {
-              "type": "walk",
-              "seconds": 300,
-              "label": "Warm up walk"
-            },
-            {
-              "type": "run",
-              "seconds": 240,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 240,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 240,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 240,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 240,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 240,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 240,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 240,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 240,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 240,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 240,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 240,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 240,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 240,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "walk",
-              "seconds": 300,
-              "label": "Cool down walk"
-            }
-          ],
-          "totalSeconds": 4800,
-          "totalMinutes": 80,
-          "longestRun": 4,
-          "isFinal": false
-        }
-      ]
-    },
-    {
-      "week": 23,
-      "phase": "Post-Half Trail Build",
-      "startDate": "2026-11-23",
-      "endDate": "2026-11-29",
-      "goal": "Easy 30 min run/walk",
-      "sessions": [
-        {
-          "id": "wc26-w23-wed",
+          "id": "wc26-w23-fri",
           "week": 23,
-          "run": 1,
-          "date": "2026-11-25",
-          "dayLabel": "Wed",
-          "phase": "Post-Half Trail Build",
-          "title": "Easy 30 min run/walk",
-          "summary": "Keep some rhythm.",
-          "purpose": "Recover before the last specific push.",
-          "effort": "4",
+          "run": 2,
+          "date": "2026-11-27",
+          "dayLabel": "Fri",
+          "phase": "Challenge-Specific Build",
+          "title": "30 min easy run/walk",
+          "summary": "Relaxed maintenance.",
+          "purpose": "Two easy runs",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
           "coachingNotes": [
-            "Absorb the biggest training week. This is where you turn one huge effort into usable adaptation.",
-            "If still trashed, strip Wednesday down to walking and keep the long day at the short end."
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
           ],
           "blocks": [
             [
               "Purpose",
-              "Keep some rhythm."
+              "Relaxed maintenance."
             ],
             [
               "Effort",
-              "4"
+              "3–4"
             ],
             [
               "Fallback",
-              "If still trashed, strip Wednesday down to walking and keep the long day at the short end."
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
             ]
           ],
           "steps": [
@@ -3322,25 +6473,148 @@
     },
     {
       "week": 24,
-      "phase": "Last Specific Week",
+      "phase": "Last Specific Week — Deloaded",
       "startDate": "2026-11-30",
       "endDate": "2026-12-06",
-      "goal": "8-10 km run/walk",
+      "goal": "Two easy maintenance runs",
       "sessions": [
         {
-          "id": "wc26-w24-wed",
+          "id": "wc26-w24-mon",
           "week": 24,
           "run": 1,
-          "date": "2026-12-02",
-          "dayLabel": "Wed",
-          "phase": "Last Specific Week",
-          "title": "8-10 km run/walk",
-          "summary": "Keep rhythm only.",
-          "purpose": "Rehearse with kit and purposeful terrain.",
-          "effort": "5-6",
+          "date": "2026-11-30",
+          "dayLabel": "Mon",
+          "phase": "Last Specific Week — Deloaded",
+          "title": "6 km easy run/walk",
+          "summary": "Comfortable maintenance.",
+          "purpose": "Two easy maintenance runs",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
           "coachingNotes": [
-            "This is the last specific week. It should increase confidence, not create new fitness at all costs.",
-            "If the long rehearsal exposes a problem, solve the problem - do not cram more mileage."
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Comfortable maintenance."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 180,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 2880,
+          "totalMinutes": 48,
+          "longestRun": 4,
+          "isFinal": false
+        },
+        {
+          "id": "wc26-w24-fri",
+          "week": 24,
+          "run": 2,
+          "date": "2026-12-04",
+          "dayLabel": "Fri",
+          "phase": "Last Specific Week — Deloaded",
+          "title": "6–8 km easy run/walk",
+          "summary": "Keep rhythm only.",
+          "purpose": "Two easy maintenance runs",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
           ],
           "blocks": [
             [
@@ -3349,11 +6623,11 @@
             ],
             [
               "Effort",
-              "5-6"
+              "3–4"
             ],
             [
               "Fallback",
-              "If the long rehearsal exposes a problem, solve the problem - do not cram more mileage."
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
             ]
           ],
           "steps": [
@@ -3469,47 +6743,12 @@
             },
             {
               "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 240,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 240,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 240,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "walk",
               "seconds": 300,
               "label": "Cool down walk"
             }
           ],
-          "totalSeconds": 4800,
-          "totalMinutes": 80,
+          "totalSeconds": 3840,
+          "totalMinutes": 64,
           "longestRun": 4,
           "isFinal": false
         }
@@ -3520,35 +6759,36 @@
       "phase": "Taper",
       "startDate": "2026-12-07",
       "endDate": "2026-12-13",
-      "goal": "Easy 30-40 min run/walk",
+      "goal": "Two short easy runs",
       "sessions": [
         {
-          "id": "wc26-w25-wed",
+          "id": "wc26-w25-mon",
           "week": 25,
           "run": 1,
-          "date": "2026-12-09",
-          "dayLabel": "Wed",
+          "date": "2026-12-07",
+          "dayLabel": "Mon",
           "phase": "Taper",
-          "title": "Easy 30-40 min run/walk",
-          "summary": "Keep the system awake.",
-          "purpose": "Reduce fatigue without going flat.",
-          "effort": "4",
+          "title": "30 min easy run/walk",
+          "summary": "Relaxed maintenance.",
+          "purpose": "Two short easy runs",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
           "coachingNotes": [
-            "The taper is about arriving mentally and physically ready, not trying to squeeze out one more big improvement.",
-            "If you feel flat, resist the urge to add hard work. Fresh beats sharp here."
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
           ],
           "blocks": [
             [
               "Purpose",
-              "Keep the system awake."
+              "Relaxed maintenance."
             ],
             [
               "Effort",
-              "4"
+              "3–4"
             ],
             [
               "Fallback",
-              "If you feel flat, resist the urge to add hard work. Fresh beats sharp here."
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
             ]
           ],
           "steps": [
@@ -3598,6 +6838,73 @@
               "label": "Recovery walk"
             },
             {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 1800,
+          "totalMinutes": 30,
+          "longestRun": 4,
+          "isFinal": false
+        },
+        {
+          "id": "wc26-w25-thu",
+          "week": 25,
+          "run": 2,
+          "date": "2026-12-10",
+          "dayLabel": "Thu",
+          "phase": "Taper",
+          "title": "25–30 min easy run/walk",
+          "summary": "Finish feeling better than you started.",
+          "purpose": "Two short easy runs",
+          "effort": "3–4",
+          "optional": false,
+          "event": false,
+          "coachingNotes": [
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Finish feeling better than you started."
+            ],
+            [
+              "Effort",
+              "3–4"
+            ],
+            [
+              "Fallback",
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
               "type": "run",
               "seconds": 240,
               "label": "Easy run"
@@ -3623,8 +6930,8 @@
               "label": "Cool down walk"
             }
           ],
-          "totalSeconds": 2400,
-          "totalMinutes": 40,
+          "totalSeconds": 1800,
+          "totalMinutes": 30,
           "longestRun": 4,
           "isFinal": false
         }
@@ -3635,7 +6942,7 @@
       "phase": "Challenge Week",
       "startDate": "2026-12-14",
       "endDate": "2026-12-20",
-      "goal": "Optional easy shakeout only",
+      "goal": "One optional confidence run",
       "sessions": [
         {
           "id": "wc26-w26-wed",
@@ -3644,26 +6951,27 @@
           "date": "2026-12-16",
           "dayLabel": "Wed",
           "phase": "Challenge Week",
-          "title": "20-30 min easy run/walk if needed",
-          "summary": "Optional confidence shakeout.",
-          "purpose": "Travel fresh, stay organised, and trust the build.",
-          "effort": "3-4",
+          "title": "Optional 20 min confidence run/walk",
+          "summary": "Very easy; skip if it would add fatigue.",
+          "purpose": "One optional confidence run",
+          "effort": "2–3",
+          "optional": true,
+          "event": false,
           "coachingNotes": [
-            "Trust the work. The goal is not to dominate the route. The goal is to move through it safely and confidently.",
-            "If weather or body state make the route unsafe, changing the plan is a successful decision."
+            "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
           ],
           "blocks": [
             [
               "Purpose",
-              "Optional confidence shakeout."
+              "Very easy; skip if it would add fatigue."
             ],
             [
               "Effort",
-              "3-4"
+              "2–3"
             ],
             [
               "Fallback",
-              "If weather or body state make the route unsafe, changing the plan is a successful decision."
+              "Repeat or shorten the session if joint signal rises above 4/10 or recovery is clearly worsening."
             ]
           ],
           "steps": [
@@ -3693,43 +7001,13 @@
               "label": "Recovery walk"
             },
             {
-              "type": "run",
-              "seconds": 240,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 240,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
-              "type": "run",
-              "seconds": 240,
-              "label": "Easy run"
-            },
-            {
-              "type": "walk",
-              "seconds": 60,
-              "label": "Recovery walk"
-            },
-            {
               "type": "walk",
               "seconds": 300,
               "label": "Cool down walk"
             }
           ],
-          "totalSeconds": 2100,
-          "totalMinutes": 35,
+          "totalSeconds": 1200,
+          "totalMinutes": 20,
           "longestRun": 4,
           "isFinal": true
         }
