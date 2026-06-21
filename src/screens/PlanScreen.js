@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Pressable, Text, View } from "react-native";
-import { Card, GhostButton, Label, Pill, ScreenTransition, SectionHeader, Title } from "../components/ui/UI";
+import { Body, Card, GhostButton, Label, Pill, ScreenTransition, SectionHeader, Title } from "../components/ui/UI";
 import { styles } from "../theme/styles";
 import { useTheme } from "../theme/theme";
 
@@ -10,10 +10,9 @@ import { useTheme } from "../theme/theme";
  * @param {Object} props Component props
  * @returns {JSX.Element} Plan screen
  */
-export function PlanScreen({ trainingPlan, completedSet, nextSessionId, onSelectSession, scrollRef, recoveryWeekActive, repeatWeekWeek, onRepeatWeek, planLabel }) {
+export function PlanScreen({ trainingPlan, completedSet, nextSessionId, nextSessionWeek, onSelectSession, scrollRef, recoveryWeekActive, repeatWeekWeek, onRepeatWeek, planLabel }) {
   const theme = useTheme();
-  const currentWeek = Number(nextSessionId.split("-")[0]);
-  const sessionsPerWeek = trainingPlan[0]?.sessions.filter((session) => session.countsTowardPlan !== false).length || 1;
+  const currentWeek = nextSessionWeek;
   const hasScrolledRef = useRef(false);
 
   return (
@@ -25,11 +24,12 @@ export function PlanScreen({ trainingPlan, completedSet, nextSessionId, onSelect
         const isFuture = week.week > currentWeek && done === 0;
         const isCurrent = week.week === currentWeek;
         const isRepeatWeek = repeatWeekWeek === week.week;
-        const sessionsRequired = Math.max(0, (week.week - 1) * sessionsPerWeek);
-        const completedBeforeWeek = trainingPlan
+        const priorSessions = trainingPlan
           .filter((candidateWeek) => candidateWeek.week < week.week)
           .flatMap((candidateWeek) => candidateWeek.sessions)
-          .filter((session) => session.countsTowardPlan !== false && completedSet.has(session.id)).length;
+          .filter((session) => session.countsTowardPlan !== false);
+        const sessionsRequired = priorSessions.length;
+        const completedBeforeWeek = priorSessions.filter((session) => completedSet.has(session.id)).length;
         const unlockRatio = sessionsRequired === 0 ? 1 : completedBeforeWeek / sessionsRequired;
 
         return (
@@ -78,6 +78,7 @@ export function PlanScreen({ trainingPlan, completedSet, nextSessionId, onSelect
               <GhostButton label={isRepeatWeek ? "Repeating this week" : "Repeat this week"} onPress={() => onRepeatWeek(week.week)} compact />
             ) : null}
 
+            {week.sessions.length === 0 ? <Body>No guided run this week. Follow the walking, hiking, strength and recovery reference in Winter Challenge.</Body> : null}
             {week.sessions.map((session, index) => (
               <Pressable
                 key={session.id}

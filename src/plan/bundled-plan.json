@@ -1,0 +1,3739 @@
+{
+  "planId": "dufton-alston-2026",
+  "planVersion": 1,
+  "publishedAt": "2026-06-21T00:00:00.000Z",
+  "revisionSummary": "Initial 26-week challenge plan.",
+  "effectiveSessionId": null,
+  "startDate": "2026-06-22",
+  "challengeDate": "2026-12-20",
+  "title": "Winter Challenge Run Plan",
+  "weeks": [
+    {
+      "week": 1,
+      "phase": "Foundation Reset",
+      "startDate": "2026-06-22",
+      "endDate": "2026-06-28",
+      "goal": "6-8 x 45 sec jog / 90 sec walk",
+      "sessions": []
+    },
+    {
+      "week": 2,
+      "phase": "Base Building",
+      "startDate": "2026-06-29",
+      "endDate": "2026-07-05",
+      "goal": "30 sec jog / 2 min walk x 8",
+      "sessions": [
+        {
+          "id": "wc26-w02-thu",
+          "week": 2,
+          "run": 1,
+          "date": "2026-07-02",
+          "dayLabel": "Thu",
+          "phase": "Base Building",
+          "title": "30 sec jog / 2 min walk x 8",
+          "summary": "First cautious run/walk ladder.",
+          "purpose": "Bridge into July by keeping the strength work and introducing more controlled run/walk.",
+          "effort": "4-5",
+          "coachingNotes": [
+            "This is the first week with running exposure. The run/walk only counts as progress if joints and calves stay settled the next day.",
+            "If the jog/walk causes next-day pain above 4/10, repeat this exact week before advancing."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "First cautious run/walk ladder."
+            ],
+            [
+              "Effort",
+              "4-5"
+            ],
+            [
+              "Fallback",
+              "If the jog/walk causes next-day pain above 4/10, repeat this exact week before advancing."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Controlled jog"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Controlled jog"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Controlled jog"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Controlled jog"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Controlled jog"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Controlled jog"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Controlled jog"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 30,
+              "label": "Controlled jog"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 1800,
+          "totalMinutes": 30,
+          "longestRun": 1,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "phase": "Base Building",
+      "startDate": "2026-07-06",
+      "endDate": "2026-07-12",
+      "goal": "1 min jog / 2 min walk x 8",
+      "sessions": [
+        {
+          "id": "wc26-w03-wed",
+          "week": 3,
+          "run": 1,
+          "date": "2026-07-08",
+          "dayLabel": "Wed",
+          "phase": "Base Building",
+          "title": "1 min jog / 2 min walk x 8",
+          "summary": "Controlled breathing, no pace chase.",
+          "purpose": "Daily walk logging opens. Walk daily, then layer intervals, strength, and one longer hike on top.",
+          "effort": "5",
+          "coachingNotes": [
+            "The win this week is steady form and repeatability, not a harder run/walk effort.",
+            "If Wednesday feels clunky, repeat Level 2 next week instead of moving on automatically."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Controlled breathing, no pace chase."
+            ],
+            [
+              "Effort",
+              "5"
+            ],
+            [
+              "Fallback",
+              "If Wednesday feels clunky, repeat Level 2 next week instead of moving on automatically."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 2040,
+          "totalMinutes": 34,
+          "longestRun": 1,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "phase": "Base Building",
+      "startDate": "2026-07-13",
+      "endDate": "2026-07-19",
+      "goal": "1 min jog / 2 min walk x 10",
+      "sessions": [
+        {
+          "id": "wc26-w04-wed",
+          "week": 4,
+          "run": 1,
+          "date": "2026-07-15",
+          "dayLabel": "Wed",
+          "phase": "Base Building",
+          "title": "1 min jog / 2 min walk x 10",
+          "summary": "Slightly longer run/walk exposure.",
+          "purpose": "Keep the walk base steady, add a second quality session, and protect recovery.",
+          "effort": "5",
+          "coachingNotes": [
+            "This week starts to feel like training rather than just restarting. Respect that by keeping the easy work truly easy.",
+            "If the hike trashes the next two days, reduce the next long day by 15-20 percent."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Slightly longer run/walk exposure."
+            ],
+            [
+              "Effort",
+              "5"
+            ],
+            [
+              "Fallback",
+              "If the hike trashes the next two days, reduce the next long day by 15-20 percent."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 2400,
+          "totalMinutes": 40,
+          "longestRun": 1,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "phase": "Base Building",
+      "startDate": "2026-07-20",
+      "endDate": "2026-07-26",
+      "goal": "90 sec jog / 2 min walk x 8",
+      "sessions": [
+        {
+          "id": "wc26-w05-wed",
+          "week": 5,
+          "run": 1,
+          "date": "2026-07-22",
+          "dayLabel": "Wed",
+          "phase": "Base Building",
+          "title": "90 sec jog / 2 min walk x 8",
+          "summary": "Longer controlled efforts.",
+          "purpose": "Add hill-strength support and a longer hike, keeping the walk habit and recovery in order.",
+          "effort": "5-6",
+          "coachingNotes": [
+            "This is the first week where hill strength and long-day demand start to meet. Keep form high and ego low.",
+            "If Wednesday or Saturday pushes joint signal to 5+, back the next run/walk down a level."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Longer controlled efforts."
+            ],
+            [
+              "Effort",
+              "5-6"
+            ],
+            [
+              "Fallback",
+              "If Wednesday or Saturday pushes joint signal to 5+, back the next run/walk down a level."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 90,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 2280,
+          "totalMinutes": 38,
+          "longestRun": 2,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "phase": "Base Building",
+      "startDate": "2026-07-27",
+      "endDate": "2026-08-02",
+      "goal": "Easy 20 min run/walk",
+      "sessions": [
+        {
+          "id": "wc26-w06-wed",
+          "week": 6,
+          "run": 1,
+          "date": "2026-07-29",
+          "dayLabel": "Wed",
+          "phase": "Base Building",
+          "title": "Easy 20 min run/walk",
+          "summary": "Absorb, do not test.",
+          "purpose": "Take an easier week, absorb the load, and keep the walking base simple.",
+          "effort": "4",
+          "coachingNotes": [
+            "Easier weeks are part of the plan, not a reward for good behavior. Let this one absorb the last three weeks.",
+            "If you feel great, keep the plan unchanged anyway."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Absorb, do not test."
+            ],
+            [
+              "Effort",
+              "4"
+            ],
+            [
+              "Fallback",
+              "If you feel great, keep the plan unchanged anyway."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 1200,
+          "totalMinutes": 20,
+          "longestRun": 4,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "phase": "Endurance Foundation",
+      "startDate": "2026-08-03",
+      "endDate": "2026-08-09",
+      "goal": "2 min jog / 2 min walk x 8",
+      "sessions": [
+        {
+          "id": "wc26-w07-wed",
+          "week": 7,
+          "run": 1,
+          "date": "2026-08-05",
+          "dayLabel": "Wed",
+          "phase": "Endurance Foundation",
+          "title": "2 min jog / 2 min walk x 8",
+          "summary": "Longer smooth run segments.",
+          "purpose": "Normalise longer time on feet while maintaining strength work.",
+          "effort": "5-6",
+          "coachingNotes": [
+            "Endurance foundation begins here. The body should start seeing longer trail time as normal rather than exceptional.",
+            "If Saturday becomes a grind, hold 15 km again next week rather than pushing distance."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Longer smooth run segments."
+            ],
+            [
+              "Effort",
+              "5-6"
+            ],
+            [
+              "Fallback",
+              "If Saturday becomes a grind, hold 15 km again next week rather than pushing distance."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 120,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 120,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 120,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 120,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 120,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 120,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 120,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 120,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 120,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 2520,
+          "totalMinutes": 42,
+          "longestRun": 2,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "phase": "Endurance Foundation",
+      "startDate": "2026-08-10",
+      "endDate": "2026-08-16",
+      "goal": "30 min easy run/walk",
+      "sessions": [
+        {
+          "id": "wc26-w08-wed",
+          "week": 8,
+          "run": 1,
+          "date": "2026-08-12",
+          "dayLabel": "Wed",
+          "phase": "Endurance Foundation",
+          "title": "30 min easy run/walk",
+          "summary": "Keep cadence smooth and calm.",
+          "purpose": "Keep hikes growing and stay patient.",
+          "effort": "5",
+          "coachingNotes": [
+            "This week is about accumulating sensible work, not one standout hero session.",
+            "If lower back or hips take over from legs, reduce the next hill-strength load slightly."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Keep cadence smooth and calm."
+            ],
+            [
+              "Effort",
+              "5"
+            ],
+            [
+              "Fallback",
+              "If lower back or hips take over from legs, reduce the next hill-strength load slightly."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 1800,
+          "totalMinutes": 30,
+          "longestRun": 4,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "phase": "Endurance Foundation",
+      "startDate": "2026-08-17",
+      "endDate": "2026-08-23",
+      "goal": "35 min easy run/walk",
+      "sessions": [
+        {
+          "id": "wc26-w09-wed",
+          "week": 9,
+          "run": 1,
+          "date": "2026-08-19",
+          "dayLabel": "Wed",
+          "phase": "Endurance Foundation",
+          "title": "35 min easy run/walk",
+          "summary": "Stay below breathless effort.",
+          "purpose": "Blend hill walking with a long hike.",
+          "effort": "5-6",
+          "coachingNotes": [
+            "You are starting to build a real long-day engine now. The key is still restraint early in the hike.",
+            "If descents push pain above 4/10, find gentler terrain next week and strengthen downhill-specific control."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Stay below breathless effort."
+            ],
+            [
+              "Effort",
+              "5-6"
+            ],
+            [
+              "Fallback",
+              "If descents push pain above 4/10, find gentler terrain next week and strengthen downhill-specific control."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 2100,
+          "totalMinutes": 35,
+          "longestRun": 4,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 10,
+      "phase": "Endurance Foundation",
+      "startDate": "2026-08-24",
+      "endDate": "2026-08-30",
+      "goal": "Easy 25 min run/walk",
+      "sessions": [
+        {
+          "id": "wc26-w10-wed",
+          "week": 10,
+          "run": 1,
+          "date": "2026-08-26",
+          "dayLabel": "Wed",
+          "phase": "Endurance Foundation",
+          "title": "Easy 25 min run/walk",
+          "summary": "Keep rhythm, trim fatigue.",
+          "purpose": "Bank an easier week before September.",
+          "effort": "4",
+          "coachingNotes": [
+            "This week should feel easier before it feels impressive. That is exactly the point.",
+            "If you still feel cooked, strip Wednesday back to walking only."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Keep rhythm, trim fatigue."
+            ],
+            [
+              "Effort",
+              "4"
+            ],
+            [
+              "Fallback",
+              "If you still feel cooked, strip Wednesday back to walking only."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 1500,
+          "totalMinutes": 25,
+          "longestRun": 4,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 11,
+      "phase": "Trail-Specific Build",
+      "startDate": "2026-08-31",
+      "endDate": "2026-09-06",
+      "goal": "40 min run/walk",
+      "sessions": [
+        {
+          "id": "wc26-w11-wed",
+          "week": 11,
+          "run": 1,
+          "date": "2026-09-02",
+          "dayLabel": "Wed",
+          "phase": "Trail-Specific Build",
+          "title": "40 min run/walk",
+          "summary": "Stable run-walk rhythm.",
+          "purpose": "Step into bigger trail-specific volume.",
+          "effort": "5-6",
+          "coachingNotes": [
+            "This is the first week that should start feeling close to real event preparation. Strong pacing matters more than bravado.",
+            "If Saturday wipes you out for more than 48 hours, hold this level before progressing."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Stable run-walk rhythm."
+            ],
+            [
+              "Effort",
+              "5-6"
+            ],
+            [
+              "Fallback",
+              "If Saturday wipes you out for more than 48 hours, hold this level before progressing."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 2400,
+          "totalMinutes": 40,
+          "longestRun": 4,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "phase": "Trail-Specific Build",
+      "startDate": "2026-09-07",
+      "endDate": "2026-09-13",
+      "goal": "45 min run/walk",
+      "sessions": [
+        {
+          "id": "wc26-w12-wed",
+          "week": 12,
+          "run": 1,
+          "date": "2026-09-09",
+          "dayLabel": "Wed",
+          "phase": "Trail-Specific Build",
+          "title": "45 min run/walk",
+          "summary": "Controlled aerobic development.",
+          "purpose": "Practice a longer trail-style outing.",
+          "effort": "5-6",
+          "coachingNotes": [
+            "Trail confidence is a skill. Use this week to become calmer on uneven ground rather than faster.",
+            "If footing makes you tense, repeat similar terrain before increasing distance."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Controlled aerobic development."
+            ],
+            [
+              "Effort",
+              "5-6"
+            ],
+            [
+              "Fallback",
+              "If footing makes you tense, repeat similar terrain before increasing distance."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 2700,
+          "totalMinutes": 45,
+          "longestRun": 4,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 13,
+      "phase": "Trail-Specific Build",
+      "startDate": "2026-09-14",
+      "endDate": "2026-09-20",
+      "goal": "45-50 min run/walk",
+      "sessions": [
+        {
+          "id": "wc26-w13-wed",
+          "week": 13,
+          "run": 1,
+          "date": "2026-09-16",
+          "dayLabel": "Wed",
+          "phase": "Trail-Specific Build",
+          "title": "45-50 min run/walk",
+          "summary": "Sustained aerobic work.",
+          "purpose": "Bring hill strength into a 22-25 km day.",
+          "effort": "5-6",
+          "coachingNotes": [
+            "The big goal is still durability. A long day only helps if you can recover from it in a reasonable window.",
+            "If you finish shattered, reduce the next long day and improve fueling first."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Sustained aerobic work."
+            ],
+            [
+              "Effort",
+              "5-6"
+            ],
+            [
+              "Fallback",
+              "If you finish shattered, reduce the next long day and improve fueling first."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 3000,
+          "totalMinutes": 50,
+          "longestRun": 4,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 14,
+      "phase": "Trail-Specific Build",
+      "startDate": "2026-09-21",
+      "endDate": "2026-09-27",
+      "goal": "Easy 30 min run/walk",
+      "sessions": [
+        {
+          "id": "wc26-w14-wed",
+          "week": 14,
+          "run": 1,
+          "date": "2026-09-23",
+          "dayLabel": "Wed",
+          "phase": "Trail-Specific Build",
+          "title": "Easy 30 min run/walk",
+          "summary": "Keep rhythm without stress.",
+          "purpose": "Ease back to protect the build.",
+          "effort": "4",
+          "coachingNotes": [
+            "This is another absorb-and-reset week. Protect it so the next block lands well.",
+            "If you still feel beat up, turn Saturday into a flatter walk and keep the week truly easy."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Keep rhythm without stress."
+            ],
+            [
+              "Effort",
+              "4"
+            ],
+            [
+              "Fallback",
+              "If you still feel beat up, turn Saturday into a flatter walk and keep the week truly easy."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 1800,
+          "totalMinutes": 30,
+          "longestRun": 4,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 15,
+      "phase": "Half Marathon Build",
+      "startDate": "2026-09-28",
+      "endDate": "2026-10-04",
+      "goal": "8-10 km run/walk",
+      "sessions": [
+        {
+          "id": "wc26-w15-wed",
+          "week": 15,
+          "run": 1,
+          "date": "2026-09-30",
+          "dayLabel": "Wed",
+          "phase": "Half Marathon Build",
+          "title": "8-10 km run/walk",
+          "summary": "Longer sustained checkpoint run/walk.",
+          "purpose": "Push the long hike without making running the hero.",
+          "effort": "6",
+          "coachingNotes": [
+            "The half marathon build starts to matter here, but hiking durability still has equal billing.",
+            "If run volume hurts recovery for Saturday, trim the Wednesday distance rather than the hike."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Longer sustained checkpoint run/walk."
+            ],
+            [
+              "Effort",
+              "6"
+            ],
+            [
+              "Fallback",
+              "If run volume hurts recovery for Saturday, trim the Wednesday distance rather than the hike."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 4800,
+          "totalMinutes": 80,
+          "longestRun": 4,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 16,
+      "phase": "Half Marathon Build",
+      "startDate": "2026-10-05",
+      "endDate": "2026-10-11",
+      "goal": "9-11 km run/walk",
+      "sessions": [
+        {
+          "id": "wc26-w16-wed",
+          "week": 16,
+          "run": 1,
+          "date": "2026-10-07",
+          "dayLabel": "Wed",
+          "phase": "Half Marathon Build",
+          "title": "9-11 km run/walk",
+          "summary": "Progress checkpoint distance.",
+          "purpose": "Keep legs durable while volume stays high.",
+          "effort": "6",
+          "coachingNotes": [
+            "The combination of longer run/walk and long mixed trail day is the point this week. Keep both sub-maximal.",
+            "If Wednesday bleeds into Saturday, shorten the run/walk before cutting the trail-specific work."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Progress checkpoint distance."
+            ],
+            [
+              "Effort",
+              "6"
+            ],
+            [
+              "Fallback",
+              "If Wednesday bleeds into Saturday, shorten the run/walk before cutting the trail-specific work."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 180,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 5280,
+          "totalMinutes": 88,
+          "longestRun": 4,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 17,
+      "phase": "Half Marathon Build",
+      "startDate": "2026-10-12",
+      "endDate": "2026-10-18",
+      "goal": "10-12 km run/walk",
+      "sessions": [
+        {
+          "id": "wc26-w17-wed",
+          "week": 17,
+          "run": 1,
+          "date": "2026-10-14",
+          "dayLabel": "Wed",
+          "phase": "Half Marathon Build",
+          "title": "10-12 km run/walk",
+          "summary": "Checkpoint build, still controlled.",
+          "purpose": "Peak hiking durability before the event taper.",
+          "effort": "6",
+          "coachingNotes": [
+            "This is one of the heaviest trail weeks before the half. Pace matters less than how you manage the whole day.",
+            "If you are wrecked for more than two days, reduce peak volume before adding more running."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Checkpoint build, still controlled."
+            ],
+            [
+              "Effort",
+              "6"
+            ],
+            [
+              "Fallback",
+              "If you are wrecked for more than two days, reduce peak volume before adding more running."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 60,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 5760,
+          "totalMinutes": 96,
+          "longestRun": 4,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 18,
+      "phase": "Half Marathon Build",
+      "startDate": "2026-10-19",
+      "endDate": "2026-10-25",
+      "goal": "14-18 km run/walk",
+      "sessions": [
+        {
+          "id": "wc26-w18-wed",
+          "week": 18,
+          "run": 1,
+          "date": "2026-10-21",
+          "dayLabel": "Wed",
+          "phase": "Half Marathon Build",
+          "title": "14-18 km run/walk",
+          "summary": "Half-marathon-specific endurance.",
+          "purpose": "Peak the half build without chasing pace.",
+          "effort": "6-7",
+          "coachingNotes": [
+            "This is the peak half-marathon week, but the route challenge still matters. That means restraint, not racing training.",
+            "If the Wednesday effort gets too hard, stop early and treat it as enough for the week."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Half-marathon-specific endurance."
+            ],
+            [
+              "Effort",
+              "6-7"
+            ],
+            [
+              "Fallback",
+              "If the Wednesday effort gets too hard, stop early and treat it as enough for the week."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 8640,
+          "totalMinutes": 144,
+          "longestRun": 4,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 19,
+      "phase": "Half Marathon Week",
+      "startDate": "2026-10-26",
+      "endDate": "2026-11-01",
+      "goal": "Half marathon run/walk",
+      "sessions": [
+        {
+          "id": "wc26-w19-wed",
+          "week": 19,
+          "run": 1,
+          "date": "2026-10-28",
+          "dayLabel": "Wed",
+          "phase": "Half Marathon Week",
+          "title": "Easy 25-30 min run/walk",
+          "summary": "Confidence, not conditioning.",
+          "purpose": "Arrive calm and finish safely.",
+          "effort": "4",
+          "coachingNotes": [
+            "The event is a checkpoint. A smart, even run/walk finish is more valuable than a messy overperformance.",
+            "If anything feels wrong on the day, convert the event fully to run/walk and protect the bigger winter goal."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Confidence, not conditioning."
+            ],
+            [
+              "Effort",
+              "4"
+            ],
+            [
+              "Fallback",
+              "If anything feels wrong on the day, convert the event fully to run/walk and protect the bigger winter goal."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 540,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 540,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 540,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 540,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 540,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 540,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 540,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 540,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 540,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 540,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 540,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 540,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 540,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 540,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 540,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 300,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 9900,
+          "totalMinutes": 165,
+          "longestRun": 9,
+          "isFinal": false
+        },
+        {
+          "id": "wc26-w19-sun",
+          "week": 19,
+          "run": 2,
+          "date": "2026-11-01",
+          "dayLabel": "Sun",
+          "phase": "Half Marathon Week",
+          "title": "Half marathon run/walk",
+          "summary": "Finish safely and evenly.",
+          "purpose": "Arrive calm and finish safely.",
+          "effort": "6-7",
+          "coachingNotes": [
+            "The event is a checkpoint. A smart, even run/walk finish is more valuable than a messy overperformance.",
+            "If anything feels wrong on the day, convert the event fully to run/walk and protect the bigger winter goal."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Finish safely and evenly."
+            ],
+            [
+              "Effort",
+              "6-7"
+            ],
+            [
+              "Fallback",
+              "If anything feels wrong on the day, convert the event fully to run/walk and protect the bigger winter goal."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 540,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 540,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 540,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 540,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 540,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 540,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 540,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 540,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 540,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 540,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 540,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 540,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 540,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 540,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 540,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 300,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 9900,
+          "totalMinutes": 165,
+          "longestRun": 9,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 20,
+      "phase": "Recovery",
+      "startDate": "2026-11-02",
+      "endDate": "2026-11-08",
+      "goal": "None",
+      "sessions": []
+    },
+    {
+      "week": 21,
+      "phase": "Post-Half Trail Build",
+      "startDate": "2026-11-09",
+      "endDate": "2026-11-15",
+      "goal": "Easy 40 min run/walk",
+      "sessions": [
+        {
+          "id": "wc26-w21-wed",
+          "week": 21,
+          "run": 1,
+          "date": "2026-11-11",
+          "dayLabel": "Wed",
+          "phase": "Post-Half Trail Build",
+          "title": "Easy 40 min run/walk",
+          "summary": "Gentle post-event running.",
+          "purpose": "Return to trail-specific structure.",
+          "effort": "5",
+          "coachingNotes": [
+            "This is the pivot back to the real target. The half is done; now everything points toward winter trail durability.",
+            "If recovery is still sluggish from the half, cut the run/walk first, not the trail day."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Gentle post-event running."
+            ],
+            [
+              "Effort",
+              "5"
+            ],
+            [
+              "Fallback",
+              "If recovery is still sluggish from the half, cut the run/walk first, not the trail day."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 2400,
+          "totalMinutes": 40,
+          "longestRun": 4,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 22,
+      "phase": "Post-Half Trail Build",
+      "startDate": "2026-11-16",
+      "endDate": "2026-11-22",
+      "goal": "8-10 km run/walk",
+      "sessions": [
+        {
+          "id": "wc26-w22-wed",
+          "week": 22,
+          "run": 1,
+          "date": "2026-11-18",
+          "dayLabel": "Wed",
+          "phase": "Post-Half Trail Build",
+          "title": "8-10 km run/walk",
+          "summary": "Maintain running confidence.",
+          "purpose": "Hit the key 30-35 km benchmark week.",
+          "effort": "5-6",
+          "coachingNotes": [
+            "This is the benchmark week. The goal is not speed. The goal is proving you can manage a long day and still think clearly.",
+            "If conditions or body state are poor, shorten the day intelligently and reschedule rather than forcing it."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Maintain running confidence."
+            ],
+            [
+              "Effort",
+              "5-6"
+            ],
+            [
+              "Fallback",
+              "If conditions or body state are poor, shorten the day intelligently and reschedule rather than forcing it."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 4800,
+          "totalMinutes": 80,
+          "longestRun": 4,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 23,
+      "phase": "Post-Half Trail Build",
+      "startDate": "2026-11-23",
+      "endDate": "2026-11-29",
+      "goal": "Easy 30 min run/walk",
+      "sessions": [
+        {
+          "id": "wc26-w23-wed",
+          "week": 23,
+          "run": 1,
+          "date": "2026-11-25",
+          "dayLabel": "Wed",
+          "phase": "Post-Half Trail Build",
+          "title": "Easy 30 min run/walk",
+          "summary": "Keep some rhythm.",
+          "purpose": "Recover before the last specific push.",
+          "effort": "4",
+          "coachingNotes": [
+            "Absorb the biggest training week. This is where you turn one huge effort into usable adaptation.",
+            "If still trashed, strip Wednesday down to walking and keep the long day at the short end."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Keep some rhythm."
+            ],
+            [
+              "Effort",
+              "4"
+            ],
+            [
+              "Fallback",
+              "If still trashed, strip Wednesday down to walking and keep the long day at the short end."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 1800,
+          "totalMinutes": 30,
+          "longestRun": 4,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 24,
+      "phase": "Last Specific Week",
+      "startDate": "2026-11-30",
+      "endDate": "2026-12-06",
+      "goal": "8-10 km run/walk",
+      "sessions": [
+        {
+          "id": "wc26-w24-wed",
+          "week": 24,
+          "run": 1,
+          "date": "2026-12-02",
+          "dayLabel": "Wed",
+          "phase": "Last Specific Week",
+          "title": "8-10 km run/walk",
+          "summary": "Keep rhythm only.",
+          "purpose": "Rehearse with kit and purposeful terrain.",
+          "effort": "5-6",
+          "coachingNotes": [
+            "This is the last specific week. It should increase confidence, not create new fitness at all costs.",
+            "If the long rehearsal exposes a problem, solve the problem - do not cram more mileage."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Keep rhythm only."
+            ],
+            [
+              "Effort",
+              "5-6"
+            ],
+            [
+              "Fallback",
+              "If the long rehearsal exposes a problem, solve the problem - do not cram more mileage."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 4800,
+          "totalMinutes": 80,
+          "longestRun": 4,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 25,
+      "phase": "Taper",
+      "startDate": "2026-12-07",
+      "endDate": "2026-12-13",
+      "goal": "Easy 30-40 min run/walk",
+      "sessions": [
+        {
+          "id": "wc26-w25-wed",
+          "week": 25,
+          "run": 1,
+          "date": "2026-12-09",
+          "dayLabel": "Wed",
+          "phase": "Taper",
+          "title": "Easy 30-40 min run/walk",
+          "summary": "Keep the system awake.",
+          "purpose": "Reduce fatigue without going flat.",
+          "effort": "4",
+          "coachingNotes": [
+            "The taper is about arriving mentally and physically ready, not trying to squeeze out one more big improvement.",
+            "If you feel flat, resist the urge to add hard work. Fresh beats sharp here."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Keep the system awake."
+            ],
+            [
+              "Effort",
+              "4"
+            ],
+            [
+              "Fallback",
+              "If you feel flat, resist the urge to add hard work. Fresh beats sharp here."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 2400,
+          "totalMinutes": 40,
+          "longestRun": 4,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "week": 26,
+      "phase": "Challenge Week",
+      "startDate": "2026-12-14",
+      "endDate": "2026-12-20",
+      "goal": "Optional easy shakeout only",
+      "sessions": [
+        {
+          "id": "wc26-w26-wed",
+          "week": 26,
+          "run": 1,
+          "date": "2026-12-16",
+          "dayLabel": "Wed",
+          "phase": "Challenge Week",
+          "title": "20-30 min easy run/walk if needed",
+          "summary": "Optional confidence shakeout.",
+          "purpose": "Travel fresh, stay organised, and trust the build.",
+          "effort": "3-4",
+          "coachingNotes": [
+            "Trust the work. The goal is not to dominate the route. The goal is to move through it safely and confidently.",
+            "If weather or body state make the route unsafe, changing the plan is a successful decision."
+          ],
+          "blocks": [
+            [
+              "Purpose",
+              "Optional confidence shakeout."
+            ],
+            [
+              "Effort",
+              "3-4"
+            ],
+            [
+              "Fallback",
+              "If weather or body state make the route unsafe, changing the plan is a successful decision."
+            ]
+          ],
+          "steps": [
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Warm up walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "run",
+              "seconds": 240,
+              "label": "Easy run"
+            },
+            {
+              "type": "walk",
+              "seconds": 60,
+              "label": "Recovery walk"
+            },
+            {
+              "type": "walk",
+              "seconds": 300,
+              "label": "Cool down walk"
+            }
+          ],
+          "totalSeconds": 2100,
+          "totalMinutes": 35,
+          "longestRun": 4,
+          "isFinal": true
+        }
+      ]
+    }
+  ]
+}

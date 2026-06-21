@@ -6,21 +6,22 @@ import { ActivityIndicator, Alert, Animated, Pressable, ScrollView, Text, View }
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { STORAGE_KEY } from "./src/config/storage";
 import { APP_VERSION } from "./src/config/product";
-import {
-  achievements,
-  getUnlockedAchievements,
-  buildRecoveryWeek,
-  buildTrainingPlan,
-  getPlanLabel,
-  getPlanMilestones,
-  hasPlacementAnswers,
-  resolvePlanPlacement,
-} from "./src/engine";
+import { getUnlockedAchievements } from "./src/engine/achievements";
+import { buildRecoveryWeek } from "./src/engine/utils/recoveryHelpers";
 import { createWorkoutLog, countCompletedWeeks, summarizeProgress } from "./src/lib/progress";
 import { syncDailyReminder } from "./src/lib/notifications";
-import { buildSavedSetupState, defaultAppState, defaultProfile, hydrateAppState, shouldResetPlanProgress } from "./src/lib/profileState";
+import { defaultAppState, hydrateAppState } from "./src/lib/profileState";
+import {
+  describePlanUpdate,
+  fetchPlanUpdate,
+  getBundledPlan,
+  getChallengeMilestones,
+  loadCachedPlan,
+  PLAN_URL,
+  preserveCompletedSessions,
+  saveCachedPlan,
+} from "./src/plan/planService";
 import { ErrorBoundary } from "./src/components/ErrorBoundary";
-import { SetupScreen } from "./src/screens/SetupScreen";
 import { DashboardScreen } from "./src/screens/DashboardScreen";
 import { PlanScreen } from "./src/screens/PlanScreen";
 import { WorkoutScreen } from "./src/screens/WorkoutScreen";
@@ -36,73 +37,38 @@ import { ThemeProvider, useTheme } from "./src/theme/theme";
 
 export default function App() {
   const [appState, setAppState] = useState(defaultAppState);
-  const [draftProfile, setDraftProfile] = useState(defaultProfile);
+  const [planDocument, setPlanDocument] = useState(getBundledPlan());
   const [ready, setReady] = useState(false);
   const [reminderPermissionGranted, setReminderPermissionGranted] = useState(false);
+  const [planUpdateStatus, setPlanUpdateStatus] = useState("Using the bundled offline plan.");
+  const [toast, setToast] = useState(null);
   const scrollRef = useRef(null);
   const lastScrollY = useRef(0);
   const tabTranslateY = useRef(new Animated.Value(0)).current;
 
-  const handleScroll = (event) => {
-    const currentY = event.nativeEvent.contentOffset.y;
-    const diff = currentY - lastScrollY.current;
-    
-    if (diff > 5 && currentY > 50) {
-      Animated.timing(tabTranslateY, {
-        toValue: 120,
-        duration: 250,
-        useNativeDriver: true,
-      }).start();
-    } else if (diff < -5 || currentY <= 0) {
-      Animated.timing(tabTranslateY, {
-        toValue: 0,
-        duration: 250,
-        useNativeDriver: true,
-      }).start();
-    }
-    lastScrollY.current = currentY;
-  };
-
-  const trainingPlan = useMemo(() => buildTrainingPlan(appState.profile), [appState.profile]);
+  const trainingPlan = planDocument.weeks;
   const allSessions = useMemo(() => trainingPlan.flatMap((week) => week.sessions), [trainingPlan]);
-  const coreSessions = useMemo(() => allSessions.filter((session) => session.countsTowardPlan !== false), [allSessions]);
+  const coreSessions = allSessions;
   const completedSet = useMemo(() => new Set(appState.progress.completedSessionIds), [appState.progress.completedSessionIds]);
-  const [toast, setToast] = useState(null);
-  const nextSession = coreSessions.find((session) => !completedSet.has(session.id)) ?? coreSessions[coreSessions.length - 1];
-  const currentWeekSessions = useMemo(
-    () => trainingPlan.find((week) => week.week === nextSession.week)?.sessions ?? [],
-    [trainingPlan, nextSession]
-  );
-  const recoveryWeekSessions = useMemo(
-    () => (appState.plan.recoveryWeek.active ? buildRecoveryWeek(currentWeekSessions) : []),
-    [appState.plan.recoveryWeek.active, currentWeekSessions]
-  );
-  const repeatWeekSessions = useMemo(() => {
-    if (!appState.plan.repeatWeek.active || !appState.plan.repeatWeek.week) {
-      return [];
-    }
-
-    return trainingPlan.find((week) => week.week === appState.plan.repeatWeek.week)?.sessions ?? [];
-  }, [appState.plan.repeatWeek, trainingPlan]);
-  const selectedSession =
-    allSessions.find((session) => session.id === appState.plan.selectedSessionId) ??
-    nextSession;
+  const nextSession = coreSessions.find((session) => !completedSet.has(session.id)) ?? coreSessions.at(-1);
+  const currentWeekSessions = trainingPlan.find((week) => week.week === nextSession?.week)?.sessions ?? [];
+  const recoveryWeekSessions = appState.plan.recoveryWeek.active ? buildRecoveryWeek(currentWeekSessions) : [];
+  const repeatWeekSessions = appState.plan.repeatWeek.active
+    ? trainingPlan.find((week) => week.week === appState.plan.repeatWeek.week)?.sessions ?? []
+    : [];
+  const selectedSession = allSessions.find((session) => session.id === appState.plan.selectedSessionId) ?? nextSession;
   const activeSession = appState.plan.recoveryWeek.active
     ? recoveryWeekSessions[appState.plan.recoveryWeek.completedRuns] ?? recoveryWeekSessions[0] ?? selectedSession
     : appState.plan.repeatWeek.active
       ? repeatWeekSessions[appState.plan.repeatWeek.sessionIndex] ?? repeatWeekSessions[0] ?? selectedSession
       : selectedSession;
-  const completionPercent = Math.round((appState.progress.completedSessionIds.filter((id) => coreSessions.some((session) => session.id === id)).length / coreSessions.length) * 100 || 0);
+  const completedCoreCount = appState.progress.completedSessionIds.filter((id) => coreSessions.some((session) => session.id === id)).length;
+  const completionPercent = Math.round((completedCoreCount / coreSessions.length) * 100 || 0);
   const streak = countCompletedWeeks(trainingPlan, completedSet);
   const unlocked = getUnlockedAchievements(appState, coreSessions.length, streak);
   const prevUnlockedRef = useRef(unlocked);
-  const weeklyCompletion = trainingPlan.map((week) =>
-    week.sessions.filter((session) => session.countsTowardPlan !== false && completedSet.has(session.id)).length
-  );
-  const planLabel = useMemo(() => getPlanLabel(appState.profile), [appState.profile]);
-  const planMilestones = useMemo(() => getPlanMilestones(appState.profile), [appState.profile]);
-  const progressSummary = useMemo(() => summarizeProgress(appState.progress.sessionLogs, planMilestones), [appState.progress.sessionLogs, planMilestones]);
-  const canContinueSetup = useMemo(() => hasPlacementAnswers(draftProfile), [draftProfile]);
+  const weeklyCompletion = trainingPlan.map((week) => week.sessions.filter((session) => completedSet.has(session.id)).length);
+  const progressSummary = summarizeProgress(appState.progress.sessionLogs, getChallengeMilestones());
 
   useEffect(() => {
     loadState();
@@ -110,9 +76,9 @@ export default function App() {
 
   useEffect(() => {
     if (ready && unlocked.length > prevUnlockedRef.current.length) {
-      const newAchievements = unlocked.filter((u) => !prevUnlockedRef.current.some((pu) => pu.id === u.id));
-      if (newAchievements.length > 0) {
-        setToast(newAchievements[newAchievements.length - 1]);
+      const newAchievements = unlocked.filter((item) => !prevUnlockedRef.current.some((previous) => previous.id === item.id));
+      if (newAchievements.length) {
+        setToast(newAchievements.at(-1));
         setTimeout(() => setToast(null), 4000);
       }
     }
@@ -126,130 +92,92 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    if (ready) {
-      AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(appState));
-    }
+    if (ready) AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(appState));
   }, [appState, ready]);
 
   useEffect(() => {
     if (!ready || !nextSession) return;
-
     syncDailyReminder(appState.profile, nextSession)
-      .then((result) => {
-        setReminderPermissionGranted(result.permissionGranted);
-      })
+      .then((result) => setReminderPermissionGranted(result.permissionGranted))
       .catch(() => {});
   }, [appState.profile, nextSession, ready]);
 
   async function loadState() {
+    let hydrated = defaultAppState;
+    let activePlan = getBundledPlan();
     try {
-      const raw = await AsyncStorage.getItem(STORAGE_KEY);
-      if (raw) {
-        const hydratedState = hydrateAppState(JSON.parse(raw));
-        setAppState(hydratedState);
-        setDraftProfile(hydratedState.profile);
-      } else {
-        setDraftProfile(defaultProfile);
+      const [rawState, cachedPlan] = await Promise.all([AsyncStorage.getItem(STORAGE_KEY), loadCachedPlan()]);
+      if (rawState) hydrated = hydrateAppState(JSON.parse(rawState));
+      if (cachedPlan && cachedPlan.planVersion >= activePlan.planVersion) {
+        activePlan = cachedPlan;
+        setPlanUpdateStatus(`Using cached plan version ${cachedPlan.planVersion}.`);
       }
+      setAppState(hydrated);
+      setPlanDocument(activePlan);
     } finally {
       setReady(true);
+      setTimeout(() => checkForPlanUpdate(activePlan, hydrated.progress.completedSessionIds, true), 250);
     }
   }
 
-  function setScreen(currentScreen, extraUi = {}) {
-    setAppState((current) => ({
-      ...current,
-      ui: { ...current.ui, currentScreen, ...extraUi },
-    }));
-  }
+  async function checkForPlanUpdate(currentPlan = planDocument, completedIds = appState.progress.completedSessionIds, quiet = false) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 10000);
+    setPlanUpdateStatus("Checking the published plan...");
+    try {
+      const candidate = await fetchPlanUpdate(currentPlan.planVersion, controller.signal);
+      if (!candidate) {
+        setPlanUpdateStatus(`Plan version ${currentPlan.planVersion} is current.`);
+        if (!quiet) Alert.alert("Plan is current", `You already have version ${currentPlan.planVersion}.`);
+        return;
+      }
 
-  function openSetupEditor() {
-    setDraftProfile(appState.profile);
-    setScreen("settings");
-  }
-
-  function editPlanSetup() {
-    setDraftProfile(appState.profile);
-    setScreen("setup");
-  }
-
-  function updateProfile(key, value) {
-    setDraftProfile((current) => ({ ...current, [key]: value }));
-  }
-
-  function updateSavedProfile(key, value) {
-    setAppState((current) => ({
-      ...current,
-      profile: { ...current.profile, [key]: value },
-    }));
-  }
-
-  function commitSetup(nextProfile, isFirstSetup) {
-    setAppState((current) => buildSavedSetupState(current, nextProfile, isFirstSetup));
-  }
-
-  function confirmSetupSave(nextProfile, isFirstSetup) {
-    const willResetProgress =
-      !isFirstSetup &&
-      appState.progress.completedSessionIds.length > 0 &&
-      shouldResetPlanProgress(appState.profile, nextProfile);
-
-    if (willResetProgress) {
+      const changes = describePlanUpdate(currentPlan, candidate, completedIds);
+      const preview = changes.slice(0, 5).map((change) => `• Week ${change.week}: ${change.type} — ${change.title}`).join("\n");
+      const more = changes.length > 5 ? `\n• Plus ${changes.length - 5} more change(s)` : "";
+      setPlanUpdateStatus(`Version ${candidate.planVersion} is available.`);
       Alert.alert(
-        "Reset current progress?",
-        "Changing your starting point, weekly rhythm, or focus will rebuild the plan and clear completed runs so the schedule stays accurate.",
+        `Run plan update v${candidate.planVersion}`,
+        `${candidate.revisionSummary || "A newer run plan is available."}\n\n${changes.length} future session change(s).\n${preview}${more}\n\nCompleted sessions and workout history will be preserved.`,
         [
-          { text: "Cancel", style: "cancel" },
+          { text: "Later", style: "cancel" },
           {
-            text: "Save and reset",
-            style: "destructive",
-            onPress: () => {
-              commitSetup(nextProfile, isFirstSetup);
+            text: "Install update",
+            onPress: async () => {
+              const installed = preserveCompletedSessions(currentPlan, candidate, completedIds);
+              await saveCachedPlan(installed);
+              setPlanDocument(installed);
+              setPlanUpdateStatus(`Installed plan version ${installed.planVersion}.`);
             },
           },
         ]
       );
-      return;
+    } catch (error) {
+      const message = error?.name === "AbortError" ? "Plan check timed out. The saved offline plan is still available." : `${error.message} The saved offline plan is still available.`;
+      setPlanUpdateStatus(message);
+      if (!quiet) Alert.alert("Could not update plan", message);
+    } finally {
+      clearTimeout(timeout);
     }
-
-    commitSetup(nextProfile, isFirstSetup);
   }
 
-  function submitSetup(isFirstSetup) {
-    if (!hasPlacementAnswers(draftProfile)) {
-      return;
+  function handleScroll(event) {
+    const currentY = event.nativeEvent.contentOffset.y;
+    const diff = currentY - lastScrollY.current;
+    if (diff > 5 && currentY > 50) {
+      Animated.timing(tabTranslateY, { toValue: 120, duration: 250, useNativeDriver: true }).start();
+    } else if (diff < -5 || currentY <= 0) {
+      Animated.timing(tabTranslateY, { toValue: 0, duration: 250, useNativeDriver: true }).start();
     }
-
-    const placement = resolvePlanPlacement(draftProfile);
-    const nextProfile = placement.effectiveProfile;
-
-    if (placement.placementMode === "redirected") {
-      const reasons = placement.reasons.map((reason) => `• ${reason}`).join("\n");
-      const recommendedPlan = getPlanLabel(nextProfile);
-
-      Alert.alert(
-        "Better plan match",
-        `${reasons}\n\nWe recommend switching you to ${recommendedPlan} for now.`,
-        [
-          { text: "Review answers", style: "cancel" },
-          {
-            text: "Use recommended plan",
-            onPress: () => confirmSetupSave(nextProfile, isFirstSetup),
-          },
-        ]
-      );
-      return;
-    }
-
-    confirmSetupSave(nextProfile, isFirstSetup);
+    lastScrollY.current = currentY;
   }
 
-  function finishSetup() {
-    submitSetup(true);
+  function setScreen(currentScreen) {
+    setAppState((current) => ({ ...current, ui: { ...current.ui, currentScreen } }));
   }
 
-  function saveSetup() {
-    submitSetup(false);
+  function updateSavedProfile(key, value) {
+    setAppState((current) => ({ ...current, profile: { ...current.profile, [key]: value } }));
   }
 
   function selectSession(sessionId) {
@@ -263,86 +191,51 @@ export default function App() {
   async function resetApp() {
     await AsyncStorage.removeItem(STORAGE_KEY);
     setAppState(defaultAppState);
-    setDraftProfile(defaultProfile);
   }
 
   function restartCurrentWeek() {
-    setAppState((current) => {
-      // Find the week that the user is currently on
-      const week = nextSession ? nextSession.week : null;
-      if (!week) return current;
-      
-      const weekPrefix = `${week}-`;
-      const completedSessionIds = current.progress.completedSessionIds.filter(
-        (id) => !id.startsWith(weekPrefix)
-      );
-
-      return {
-        ...current,
-        progress: {
-          ...current.progress,
-          completedSessionIds,
-        },
-        ui: {
-          ...current.ui,
-          currentScreen: "dashboard",
-        },
-      };
-    });
+    const currentIds = new Set(currentWeekSessions.map((session) => session.id));
+    setAppState((current) => ({
+      ...current,
+      progress: {
+        ...current.progress,
+        completedSessionIds: current.progress.completedSessionIds.filter((id) => !currentIds.has(id)),
+      },
+      ui: { ...current.ui, currentScreen: "dashboard" },
+    }));
   }
 
   function restartProgram() {
     setAppState((current) => ({
       ...current,
-      progress: {
-        ...current.progress,
-        completedSessionIds: [],
-        sessionLogs: [],
-      },
-      ui: {
-        ...current.ui,
-        currentScreen: "dashboard",
-      },
+      plan: { ...current.plan, selectedSessionId: coreSessions[0]?.id ?? current.plan.selectedSessionId },
+      progress: { ...current.progress, completedSessionIds: [], sessionLogs: [] },
+      ui: { ...current.ui, currentScreen: "dashboard" },
     }));
   }
 
   function injectDummyData() {
     setAppState((current) => {
-      const dummyLogs = [];
-      const dummySessionIds = [];
-      const now = new Date();
-      
-      coreSessions.slice(0, 15).forEach((session, i) => {
-         const log = createWorkoutLog(session, "complete");
-         const pastDate = new Date(now.getTime() - (15 - i) * 86400000 * 2.3);
-         log.completedAt = pastDate.toISOString();
-         const month = String(pastDate.getMonth() + 1).padStart(2, "0");
-         const day = String(pastDate.getDate()).padStart(2, "0");
-         log.dateKey = `${pastDate.getFullYear()}-${month}-${day}`;
-         dummyLogs.push(log);
-         dummySessionIds.push(session.id);
+      const logs = coreSessions.slice(0, 10).map((session, index) => {
+        const log = createWorkoutLog(session, "complete");
+        const date = new Date(Date.now() - (10 - index) * 172800000);
+        log.completedAt = date.toISOString();
+        log.dateKey = date.toISOString().slice(0, 10);
+        return log;
       });
-
       return {
         ...current,
         progress: {
-          ...current.progress,
-          completedSessionIds: [...new Set([...current.progress.completedSessionIds, ...dummySessionIds])],
-          sessionLogs: [...current.progress.sessionLogs, ...dummyLogs],
+          completedSessionIds: [...new Set([...current.progress.completedSessionIds, ...logs.map((log) => log.sessionId)])],
+          sessionLogs: [...current.progress.sessionLogs, ...logs],
         },
-        ui: {
-          ...current.ui,
-          currentScreen: "dashboard",
-        }
+        ui: { ...current.ui, currentScreen: "dashboard" },
       };
     });
   }
 
   function beginRun(runMode) {
-    setAppState((current) => ({
-      ...current,
-      ui: { ...current.ui, currentScreen: "run", runMode },
-    }));
+    setAppState((current) => ({ ...current, ui: { ...current.ui, currentScreen: "run", runMode } }));
   }
 
   function toggleRecoveryWeek() {
@@ -351,26 +244,11 @@ export default function App() {
       plan: {
         ...current.plan,
         recoveryWeek: current.plan.recoveryWeek.active
-          ? {
-              active: false,
-              completedRuns: 0,
-              targetSessionId: null,
-            }
-          : {
-              active: true,
-              completedRuns: 0,
-              targetSessionId: nextSession.id,
-            },
-        repeatWeek: {
-          active: false,
-          week: null,
-          sessionIndex: 0,
-        },
+          ? { active: false, completedRuns: 0, targetSessionId: null }
+          : { active: true, completedRuns: 0, targetSessionId: nextSession.id },
+        repeatWeek: { active: false, week: null, sessionIndex: 0 },
       },
-      ui: {
-        ...current.ui,
-        currentScreen: "workout",
-      },
+      ui: { ...current.ui, currentScreen: "workout" },
     }));
   }
 
@@ -379,227 +257,143 @@ export default function App() {
       ...current,
       plan: {
         ...current.plan,
-        recoveryWeek: {
-          active: false,
-          completedRuns: 0,
-          targetSessionId: null,
-        },
-        repeatWeek: {
-          active: true,
-          week,
-          sessionIndex: 0,
-        },
+        recoveryWeek: { active: false, completedRuns: 0, targetSessionId: null },
+        repeatWeek: { active: true, week, sessionIndex: 0 },
       },
-      ui: {
-        ...current.ui,
-        currentScreen: "workout",
-        runMode: "repeat",
-      },
+      ui: { ...current.ui, currentScreen: "workout", runMode: "repeat" },
     }));
   }
 
   function completeSelectedSession(runMode) {
     const workoutLog = createWorkoutLog(activeSession, runMode);
-
     setAppState((current) => {
-      const nextProgress = {
-        ...current.progress,
-        sessionLogs: [...current.progress.sessionLogs, workoutLog],
-      };
-
+      const nextProgress = { ...current.progress, sessionLogs: [...current.progress.sessionLogs, workoutLog] };
       if (runMode === "recovery") {
         const completedRuns = current.plan.recoveryWeek.completedRuns + 1;
-        const recoveryFinished = completedRuns >= recoveryWeekSessions.length;
-
+        const finished = completedRuns >= recoveryWeekSessions.length;
         return {
           ...current,
           progress: nextProgress,
           plan: {
             ...current.plan,
-            recoveryWeek: recoveryFinished
-              ? { active: false, completedRuns: 0, targetSessionId: null }
-              : { ...current.plan.recoveryWeek, completedRuns },
+            recoveryWeek: finished ? { active: false, completedRuns: 0, targetSessionId: null } : { ...current.plan.recoveryWeek, completedRuns },
           },
-          ui: {
-            ...current.ui,
-            currentScreen: "progress",
-            runMode: "complete",
-          },
+          ui: { ...current.ui, currentScreen: "progress", runMode: "complete" },
         };
       }
-
       if (runMode === "repeat") {
-        const nextRepeatIndex = current.plan.repeatWeek.sessionIndex + 1;
-        const repeatFinished = nextRepeatIndex >= repeatWeekSessions.length;
-
+        const sessionIndex = current.plan.repeatWeek.sessionIndex + 1;
+        const finished = sessionIndex >= repeatWeekSessions.length;
         return {
           ...current,
           progress: nextProgress,
           plan: {
             ...current.plan,
-            repeatWeek: repeatFinished
-              ? { active: false, week: null, sessionIndex: 0 }
-              : { ...current.plan.repeatWeek, sessionIndex: nextRepeatIndex },
+            repeatWeek: finished ? { active: false, week: null, sessionIndex: 0 } : { ...current.plan.repeatWeek, sessionIndex },
           },
-          ui: {
-            ...current.ui,
-            currentScreen: repeatFinished ? "progress" : "workout",
-            runMode: "complete",
-          },
+          ui: { ...current.ui, currentScreen: finished ? "progress" : "workout", runMode: "complete" },
         };
       }
 
-      const isAlreadyComplete = current.progress.completedSessionIds.includes(selectedSession.id);
-      const completedSessionIds = isAlreadyComplete ? current.progress.completedSessionIds : [...current.progress.completedSessionIds, selectedSession.id];
+      const completedSessionIds = current.progress.completedSessionIds.includes(activeSession.id)
+        ? current.progress.completedSessionIds
+        : [...current.progress.completedSessionIds, activeSession.id];
       const updatedSet = new Set(completedSessionIds);
       const upcoming = coreSessions.find((session) => !updatedSet.has(session.id));
-
       return {
         ...current,
-        progress: {
-          ...nextProgress,
-          completedSessionIds,
-        },
-        plan: {
-          ...current.plan,
-          selectedSessionId: upcoming?.id ?? selectedSession.id,
-        },
-        ui: {
-          ...current.ui,
-          currentScreen: selectedSession.isFinal ? "finish" : "progress",
-          runMode: "complete",
-        },
+        progress: { ...nextProgress, completedSessionIds },
+        plan: { ...current.plan, selectedSessionId: upcoming?.id ?? activeSession.id },
+        ui: { ...current.ui, currentScreen: activeSession.isFinal ? "finish" : "progress", runMode: "complete" },
       };
     });
   }
 
-  if (!ready) {
+  if (!ready || !activeSession || !nextSession) {
     return (
       <ThemeProvider darkMode={false}>
-        <SafeAreaProvider>
-          <ThemedLoader />
-        </SafeAreaProvider>
+        <SafeAreaProvider><ThemedLoader /></SafeAreaProvider>
       </ThemeProvider>
     );
   }
 
   return (
-    <ThemeProvider darkMode={appState.plan.hasSetup && appState.ui.currentScreen !== "setup" ? appState.profile.darkMode : draftProfile.darkMode}>
+    <ThemeProvider darkMode={appState.profile.darkMode}>
       <SafeAreaProvider>
         <ErrorBoundary>
           <ThemedAppFrame>
-            {appState.plan.hasSetup ? (
-              <>
-                <ScrollView ref={scrollRef} showsVerticalScrollIndicator={false} contentContainerStyle={styles.scrollContent} scrollEventThrottle={16} onScroll={handleScroll}>
-                  {appState.ui.currentScreen === "dashboard" && (
-                    <DashboardScreen
-                      nextSession={activeSession}
-                      completionPercent={completionPercent}
-                      completedCount={appState.progress.completedSessionIds.length}
-                      streak={streak}
-                      onOpenWorkout={() => setScreen("workout")}
-                      onOpenSetup={openSetupEditor}
-                      onTakeRecoveryWeek={toggleRecoveryWeek}
-                      recoveryWeekActive={appState.plan.recoveryWeek.active}
-                    />
-                  )}
-                  {appState.ui.currentScreen === "plan" && (
-                    <PlanScreen
-                      trainingPlan={trainingPlan}
-                      completedSet={completedSet}
-                      nextSessionId={nextSession.id}
-                      onSelectSession={selectSession}
-                      scrollRef={scrollRef}
-                      recoveryWeekActive={appState.plan.recoveryWeek.active}
-                      repeatWeekWeek={appState.plan.repeatWeek.active ? appState.plan.repeatWeek.week : null}
-                      onRepeatWeek={activateRepeatWeek}
-                      planLabel={planLabel}
-                    />
-                  )}
-                  {appState.ui.currentScreen === "workout" && (
-                    <WorkoutScreen
-                      session={activeSession}
-                      isCompleted={completedSet.has(activeSession.id)}
-                      onStartRun={() => beginRun(appState.plan.recoveryWeek.active ? "recovery" : appState.plan.repeatWeek.active ? "repeat" : "complete")}
-                      onTakeRecoveryWeek={toggleRecoveryWeek}
-                      canTakeRecoveryWeek={!appState.plan.recoveryWeek.active && !appState.plan.repeatWeek.active}
-                      isRecoveryMode={appState.plan.recoveryWeek.active}
-                      isRepeatWeekMode={appState.plan.repeatWeek.active}
-                    />
-                  )}
-                  {appState.ui.currentScreen === "run" && (
-                    <RunScreen
-                      session={activeSession}
-                      cueMode={appState.profile.cueMode}
-                      onBack={() => setScreen("workout")}
-                      onFinished={completeSelectedSession}
-                      runMode={appState.ui.runMode}
-                    />
-                  )}
-                  {appState.ui.currentScreen === "progress" && (
-                    <ProgressScreen
-                      weeklyCompletion={weeklyCompletion}
-                      unlocked={unlocked}
-                      nextSession={nextSession}
-                      completedCount={appState.progress.completedSessionIds.length}
-                      summary={progressSummary}
-                      roadTitle={appState.profile.goal}
-                    />
-                  )}
-                  {appState.ui.currentScreen === "achievements" && <AchievementsScreen unlocked={unlocked} onBack={() => setScreen("more")} />}
-                  {appState.ui.currentScreen === "finish" && (
-                    <FinishScreen
-                      onReviewPlan={() => setScreen("plan")}
-                      summary={progressSummary}
-                      finishLabel={appState.profile.goal === "Build to 10K" ? "10K" : appState.profile.goal === "Build to 30 minutes" ? "30m" : "5K"}
-                    />
-                  )}
-                  {appState.ui.currentScreen === "more" && (
-                    <MoreScreen onOpenScreen={(screen) => setScreen(screen)} reminderEnabled={appState.profile.reminderEnabled} />
-                  )}
-                  {appState.ui.currentScreen === "settings" && (
-                    <SettingsScreen
-                      profile={appState.profile}
-                      onChange={updateSavedProfile}
-                      onOpenSetup={editPlanSetup}
-                      onBack={() => setScreen("more")}
-                      onReset={resetApp}
-                      onRestartWeek={restartCurrentWeek}
-                      onRestartProgram={restartProgram}
-                      onInjectDummyData={injectDummyData}
-                      reminderPermissionGranted={reminderPermissionGranted}
-                    />
-                  )}
-                  {["help", "privacy", "support", "safety"].includes(appState.ui.currentScreen) && (
-                    <InfoScreen screenKey={appState.ui.currentScreen} onBack={() => setScreen("more")} />
-                  )}
-                  {appState.ui.currentScreen === "setup" && (
-                    <SetupScreen
-                      profile={draftProfile}
-                      onChange={updateProfile}
-                      onContinue={saveSetup}
-                      onReset={resetApp}
-                      compact
-                      canContinue={canContinueSetup}
-                    />
-                  )}
-                </ScrollView>
+            <ScrollView ref={scrollRef} showsVerticalScrollIndicator={false} contentContainerStyle={styles.scrollContent} scrollEventThrottle={16} onScroll={handleScroll}>
+              {appState.ui.currentScreen === "dashboard" && (
+                <DashboardScreen
+                  nextSession={activeSession}
+                  completionPercent={completionPercent}
+                  completedCount={completedCoreCount}
+                  streak={streak}
+                  onOpenWorkout={() => setScreen("workout")}
+                  onOpenSetup={() => setScreen("settings")}
+                  onTakeRecoveryWeek={toggleRecoveryWeek}
+                  recoveryWeekActive={appState.plan.recoveryWeek.active}
+                />
+              )}
+              {appState.ui.currentScreen === "plan" && (
+                <PlanScreen
+                  trainingPlan={trainingPlan}
+                  completedSet={completedSet}
+                  nextSessionId={nextSession.id}
+                  nextSessionWeek={nextSession.week}
+                  onSelectSession={selectSession}
+                  scrollRef={scrollRef}
+                  recoveryWeekActive={appState.plan.recoveryWeek.active}
+                  repeatWeekWeek={appState.plan.repeatWeek.active ? appState.plan.repeatWeek.week : null}
+                  onRepeatWeek={activateRepeatWeek}
+                  planLabel="Winter Challenge run plan"
+                />
+              )}
+              {appState.ui.currentScreen === "workout" && (
+                <WorkoutScreen
+                  session={activeSession}
+                  isCompleted={completedSet.has(activeSession.id)}
+                  onStartRun={() => beginRun(appState.plan.recoveryWeek.active ? "recovery" : appState.plan.repeatWeek.active ? "repeat" : "complete")}
+                  onTakeRecoveryWeek={toggleRecoveryWeek}
+                  canTakeRecoveryWeek={!appState.plan.recoveryWeek.active && !appState.plan.repeatWeek.active}
+                  isRecoveryMode={appState.plan.recoveryWeek.active}
+                  isRepeatWeekMode={appState.plan.repeatWeek.active}
+                />
+              )}
+              {appState.ui.currentScreen === "run" && (
+                <RunScreen session={activeSession} cueMode={appState.profile.cueMode} onBack={() => setScreen("workout")} onFinished={completeSelectedSession} runMode={appState.ui.runMode} />
+              )}
+              {appState.ui.currentScreen === "progress" && (
+                <ProgressScreen weeklyCompletion={weeklyCompletion} unlocked={unlocked} nextSession={nextSession} completedCount={completedCoreCount} summary={progressSummary} roadTitle="Road to the half-marathon checkpoint" />
+              )}
+              {appState.ui.currentScreen === "achievements" && <AchievementsScreen unlocked={unlocked} onBack={() => setScreen("more")} />}
+              {appState.ui.currentScreen === "finish" && <FinishScreen onReviewPlan={() => setScreen("plan")} summary={progressSummary} finishLabel="26-week run plan" />}
+              {appState.ui.currentScreen === "more" && <MoreScreen onOpenScreen={setScreen} reminderEnabled={appState.profile.reminderEnabled} />}
+              {appState.ui.currentScreen === "settings" && (
+                <SettingsScreen
+                  profile={appState.profile}
+                  onChange={updateSavedProfile}
+                  onBack={() => setScreen("more")}
+                  onReset={resetApp}
+                  onRestartWeek={restartCurrentWeek}
+                  onRestartProgram={restartProgram}
+                  onInjectDummyData={injectDummyData}
+                  reminderPermissionGranted={reminderPermissionGranted}
+                  planVersion={planDocument.planVersion}
+                  planPublishedAt={planDocument.publishedAt}
+                  planUpdateStatus={`${planUpdateStatus} Source: ${PLAN_URL}`}
+                  onCheckPlanUpdate={() => checkForPlanUpdate()}
+                />
+              )}
+              {["help", "privacy", "support", "safety"].includes(appState.ui.currentScreen) && <InfoScreen screenKey={appState.ui.currentScreen} onBack={() => setScreen("more")} />}
+            </ScrollView>
 
-                {!["finish", "run"].includes(appState.ui.currentScreen) && <TabBar currentScreen={appState.ui.currentScreen} onChange={setScreen} style={{ transform: [{ translateY: tabTranslateY }] }} />}
-                {toast && (
-                  <View style={styles.toastContainer}>
-                    <Text style={styles.toastTitle}>Achievement Unlocked</Text>
-                    <Text style={styles.toastBody}>{toast.title}</Text>
-                  </View>
-                )}
-              </>
-            ) : (
-              <SetupScreen
-                profile={draftProfile}
-                onChange={updateProfile}
-                onContinue={finishSetup}
-                canContinue={canContinueSetup}
-              />
+            {!["finish", "run"].includes(appState.ui.currentScreen) && <TabBar currentScreen={appState.ui.currentScreen} onChange={setScreen} style={{ transform: [{ translateY: tabTranslateY }] }} />}
+            {toast && (
+              <View style={styles.toastContainer}>
+                <Text style={styles.toastTitle}>Achievement Unlocked</Text>
+                <Text style={styles.toastBody}>{toast.title}</Text>
+              </View>
             )}
           </ThemedAppFrame>
         </ErrorBoundary>
@@ -636,23 +430,10 @@ function ThemedAppFrame({ children }) {
 function TabBar({ currentScreen, onChange, style }) {
   const theme = useTheme();
   const activeKey = ["settings", "help", "privacy", "support", "safety", "achievements"].includes(currentScreen) ? "more" : currentScreen;
-
   return (
     <Animated.View style={[styles.tabBar, { backgroundColor: theme.overlay, borderColor: theme.border }, style]}>
-      {[
-        ["dashboard", "Home"],
-        ["plan", "Plan"],
-        ["progress", "Stats"],
-        ["more", "More"],
-      ].map(([key, label]) => (
-        <Pressable
-          key={key}
-          accessibilityRole="tab"
-          accessibilityLabel={label}
-          accessibilityState={{ selected: activeKey === key }}
-          style={[styles.tab, activeKey === key && { backgroundColor: theme.text }]}
-          onPress={() => onChange(key)}
-        >
+      {[["dashboard", "Home"], ["plan", "Plan"], ["progress", "Stats"], ["more", "More"]].map(([key, label]) => (
+        <Pressable key={key} accessibilityRole="tab" accessibilityLabel={label} accessibilityState={{ selected: activeKey === key }} style={[styles.tab, activeKey === key && { backgroundColor: theme.text }]} onPress={() => onChange(key)}>
           <Text style={[styles.tabText, { color: theme.textSoft }, activeKey === key && { color: theme.inverseText }]}>{label}</Text>
         </Pressable>
       ))}

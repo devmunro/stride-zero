@@ -104,6 +104,9 @@ export function countCompletedWeeks(trainingPlan, completedSet) {
 
   for (const week of trainingPlan) {
     const coreSessions = week.sessions.filter((session) => session.countsTowardPlan !== false);
+    if (coreSessions.length === 0) {
+      continue;
+    }
     if (coreSessions.every((session) => completedSet.has(session.id))) {
       count += 1;
       continue;

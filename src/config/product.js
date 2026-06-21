@@ -1,4 +1,4 @@
-export const APP_VERSION = "1.2.0";
+export const APP_VERSION = "2.0.0";
 export const SUPPORT_EMAIL = "support@stridezero.app";
 export const PRIVACY_EMAIL = "privacy@stridezero.app";
 
@@ -7,7 +7,7 @@ export const INFO_CONTENT = {
     label: "Help",
     title: "How Stride Zero works",
     intro:
-      "Stride Zero builds a beginner-friendly running plan around where you are now, what you are building toward, how many runs fit real life, and the kind of workout cues you want.",
+      "Stride Zero delivers the guided run and run/walk sessions from the 26-week Winter Challenge plan. Walking, hiking, strength, flexibility, health tracking, and notes stay in the Winter Challenge tracker.",
     sections: [
       {
         heading: "Adaptive controls",
@@ -15,14 +15,14 @@ export const INFO_CONTENT = {
           "If training feels heavy, turn on a recovery week for lighter guided sessions based on your current plan. If you want extra confidence, repeat the whole week without moving your core plan progress forward.",
       },
       {
-        heading: "Weekly rhythm",
+        heading: "The focused plan",
         body:
-          "The app does not lock you into fixed weekdays. You pick how many runs you can usually handle, and the plan stays flexible around that rhythm whether you are building to 30 minutes, 5K, or 10K.",
+          "The app contains only guided running sessions. The complete 26-week reference plan remains in Winter Challenge.",
       },
       {
-        heading: "Plan matching",
+        heading: "Plan updates",
         body:
-          "Sharper 5K work is meant for runners who can already finish 5K comfortably, and 10K plans assume an established 5K base. Setup uses your current running answers to keep you on the safest match for now.",
+          "Stride Zero checks a read-only plan feed for newer versions. You preview changes before installing them, and completed sessions are never rewritten.",
       },
       {
         heading: "Reminders",
@@ -68,7 +68,7 @@ export const INFO_CONTENT = {
       {
         heading: "What is stored",
         body:
-          "The app stores your setup choices, completed runs, recovery sessions, repeat-week logs, reminder preferences, and simple progress summaries in local device storage.",
+          "The app stores completed runs, recovery sessions, repeat-week logs, reminder preferences, the last valid plan, and simple progress summaries in local device storage.",
       },
       {
         heading: "What is not collected",

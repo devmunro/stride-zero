@@ -2,7 +2,7 @@
   "expo": {
     "name": "Stride Zero",
     "slug": "stride-zero",
-    "version": "1.2.0",
+    "version": "2.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "automatic",
     "scheme": "stridezero",
@@ -19,7 +19,7 @@
     },
     "android": {
       "package": "com.stridezero.app",
-      "versionCode": 2,
+      "versionCode": 3,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#f4f1ea"
@@ -31,7 +31,7 @@
     },
     "ios": {
       "bundleIdentifier": "com.stridezero.app",
-      "buildNumber": "2",
+      "buildNumber": "3",
       "supportsTablet": false,
       "infoPlist": {
         "NSUserNotificationsUsageDescription": "Stride Zero sends local reminders for your planned runs.",

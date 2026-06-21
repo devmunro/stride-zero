@@ -1,7 +1,7 @@
 {
   "name": "stride-zero",
-  "version": "1.2.0",
-  "description": "Adaptive Expo running app for beginner running plans with guided sessions, reminders, and local progress tracking.",
+  "version": "2.0.0",
+  "description": "Focused Expo run player for the 26-week Winter Challenge plan.",
   "private": true,
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "ios": "expo start --ios",
     "check": "expo export --platform android",
     "lint": "expo lint",
-    "placement-check": "node scripts/placement-check.cjs",
+    "plan-check": "node scripts/plan-check.cjs",
     "smoke": "node scripts/smoke-check.cjs"
   },
   "dependencies": {

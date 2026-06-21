@@ -1,14 +1,7 @@
 /**
- * User profile choices that influence plan generation and app presentation.
+ * Local presentation, cue and reminder preferences.
  *
  * @typedef {Object} Profile
- * @property {string} experienceLevel Selected experience level
- * @property {string} goal Selected running goal
- * @property {string|null} continuousRunLevel Selected current continuous-running ability
- * @property {string|null} recentRunPattern Selected recent run frequency pattern
- * @property {string|null} fiveKStatus Selected prior 5K experience level
- * @property {string|null} comebackStatus Selected comeback or injury status
- * @property {string} weeklyPattern Selected weekly schedule
  * @property {string} cueMode Cue preference for the timer
  * @property {boolean} darkMode Whether dark mode is enabled
  * @property {boolean} reminderEnabled Whether daily reminders are enabled
@@ -43,6 +36,8 @@
  * @property {number} [sourceWeek] Source plan week used to build the session
  * @property {boolean} [countsTowardPlan] Whether this session advances the plan
  * @property {boolean} [isOptional] Whether this session is optional support work
+ * @property {string} [date] Scheduled ISO date from the published challenge plan
+ * @property {string} [phase] Challenge-plan phase
  */
 
 /**

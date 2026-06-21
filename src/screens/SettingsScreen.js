@@ -4,7 +4,7 @@ import { APPEARANCE_OPTIONS, CUE_MODE_OPTIONS, REMINDER_TIME_OPTIONS } from "../
 import { Body, Card, GhostButton, Label, OptionRow, PrimaryButton, ScreenTransition, SectionHeader } from "../components/ui/UI";
 import { styles } from "../theme/styles";
 
-export function SettingsScreen({ profile, onChange, onOpenSetup, onBack, onReset, onRestartWeek, onRestartProgram, onInjectDummyData, reminderPermissionGranted }) {
+export function SettingsScreen({ profile, onChange, onBack, onReset, onRestartWeek, onRestartProgram, onInjectDummyData, reminderPermissionGranted, planVersion, planPublishedAt, planUpdateStatus, onCheckPlanUpdate }) {
   return (
     <ScreenTransition style={styles.screenStack}>
       <SectionHeader label="Settings" title="Coaching preferences" action="Back" onAction={onBack} />
@@ -33,8 +33,14 @@ export function SettingsScreen({ profile, onChange, onOpenSetup, onBack, onReset
         <OptionRow value={profile.darkMode ? "Dark" : "Light"} options={APPEARANCE_OPTIONS} onSelect={(value) => onChange("darkMode", value === "Dark")} />
       </Card>
 
+      <Card>
+        <Label>Run plan updates</Label>
+        <Body style={styles.inlineTopSpacing}>{`Version ${planVersion} · published ${String(planPublishedAt).slice(0, 10)}`}</Body>
+        <Body style={styles.inlineTopSpacing}>{planUpdateStatus}</Body>
+        <PrimaryButton label="Check for plan update" onPress={onCheckPlanUpdate} />
+      </Card>
+
       <View style={styles.buttonColumn}>
-        <PrimaryButton label="Edit plan setup" onPress={onOpenSetup} />
         <GhostButton
           label="Restart current week"
           onPress={() => {
